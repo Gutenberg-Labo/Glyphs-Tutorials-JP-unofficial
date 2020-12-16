@@ -11,3 +11,7 @@
 ******
 
 ## Index
+
+* [複数レイヤーのカラーフォントの作成](https://github.com/Gutenberg-Labo/Glyphs-Tutorials-JP-unofficial/blob/main/MDs/creating-a-layered-color-font.md)
+* [SVGカラーフォントの作成](https://github.com/Gutenberg-Labo/Glyphs-Tutorials-JP-unofficial/blob/main/MDs/creating-an-svg-color-font.md)
+* [図形の再利用：スマートコンポーネント](https://github.com/Gutenberg-Labo/Glyphs-Tutorials-JP-unofficial/blob/main/MDs/smart-components.md)

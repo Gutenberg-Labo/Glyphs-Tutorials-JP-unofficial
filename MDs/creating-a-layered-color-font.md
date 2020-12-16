@@ -1,4 +1,4 @@
-# 複数レイヤーのカラーフォント作成
+# 複数レイヤーのカラーフォントの作成
 
 [(Original page)](https://glyphsapp.com/learn/creating-a-layered-color-font)  
 
