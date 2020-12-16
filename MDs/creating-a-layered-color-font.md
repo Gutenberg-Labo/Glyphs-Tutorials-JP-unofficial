@@ -1,4 +1,4 @@
-#複数レイヤーのカラーフォント作成
+# 複数レイヤーのカラーフォント作成
 
 by Rainer Erich Scheichelbauer  
 1 December 2016  
@@ -40,25 +40,25 @@ Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作�
 
 ウィンドウ上部にあるマスターボタンか、または Cmd-1、Cmd-2、Cmd-3 のショートカットで、レイヤーの切り替えができます。サイドバーパレット（Cmd-Opt-P）の「レイヤー」セクションに、カスタム名がレイヤー色とともにポップアップ表示されます。各レイヤー名の左側には、小さな目のアイコンがあります。閉じている目を全てクリックして開けます。すると、編集中に全マスターのレイヤーが一度に表示されます。  
 
-<img alt="" width="100%" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/1ff69474e3-1605628235/colorfont-4.png">
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/1ff69474e3-1605628235/colorfont-4.png">
 
 Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトからベースラインまでの長方形を、大文字の I として描きます。  
 
-<img alt="" width="100%" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/409c099317-1605628235/colorfont-5.png">
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/409c099317-1605628235/colorfont-5.png">
 
 それから、長方形を選択したままにして、クリップボードにコピーし（Cmd-C）、「Side」レイヤーに切り替え（Cmd-2）て、ペースト（Cmd-V）します。  
 
 一番左のノード2つを選択ツール（V）で選択し、次のように、右下に移動させます。  
 
-<img alt="" width="100%" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/9f176f7048-1605628235/colorfont-6.png">
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/9f176f7048-1605628235/colorfont-6.png">
 
 全てを選択して（Cmd-A）、クリップボードにコピーし（Cmd-C）、「Bottom」レイヤーに切り替えて（Cmd-3）、貼り付けます。ここで、「Bottom」レイヤーの上端が「Front」レイヤーのベースに揃うように、上2つのノードを左下の位置まで移動させます。  
 
-<img alt="" width="100%" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/a1d1a01964-1605628235/colorfont-7.png">
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/a1d1a01964-1605628235/colorfont-7.png">
 
 ここで Option キーを押しながら、「パス」メニューから「全マスターのパス方向を修正」（Cmd-Opt-Shift-R）を選択してください。スペースバーを押して一時的にプレビュー表示するか、単純にテキストツール（T）に切り替えれば、全てが期待通りに動作するかを確認できます。  
 
-<img alt="" width="100%" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/fae16b9ae7-1605628235/colorfont-8.png">
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/fae16b9ae7-1605628235/colorfont-8.png">
 
 おめでとう。最初のレイヤーグリフができました。  
 
@@ -66,7 +66,7 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 編集については、「全レイヤー選択」ツールがあって、これで表示中のレイヤーにある任意のポイントが編集できます。  
 
-<img alt="" width="100%" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/493cdc6a67-1605628236/colorfont-9.gif">
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/493cdc6a67-1605628236/colorfont-9.gif">
 
 いくつかのメニューコマンドは一度に全てのレイヤーで動作します。「グリフ」＞「全マスターのメトリクス情報を更新」（Cmd-Opt-Ctrl-M）が使えますし、「パス」＞「全マスターのパス方向を修正」（Cmd-Opt-Shift-R）ならもう使っています。  
 
@@ -76,11 +76,11 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 「ファイル」＞「フォント情報」＞「マスター」（Cmd-I）で、カスタムパラメータ「Link Metrics With First Master」を全てのマスターに追加します。これで全ての幅の変更がこのパラメータを持つ全てのマスターで同期されます。また「幅の変更」だけでなく、「カーニングの変更」も全てのマスター間で同期されます。やったね。  
 
-<img alt="" width="100%" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/55982ab8be-1605628236/colorkerning.gif">
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/55982ab8be-1605628236/colorkerning.gif">
 
 メトリクスとカーニングを最初のマスターではなく、別のマスターと同期させたいときがあります。その場合、「Link Metrics with Master」パラメータを使います。「値」にマスター名を入力します。  
 
-<img alt="" width="100%" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/330f5af643-1605628236/linkmetricswithmaster.png">
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/330f5af643-1605628236/linkmetricswithmaster.png">
 
 ### レイヤーフォントをInDesignで適用
 
