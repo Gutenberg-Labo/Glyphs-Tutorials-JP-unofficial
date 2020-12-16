@@ -91,7 +91,7 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 ### レイヤーフォントをInDesignで適用
 
-他のプロジェクトと同様にフォントをエクスポートします。いつものように、[Adobe Fonts](https://glyphsapp.com/tutorials/tutorials/testing-your-fonts-in-adobe-apps)フォルダを使うことをお勧めします。  
+他のプロジェクトと同様にフォントをエクスポートします。いつものように、[Adobe Fonts](https://glyphsapp.com/tutorials/testing-your-fonts-in-adobe-apps)フォルダを使うことをお勧めします。  
 
 さて、InDesignで行うべきは、完全に同じ内容のテキストフレームを複数用意し、それぞれを別のスタイルで重ねることです。[これは InDesign の配置とリンクツールを使えば実現できます](http://www.lynda.com/articles/indesign-secrets-how-to-place-and-link-text-without-its-formatting)。
 
