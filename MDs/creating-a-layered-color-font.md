@@ -1,5 +1,9 @@
 # 複数レイヤーのカラーフォント作成
 
+[(Original page)](https://glyphsapp.com/learn/creating-a-layered-color-font)  
+
+<br />
+
 by Rainer Erich Scheichelbauer  
 1 December 2016  
 Published on 16 September 2014  
