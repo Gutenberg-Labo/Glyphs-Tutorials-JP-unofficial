@@ -11,7 +11,7 @@ by Rainer Erich Scheichelbauer
 1 December 2016  
 Published on 16 September 2014  
 
-<br />
+********
 
 Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作成できます。その方法を見てください。
 
@@ -116,6 +116,9 @@ Adobe Illustratorでエリアタイプのオブジェクト（つまりテキス
 ********
 
 サンプルフォント：[SAPPERLOT](https://github.com/DrTypo/sapperlot)、Thomas Maier氏 提供  
+
+<br />
+
 Update 2014-12-24: 「Illustratorでフォントを重ねる」の段落を追加。  
 Update 2016-11-30: 「Link Metrics With First Master」パラメータについての段落を追加。  
 Update 2016-12-01: 誤記と更新日時を修正。  
