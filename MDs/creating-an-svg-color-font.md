@@ -107,13 +107,13 @@ Glyphsで既存のさまざまな形式のカラーフォントを取り込み�
 
 オプションを見て、どれかの形式を選び、SVGのエクスポートを追加する方法は以下をお読みください。  
 
-*複数レイヤーフォントの場合：* [こちらのチュートリアルの手順に従ってください。](https://glyphsapp.com/tutorials/creating-a-layered-color-font)「ファイル」＞「フォント情報」＞「マスター」の「Master Color」パラメータで色が設定されているかを確認してください。  
+**複数レイヤーフォントの場合：** [こちらのチュートリアルの手順に従ってください。](https://glyphsapp.com/tutorials/creating-a-layered-color-font)「ファイル」＞「フォント情報」＞「マスター」の「Master Color」パラメータで色が設定されているかを確認してください。  
 
 「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。スタイル名には「レギュラー」とか「マルチカラー」、「SVG」など納得のいく名前をつけます。そしてその新しいインスタンスにカスタムパラメータ「Color Layers to SVG」を追加し、「値」をオンにしてください。  
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/a268aa8cad-1605628243/colorlayerstosvg.png">
 
-*CPAL/COLRフォントの場合：* [こちらのチュートリアルの手順に従ってください。](https://glyphsapp.com/tutorials/creating-a-microsoft-color-font)「ファイル」＞「フォント情報」＞「マスター」で最初のマスターの「カスタムパラメータ」セクションで「Color Palettes」が1つ以上設定されていることと、グリフ内の「Color」レイヤーに番号、つまり `Color 0` 、`Color 1` 、`Color 2`、……が振られていることを確認してください。  
+**CPAL/COLRフォントの場合：** [こちらのチュートリアルの手順に従ってください。](https://glyphsapp.com/tutorials/creating-a-microsoft-color-font)「ファイル」＞「フォント情報」＞「マスター」で最初のマスターの「カスタムパラメータ」セクションで「Color Palettes」が1つ以上設定されていることと、グリフ内の「Color」レイヤーに番号、つまり `Color 0` 、`Color 1` 、`Color 2`、……が振られていることを確認してください。  
 
 「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。これに適切なスタイル名をつけてください。そしてそのインスタンスの「カスタムパラメータ」セクションにパラメータ「Color Palette for SVG」を追加し、その値には含めたいカラーパレットのインデックスを設定します。上述の「Color Palettes」パラメータで定義したパレットが1つだけであれば、値に `0` を設定します。  
 
