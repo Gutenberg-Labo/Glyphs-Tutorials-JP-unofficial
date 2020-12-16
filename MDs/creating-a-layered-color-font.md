@@ -39,7 +39,7 @@ Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作�
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/405be428bc-1605628235/colorfont-3.png">
 
-<「全く」同じ値を使うと、補間が行われることはありません。ここでは補間したいのではなく、異なるレイヤーを描画して出力したいだけなのでそれでOKです。  
+「全く」同じ値を使うと、補間が行われることはありません。ここでは補間したいのではなく、異なるレイヤーを描画して出力したいだけなのでそれでOKです。  
 
 ### レイヤーグリフの編集
 
@@ -91,7 +91,7 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 ### レイヤーフォントをInDesignで適用
 
-他のプロジェクトと同様にフォントをエクスポートします。いつものように、[Adobe Fonts](https://glyphsapp.com/tutorials//tutorials/testing-your-fonts-in-adobe-apps)フォルダを使うことをお勧めします。  
+他のプロジェクトと同様にフォントをエクスポートします。いつものように、[Adobe Fonts](https://glyphsapp.com/tutorials/tutorials/testing-your-fonts-in-adobe-apps)フォルダを使うことをお勧めします。  
 
 さて、InDesignで行うべきは、完全に同じ内容のテキストフレームを複数用意し、それぞれを別のスタイルで重ねることです。[これは InDesign の配置とリンクツールを使えば実現できます](http://www.lynda.com/articles/indesign-secrets-how-to-place-and-link-text-without-its-formatting)。
 
