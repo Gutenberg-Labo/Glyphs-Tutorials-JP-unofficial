@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/creating-a-layered-color-font" />
+  <title>複数レイヤーのカラーフォント作成 | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">複数レイヤーのカラーフォント作成</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rainer Erich Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/creating-a-layered-color-font" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/fr/learn/creating-a-layered-color-font" aria-label="French"><span class="Button-text">fr</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/creating-a-layered-color-font" aria-label="Chinese"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content"><p><span>1 December 2016&nbsp;</span><span>Published on 16 September 2014</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作成できます。その方法を見てください。</p>
+</div>
+
+<div class="Article-contentInner">
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/17a16877d2-1605628236/Sapperlot.png"></figure>
+<p>複数レイヤーフォントはユーザにとって楽しいものですが、作成者の作業はいつも大変でした。でも、それがとても簡単になりました。Glyphsは、複数レイヤーフォントのデザイナー向けに大きな改善をいくつか行いました。</p>
+
+<h3 id="__create-masters-and-instances">マスターとインスタンスの作成</h3>
+<p>レイヤーがマスターになります。そこで「ファイル」＞「フォント情報」＞「マスター」を選択し、必要なレイヤーの数だけフォントマスターを追加します。そのそれぞれに異なる「カスタム」名と値を指定してください。例えば「Front」「Side」「Bottom」、1、2、3、などです。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/9f2fbc4c4d-1605628235/colorfont-1.gif"></figure>
+<p>そして作業中は、マスターごとに異なるプレビューカラーを割り当てることができます。というのも全レイヤーが同じ色のレイヤーフォントなんて面白くないからです。やり方は次の通りです。カスタムパラメータのセクションのすぐ上にある小さな＋アイコンを押下して、新しいカスタムパラメータを追加します。「プロパティ」ポップアップから「Master Color」を選択すると、「値」フィールドにカラーピッカーが表示されます。カラーピッカーをクリックし、それぞれの色を選択します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/5a7f3badab-1605628235/colorfont-2.png"></figure>
+<p>ヒント、ヒント。オーバープリント効果をシミュレートしたい場合、透明度の選択も可能です。</p>
+<p>それができたら、「Master Color」パラメータを選択し、クリップボードにコピー（Cmd-C）します。そして他の各マスターに移動して、その度に、「カスタムパラメータ」セクションをクリックして、ペースト（Cmd-V）します。その後はカラーピッカーをクリックすれば、簡単に各レイヤーの色を変更できます。パワーユーザであるならサイドバーで複数のマスターをCmdキーを押しながら選択すれば、全てのマスターレイヤーのパラメータを一度に追加またはペーストできます。</p>
+<p>さて、「フォント情報」ウィンドウで、「インスタンス」タブに切り替えます。そこで、先ほど使ったのと全く同じウェイト値を持つインスタンスを作成します。そうするには、左下の＋アイコンをクリックし、ポップアップメニューから「全マスターをインスタンスとして追加」を選択します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/405be428bc-1605628235/colorfont-3.png"></figure>
+<p>「全く」同じ値を使うと、補間が行われることはありません。ここでは補間したいのではなく、異なるレイヤーを描画して出力したいだけなのでそれでOKです。</p>
+
+<h3 id="__edit-the-layer-glyphs">レイヤーグリフの編集</h3>
+<p>「フォント情報」ウィンドウを閉じると、フォントウィンドウに戻ります。大文字の I をダブルクリックしましょう。簡単な文字なので、試したり編集してみるのに最適です。</p>
+<p>ウィンドウ上部にあるマスターボタンか、または Cmd-1、Cmd-2、Cmd-3 のショートカットで、レイヤーの切り替えができます。サイドバーパレット（Cmd-Opt-P）の「レイヤー」セクションに、カスタム名がレイヤー色とともにポップアップ表示されます。各レイヤー名の左側には、小さな目のアイコンがあります。閉じている目を全てクリックして開けます。すると、編集中に全マスターのレイヤーが一度に表示されます。
+</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/1ff69474e3-1605628235/colorfont-4.png"></figure>
+<p>Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトからベースラインまでの長方形を、大文字の I として描きます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/409c099317-1605628235/colorfont-5.png"></figure>
+<p>それから、長方形を選択したままにして、クリップボードにコピーし（Cmd-C）、「Side」レイヤーに切り替え（Cmd-2）て、ペースト（Cmd-V）します。
+一番左のノード2つを選択ツール（V）で選択し、次のように、右下に移動させます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/9f176f7048-1605628235/colorfont-6.png"></figure>
+<p>全てを選択して（Cmd-A）、クリップボードにコピーし（Cmd-C）、「Bottom」レイヤーに切り替えて（Cmd-3）、貼り付けます。ここで、「Bottom」レイヤーの上端が「Front」レイヤーのベースに揃うように、上2つのノードを左下の位置まで移動させます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/a1d1a01964-1605628235/colorfont-7.png"></figure>
+<p>ここで Option キーを押しながら、「パス」メニューから「全マスターのパス方向を修正」（Cmd-Opt-Shift-R）を選択してください。スペースバーを押して一時的にプレビュー表示するか、単純にテキストツール（T）に切り替えれば、全てが期待通りに動作するかを確認できます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/fae16b9ae7-1605628235/colorfont-8.png"></figure>
+<p>おめでとう。最初のレイヤーグリフができました。</p>
+
+<h3 id="__multiple-layer-editing">マルチプルレイヤーの編集</h3>
+<p>編集については、「全レイヤー選択」ツールがあって、これで表示中のレイヤーにある任意のポイントが編集できます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/493cdc6a67-1605628236/colorfont-9.gif"></figure>
+<p>いくつかのメニューコマンドは一度に全てのレイヤーで動作します。「グリフ」＞「全マスターのメトリクス情報を更新」（Cmd-Opt-Ctrl-M）が使えますし、「パス」＞「全マスターのパス方向を修正」（Cmd-Opt-Shift-R）ならもう使っています。</p>
+
+<h3 id="__keeping-metrics-and-kerning-in-sync">メトリクスの維持とカーニングの同期</h3>
+<p>もう1つ大きな課題があります。全てのマスターを全く同じ幅にすることです。要は、ある色で幅を変更したら、他の色のレイヤーも全てそれに揃えなければなりません。もちろん Cmd-1 、2 、3 ……で全てのマスターの幅を変更し、同じくメトリックを変更することは「できます」。でももっとスマートな方法があります。</p>
+<p>「ファイル」＞「フォント情報」＞「マスター」（Cmd-I）で、カスタムパラメータ「Link Metrics With First Master」を全てのマスターに追加します。これで全ての幅の変更がこのパラメータを持つ全てのマスターで同期されます。また「幅の変更」だけでなく、「カーニングの変更」も全てのマスター間で同期されます。やったね。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/55982ab8be-1605628236/colorkerning.gif"></figure>
+<p>メトリクスとカーニングを最初のマスターではなく、別のマスターと同期させたいときがあります。その場合、「Link Metrics with Master」パラメータを使います。「値」にマスター名を入力します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/330f5af643-1605628236/linkmetricswithmaster.png"></figure>
+
+<h3 id="__applying-layer-fonts-in-indesign">レイヤーフォントをInDesignで適用</h3>
+<p>他のプロジェクトと同様にフォントをエクスポートします。いつものように、<a href="/tutorials/testing-your-fonts-in-adobe-apps">Adobe Fontsフォルダ</a>を使うことをお勧めします。</p>
+<p>さて、InDesignで行うべきは、完全に同じ内容のテキストフレームを複数用意し、それぞれを別のスタイルで重ねることです。<a href="http://www.lynda.com/articles/indesign-secrets-how-to-place-and-link-text-without-its-formatting">これは InDesign の配置とリンクツールを使えば実現できます</a>。</p>
+
+<h3 id="__layering-fonts-in-illustrator">Illustratorでフォントを重ねる</h3>
+<p>Adobe Illustratorでエリアタイプのオブジェクト（つまりテキストボックス内のテキスト）を整列させるにあたって問題が1つあります。デフォルトでは、アプリはテキストボックスの最初のベースラインに合わせてオフセットを自動で調整します。そのために、「Illustratorではフォントの小文字 d を測定して、」そのアセンダーの高さを最初の行のオフセットとして使っています。これは冗談ではなくて、AIは本当にそうしています。</p>
+<p>問題は、カラーレイヤーでは、小文字のdで全てのレイヤーの縦の最大値が偶然同じになるなんてむしろ起こらないということです。その結果、レイヤーが揃わず、カラーフォントを買った人からサポート依頼メールを大量に受け取るかもしれません。</p>
+<p>対策としてできることは2つあります。1つは、Adobe Illustratorの全てのエリアタイプのオブジェクトで、ベースラインのオフセット設定を変える方法をユーザに告知することです。整列させたいテキストボックスを全て選択し、「タイプ」＞「エリアタイプオプション」から、「最初のベースライン」オプションで「固定」または「リーディング」を選択します。ただし、経験豊富なユーザでもこの設定は知らない場合が多いのでご注意ください。そして彼らはあなたに連絡する前に、このフォントに怒った投稿をInstagramで公開してしまうというリスクがあります。</p>
+<p>あるいは、2つ目は、小文字 d の全レイヤーの上部に、ごく小さな、多分ちょうど1ユニット幅の正方形を追加することです。全ての色のレイヤーの同じ高さにコピー＆ペーストして、この文字の中で最も高いパスオブジェクトとなるようにしてください。デザインの中でちょうど良い位置を探して、あまり目立たないようにしてください。そうすれば、Illustratorは小文字 d を測定して、全てのレイヤーを同じ高さとして検出し、デフォルトでそれらを全て揃えます。そしてあなたの受信箱がサポート依頼で溢れかえることもないでしょう。</p>
+<p>なお繰り返しますが、AIでフォントをテストするためにも、<a href="/tutorials/testing-your-fonts-in-adobe-apps">Adobe Fontsフォルダ</a>を使うようにしてください。</p>
+
+<h3 id="__sapperlot-sources">Sapperlot ソースファイル</h3>
+<p>とにかく、いい感じのものがこれでいけます。Thomas Maier氏（DrTypo）のSapperlotというフォントのように。Thomasは <code>.glyphs</code> ファイルをオープンソースで公開してくれてますので、<a href="https://github.com/DrTypo/sapperlot">彼のGitHubページにアクセスして</a>よく見てみてください。</p>
+<p><a href="https://github.com/DrTypo/sapperlot"><figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/15eaf016bb-1605628236/colorfont-10.png"></figure></a></p>
+
+<p><small><br />
+<span class="caps"><br />
+サンプルフォント：<a href="https://github.com/DrTypo/sapperlot">SAPPERLOT</a>、Thomas Maier氏 提供<br />
+</span></p>
+<p>Update 2014-12-24: 「Illustratorでフォントを重ねる」の段落を追加。<br />
+Update 2016-11-30: 「Link Metrics With First Master」パラメータについての段落を追加。<br />
+Update 2016-12-01: 誤記と更新日時を修正。<br />
+Update 2017-01-18: 「Link Metrics With Master」パラメータについてのスクリーンショットと段落を追加。</em><br />
+</small></p>          </div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/creating-an-svg-color-font" />
+  <title>SVGカラーフォントの作成 | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">SVGカラーフォントの作成</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rainer Erich Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/creating-an-svg-color-font" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/fr/learn/creating-an-svg-color-font" aria-label="French"><span class="Button-text">fr</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/creating-an-svg-color-font" aria-label="Chinese"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content"><p>20 January 2017</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>Glyphsは何種類かあるOpenType-SVGフォントの作成方法を提供します。このチュートリアルを読めば、そのほぼ全容が分かります。</p>
+</div>
+
+<div class="Article-contentInner">
+<p>SVGについて調べると、<a href="https://ja.wikipedia.org/wiki/Scalable_Vector_Graphics">Scalable Vector Graphics</a>の略であることが分かります。ここまでは良いのですが、フォントの分野でこの用語を使うと、実際とは異なる意味になってしまうことがあります。</p>
+
+<h3 id="__the-svg-font-format">SVGフォント形式</h3>
+<p>まず第一に、SVGというWebフォントの<strong>ファイル形式</strong>がありました。このファイルの拡張子名は <code>.svg</code> またはzip圧縮された <code>.svgz</code> でした。これは初期iPhoneのSafariでしかサポートされなかったので、すぐに忘れ去られました。そして幸運なことに、絶滅してしまいました。それは他のフォント形式と比べるとサイズが巨大で、単なるアウトラインしか提供していませんでした。つまり、カーニングも、ヒントもなく、OpenTypeテーブルの提供するその他の良い機能は何一つありませんでした。言い換えれば、OpenTypeフォントですらありませんでした。GlyphsはOpenTypeフォントエディタですから、そんなSVGフォントは生成できません。</p>
+<p>このチュートリアルでは、このレガシーなSVGフォントのファイル形式については「触れません」。</p>
+
+<h3 id="__the-svg-opentype-table">SVG OpenTypeテーブル</h3>
+<p>現在広く使われるWebフォントのファイル形式はWOFFと、ゆっくりと普及しつつある、WOFF2です。もちろん他にもありますが、簡単に言えば、WOFFとは圧縮されたOpenTypeフォントです。デスクトップフォントの兄弟姉妹である、CFF/OTFやTTFもOpenType形式ですが、どちらも独特で、WOFFほどは圧縮されていません。OpenTypeフォントをOpenTypeフォントたらしめているのは、いわゆる<strong>OpenTypeテーブル</strong>と呼ばれるものの集合体であるその内部構造であり、そのテーブルの1つに<a href="https://www.w3.org/TR/SVG11/">SVG</a>をベースとした情報を含む<a href="https://www.microsoft.com/typography/otspec/svg.htm">SVGテーブル</a>があります。こういったSVGテーブルを含むフォントは「OpenType-SVGカラーフォント」や「SVGカラーフォント」と呼ばれたりしています。</p>
+<p>このチュートリアルは、OpenType-SVGカラーフォントについて「です」。</p>
+<p>Glyphsで、フォントにSVG情報を取り込む方法は2つあります。（A）個別の <code>.svg</code> 画像ファイルから取り込む方法と、（B）既存のカラーフォントから取り込む方法です。後者は、異なるマスター上のレイヤーフォント、インデックス付きの「カラー」レイヤーを持つCPAL/COLRフォント、または「iColor」レイヤーを持つApple形式のsbixフォントのどれかからです。</p>
+
+<h3 id="__option-a-from-svg-image-files">オプションA：SVG画像ファイルから取り込む</h3>
+<p>使えるSVG画像が個別のファイルで既にある場合、それをそれぞれのグリフに配置すれば、SVGテーブル付きフォントを出力できます。この方法ではベクターアニメーションのようなイカれたものも含めて、SVGファイル形式の機能がフル活用できます。</p>
+<p>前準備として、.glyphsファイルを好きな場所に保存し、SVGファイル用に「Images」というサブフォルダを作っておいてください。.glyphsファイルに保存されるのは画像の相対パスだけなので、画像がサブフォルダにあれば簡単にまとめておけます。</p>
+<p>さて例が必要です。SVG画像が手元になければ、ここに1つ用意します。大文字の <code>O</code> として赤い丸を回転させてみましょう。このSVGコードを選択してコピー（Cmd-C）してください。</p>
+<pre><code class="language-plaintext">&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="1000" height="1000" viewBox="-400 -400 800 800"&gt;
+ &lt;title&gt;SVG animation using SMIL&lt;/title&gt;
+ &lt;circle cx="0" cy="100" r="200" stroke="none" fill="red"&gt;
+  &lt;animateTransform
+   attributeName="transform"
+   attributeType="XML"
+   type="rotate"
+   from="0"
+   to="360"
+   begin="0s"
+   dur="1s"
+   repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+ &lt;/circle&gt;
+&lt;/svg&gt;</code></pre>
+<p><a href="https://macromates.com">TextMate</a>、<a href="https://www.sublimetext.com">SublimeText</a>、<a href="https://atom.io">Atom</a>などのお好きなプレーンテキストエディタで新しいウィンドウを開き、これをペースト（Cmd-V）します。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/4e7c043556-1605628244/svgintexteditor.png"></figure>
+<p>そして、O.svgとして「Images」フォルダ内にファイルを保存します。すると、Finderで見ると、用意したファイル全体は次のようになります。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/33935b6884-1605628243/findersetup.png"></figure>
+<p>.glyphsファイルに戻って、大文字 O を用意します。編集ビューで開き、「レイヤー」パレットで「コピー」ボタンを押下してレイヤーのコピーを追加し、それから名前を <code>svg</code>（すべて小文字）に変更します。それが終わると、次のようになります。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/78e6453dcf-1605628244/svglayer.png"></figure>
+<p>さてここからが本題です。マスターレイヤーに置くのは何であれ黒白のフォールバック用グリフで、SVGテーブルに格納された色情報を表示できないアプリケーションではこれが表示されます。何それと思われたかもしれませんが、マスターレイヤーというのは「レイヤー」パレットで太字で表されるレイヤーのことで、今の例では「Regular」という名前です。</p>
+<p>でも新しい <code>svg</code> レイヤーには、.svg画像ファイルをドラッグしてドロップできます。アニメーションは動作しませんが、画像はすぐに表示されます。リンクした画像はサイズを変えたり、好きな位置に動かすことができます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/395d4555a6-1605628244/placedsvgineditview.png"></figure>
+<p>スペーシングに関する注意：<code>svg</code> レイヤーの幅はマスターレイヤーから継承されるので、グリフの間隔を広げるにはそちらに切り戻す必要があります。この例では、配置したSVGを拡大縮小や変形させていないのであれば、幅は800に設定するのがちょうど良いでしょう。それをやるには、レイヤーパレットの「Regular」レイヤーをクリックして、灰色の情報ボックスで幅を800に変更します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/c192bb4b7d-1605628244/setwidthto800.png"></figure>
+<p>それはさておき、フォントをWebフォントに出力します。「ファイル」＞「出力」＞「Webフォント」で、フォーマットにはWOFFとWOFF2を使います。CFFやTTFは関係ありません。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/7587f4ca36-1605628243/exportwoff.png"></figure>
+<p>Macでは、OpenType-SVGフォントをサポートするブラウザは<a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>しかありません。Windowsでは、<a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>もサポートしています。なのでOpenType-SVGフォントをテストするにはこれらのブラウザを使う必要があります。テストのために、WOFFを表示させるためのHTMLとCSSのコードを含んだHTMLファイルを作成するか、あるいは<a href="https://github.com/mekkablue/Glyphs-Scripts">mekkablueのスクリプトのリポジトリ</a>から「Test」＞「Webfont Test HTML」スクリプトを実行するかしましょう。このスクリプトは現在のフォント用のHTMLファイルを最後に使われたWebフォント出力先に生成します。</p>
+<blockquote>
+<p>もしスクリプトを使うことに慣れてなければ、ちょっと時間を取ってスクリプトのreadmeのインストール手順を読み、それに従ってスクリプトをインストールしてみてください。その後、Optionキーを押しながら「スクリプト」＞「スクリプトの再読み込み」（Cmd-Opt-Shift-Y）を選択します。</p>
+</blockquote>
+<p>スクリプトがうまく動いて出力先フォルダが開きます。あとはHTMLファイルをDockのFirefoxアイコンにドラッグ（または右クリックから「このアプリケーションで開く」＞「Firefox.app」）して、大文字の O を入力するだけです。さあどうぞ！</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/0c481c0f5f-1605628243/animatedredcircle.gif"></figure>
+<p>ジャジャーン！ だけど、フォントでのアニメーションはプロセッサに高負荷をかけることになるのでどうか気をつけてください。コンピュータのファンは狂ったようにフル回転するでしょうし、モバイルではバッテリーが直葬になってユーザは全員あなたに微妙な感情を持つでしょう。警告しましたよ。</p>
+
+<h3 id="__option-b-from-an-existing-color-font">オプションB：既存のカラーフォントから取り込む</h3>
+Glyphsで既存のさまざまな形式のカラーフォントを取り込み、SVGとしてエクスポートできます。カラーフォントをこれらのソース形式のどれかで作成すると、そのソース形式「と」SVGとの両方にエクスポートできる利点があります。</p>
+<p>選択肢は3つあります。</p>
+<ol>
+<li><a href="/tutorials/creating-a-layered-color-font">複数レイヤーフォント</a>：2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。</li>
+<li><a href="/tutorials/creating-a-microsoft-color-font">CPAL/COLRフォント</a>：グリフに <code>Color</code> レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。</li>
+<li><a href="/tutorials/creating-an-apple-color-font">sbixフォント</a>：グリフの<code>iColor</code> レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。</li>
+</ol>
+<p>オプションを見て、どれかの形式を選び、SVGのエクスポートを追加する方法は以下をお読みください。</p>
+<p><strong>複数レイヤーフォントの場合：</strong> <a href="/tutorials/creating-a-layered-color-font">こちらのチュートリアルの手順に従ってください。</a>「ファイル」＞「フォント情報」＞「マスター」の「Master Color」パラメータで色が設定されているかを確認してください。</p>
+<p>「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。スタイル名には「レギュラー」とか「マルチカラー」、「SVG」など納得のいく名前をつけます。そしてその新しいインスタンスにカスタムパラメータ「Color Layers to SVG」を追加し、「値」をオンにしてください。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/a268aa8cad-1605628243/colorlayerstosvg.png"></figure>
+<p><strong>CPAL/COLRフォントの場合：</strong> <a href="/tutorials/creating-a-microsoft-color-font">こちらのチュートリアルの手順に従ってください。</a>「ファイル」＞「フォント情報」＞「マスター」で最初のマスターの「カスタムパラメータ」セクションで「Color Palettes」が1つ以上設定されていることと、グリフ内の「Color」レイヤーに番号、つまり <code>Color 0</code> 、<code>Color 1</code> 、<code>Color 2</code>、……が振られていることを確認してください。</p>
+<p>「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。これに適切なスタイル名をつけてください。そしてそのインスタンスの「カスタムパラメータ」セクションにパラメータ「Color Palette for SVG」を追加し、その値には含めたいカラーパレットのインデックスを設定します。上述の「Color Palettes」パラメータで定義したパレットが1つだけであれば、値に <code>0</code> を設定します。</p>
+<p>そして、カスタムパラメータ「Export SVG Table」を追加し、チェックボックスをオンにします。純粋にSVGフォントだけが欲しいなら、カスタムパラメータ「Export COLR Table」を追加してそのチェックボックスをオフにするのもありだと思います。</p>
+<p>「ファイル」＞「フォント情報」＞「インスタンス」で新しいインスタンスを作成し、カスタムパラメータ「SBIX to SVG」を追加して値に適切なiColorのサイズを入力します。こうすることで同じサイズのインデックスのiColorレイヤーからsbix画像が取り込まれ、SVG画像に変換されます。例えば、カスタムパラメータの値に256を指定すると、Glyphsは全ての <code>iColor 256</code> レイヤーを探し出してSVGに変換します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/596ec67efe-1605628244/sbix2svgparameter.png"></figure>
+<p>純粋にSVGフォントだけが欲しい場合は、カスタムパラメータに「Export sbix Table」を追加してそのチェックボックスをオフにしても良いと思います。</p>
+<p>さあ「ファイル」＞「出力」＞「Webフォント（Cmd-E）」で出力します。もうそれだけで、それ以上のことはありません。上で説明したようにフォントをFirefoxでテストします（オプションA参照）。</p>
+
+<h3 id="__more-custom-parameters">カスタムパラメータについての詳細</h3>
+<p>「ファイル」＞「フォント情報」＞「インスタンス」（Cmd-I）の、「カスタムパラメータ」では、次の3つのパラメータのどれかまたは全てを追加できます。</p>
+<ul>
+<li>「Export COLR Table」</li>
+<li>「Export SVG Table」</li>
+<li>「Export sbix Table」</li>
+</ul>
+<p>これらはどのカラーテーブルを生成して実際のOpenTypeフォントに含めるか、含めないかを制御します。Webフォントのファイルサイズを抑えるためには、これらのテーブルから1つだけを出力し、他のテーブルはすべて無効にした方が良いかもしれません。例えば、オプションBで説明した方法でCPAL/COLRに基づいた設定からSVGテーブルを出力するときは、COLRテーブルの生成を抑制する方が良いでしょう。</p>
+
+<h3 id="__more-about-svg">SVGについての詳細</h3>
+<p>私たちはまだ表面をさらっただけです。SVGとその可能性の全ての沼にハマったら、仕様やサンプルコードを追っかけてみてください。</p>
+<ul>
+<li>公式 <a href="https://www.w3.org/TR/SVG11/">SVG 1.1 仕様書</a>（W3）</li>
+<li>公式 <a href="https://www.microsoft.com/typography/otspec/svg.htm">SVGテーブル仕様</a>（Microsoft Typography）</li>
+<li>Roel Nieskens氏のSVGテストページ <a href="https://pixelambacht.nl/lapislegit/">LapisLegit</a>（ブラウザがクラッシュする可能性あり。気をつけて！）</li>
+<li>Adobe TypeKitの<a href="https://color.typekit.com/">カラーフォントコンセプトページ</a> SVGフォントもあり</li>
+<li>Adobeヘルプページ <a href="https://helpx.adobe.com/typekit/using/ot-svg-color-fonts.html">OpenType-SVGカラーフォント</a></li>
+</ul>
+<p>この記事を書いた時点では、SVGテーブルはFirefox、Windows 10+、そしてAdobeアプリでサポートされています。</p>
+
+<p><small><br />
+Update 2017-01-20: サポートブラウザのリストにMicrosoft Edgeを追加。<br />
+Update 2018-03-26: sbixからSVGへの変換を追加。<br />
+Update 2018-04-14: SVGをサポートするOSとアプリを更新。Behdadさんありがとう！<br />
+Update 2019-02-01: 誤記を訂正し、兄弟（brothers）という単語を兄弟姉妹（siblings）に置換。Nathalieさんありがとう！<br />
+Update 2019-11-15: 「オプションB」の導入部を更新。<br />
+</small></p>          </div>
+
+</body>
+</html>

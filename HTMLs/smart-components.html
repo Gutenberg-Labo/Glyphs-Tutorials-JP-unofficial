@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/smart-components" />
+  <title>図形の再利用：スマートコンポーネント | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">図形の再利用：スマートコンポーネント</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rainer Erich Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/smart-components" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/fr/learn/smart-components" aria-label="French"><span class="Button-text">fr</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/smart-components" aria-label="Chinese"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content"><p>30 March 2015</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>スマートコンポーネントは、特にCJK部首の場合に、グリフのパーツ図形を再利用するための非常に優れた機能ですが、ラテン文字のパーツでも使えます。スマートに使いこなしてみましょう！</p>
+</div>
+
+<div class="Article-contentInner">
+<p>小文字の n の肩パーツを、例えば、小文字の m や h に再利用するとします。確かに、<a href="/tutorials/serif-components">スラブセリフ体を作る時に説明</a>したようにコンポーネントを使えば再利用は可能です。しかし通常のコンポーネントを使うには1つ問題があります。それはサイズが固定であるということです。</p>
+<p>m の肩の場合は調整する必要があります。大半の人は幅をもう少し狭めたいと考えるでしょう。1つの文字中に肩パーツが2つあることで生じる懐はかなり大きいからです。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/d788a41214-1605628237/shoulder-m.png"></figure>
+<p>また、ほとんどのデザイナーは小文字の h で、分岐部分を下げて切れ込みの量が n と釣り合うようにします。h のステムは n の上側のセリフと違って簡単には調整できないからです。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/6ef7997498-1605628237/shoulder-h.png"></figure>
+<p>これが、サイズが固定である通常のコンポーネントがここでは役に立たない理由です。もっと良い解決策が必要です。</p>
+
+<h3 id="__setting-up-a-smart-glyph">スマートグリフの設定</h3>
+<p>肩パーツを「スマートコンポーネント」にします。n の肩パーツをダブルクリックして選択します。次に右クリックしてコンテキストメニューを表示し、「選択パスをコンポーネント化」を選択します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/b53ce33d96-1605628237/componentFromSelection.png"></figure>
+<p>これは他のグリフでも再利用できるパーツになるので、「コンポーネントのグリフ名」の入力では <code>_part</code> から始まる名前を付けます。アンダースコアで始まる名前で作成されたグリフは、デフォルトでは出力に含まれないので、こうすることは合理的でもあります。スマートコンポーネントはフォント中に複数あることを想定して、コンポーネント名はドットから始まるサフィックスで終わらせましょう。今の場合は <code>.shoulder</code> が良いでしょう。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/d2650f8a15-1605628237/nameOfTheComponentGlyph.png"></figure>
+<p><code>_part.shoulder</code> という名の分割グリフができました。この肩パーツにアンカーを追加して他のパーツと接続できるようにしましょう。まずは、m が作れるように、続くパーツに接続用のアンカーを追加します。これに <code>connect</code> という名前をつけ、ステムの右端に合わせましょう。</p>
+<blockquote>
+<p><strong>Tip:</strong> スマートコンポーネントの名前には、<code>_part</code> の代わりに <code>_smart</code> というプレフィックスも使えます。</p>
+</blockquote>
+<p>そして、<code>_part.shoulder</code> には、吸着先のパーツに繋がるためのアンカーが必要です。吸着先のアンカーが <code>connect</code> という名であるならば、対応するアンカーは先頭にアンダースコアをつけた <code>_connect</code> という名でなければなりません。これらのアンカーはすべて同じ高さ（つまりy座標）になければならないので、アンカーはベースライン上に置くことをお勧めします。すると、このようになります。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/908fe8f6ba-1605628237/partWithAnchors.png"></figure>
+<p>このパーツは名前が <code>_part</code> で始まるので、「スマートグリフ」として認識されます。しかしレイヤーが追加されない限り、まだまだスマートとは言えません。そこで、現在のレイヤーを2回コピーして、それらに <code>NarrowShoulder</code> と <code>LowCrotch</code> という名をつけましょう。これはパネルサイドバーの「レイヤー」セクション（Cmd-Opt-P）で行えます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/4e766032d9-1605628237/layersPanel.png"></figure>
+<p>さて、<code>NarrowShoulder</code> レイヤーをアクティブにして、パーツを少し細身にしてみましょう：肩パーツの右半分を選択し、Ctrl キーと Option キーを押しながら左矢印キーを押します。選択部分が左に移動し、周囲のハンドルがそれに比例して調整されます。同時にシフトキーも押すと10ユニット移動します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/2e9cda6fed-1605628237/nudgeShoulder.gif"></figure>
+<p><code>LowCrotch</code> レイヤでも同じことを行いますが、今度は左端の2つのノードを選択して、分岐部分を低く下げます。この簡単な変形はとりあえずのものです。図形は後からでも調整可能です。</p>
+<p>ここで、<code>_part.shoulder</code> をアクティブにしたまま、キャンバス内で右クリックしてコンテキストメニューを表示させて、「スマートグリフ設定を表示」を選択します。または、「編集」＞「選択範囲の情報」（Cmd-Opt-I）を選択しても同じことができます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/8d21ec35ed-1605628237/showSmartGlyphSettings.png"></figure>
+<p>表示されたダイアログシートで、＋アイコンを押下して <code>shoulderWidth</code> というプロパティを追加し、「Limits」に <code>0</code> と <code>100</code> を入力します。プロパティ名と数値は多かれ少なかれ任意ですが、「Bottom」値は「Top」値よりも小さくする必要があります。またその値はあなたにとって意味のあるものでなければなりません。ここでは私は肩の最小幅を表す値に0を、最大幅を表す値に100を選びました。</p>
+<p>そして、<code>crotchDepth</code> という2つ目のプロパティを追加して <code>-100</code> から <code>0</code> までの範囲を指定します。私としては、<code>-100</code> は分岐部分が最も低い位置の場合を表し、<code>0</code> は通常の位置の分岐を表します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/ce114547e4-1605628237/smartProperties.png"></figure>
+<p>
+それから、ダイアログシートの「レイヤー」タブに切り替えます。ここで、Glyphsに対しどのレイヤーでプロパティ値がどれにあたるかを指定します。今の場合は、次のようになります。</p>
+<ul>
+<li>「Regular」レイヤー： <code>crotchDepth 0</code> 、<code>shoulderWidth 100</code></li>
+<li>「NarrowShoulder」レイヤー： <code>crotchDepth 0</code> 、<code>shoulderWidth 0</code></li>
+<li>「LowCrotch」レイヤー： <code>crotchDepth -100</code> 、<code>shoulderWidth 100</code></li>
+</ul>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/a35565abee-1605628237/smartLayers.png"></figure>
+<p>全てのレイヤーでプロパティを全て設定したら、「OK」ボタンをクリックしてダイアログを終了します。</p>
+
+<h3 id="__adjusting-the-smart-component">スマートコンポーネントの調整</h3>
+<p>さて、h 、m 、n といったグリフに戻って、肩のパーツを削除し、「グリフ」＞「コンポーネントの追加」（Cmd-Shift-C）から <code>_part.shoulder</code> をコンポーネントとして挿入します。</p>
+<p>そして、コンポーネントを右クリックし、コンテキストメニューから「スマートコンポーネントの設定を表示」を選択するか、また、あるいは、コンポーネントを選択して「編集」＞「選択情報」（Cmd-Opt-I）を選択すると、スライダダイアログが表示されます。配置したスマートコンポーネントをスライダで補間します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/b6343dc0ad-1605628237/sliders.png"></figure>
+<p>アンカーを活用するには、 <code>connect</code> アンカーで「ステム」をスマートグリフにすると合理的です。またおそらくは上部のセリフに湾曲を変えるための別のレイヤーを追加すれば、さまざまな角度の切れ込みが実現ができます。いずれにしろ、<code>_part.stem</code> はこのようになるでしょう。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/1a164d3c3a-1605628237/stem.png"></figure>
+<p>アンカーによる自動整列はグリフの「全ての」パーツがコンポーネントである場合にのみ機能します。グリフ内に通常のパスが存在すると、自動整列は直ちに無効となり、アンカーは無視されます。</p>
+<p>さて、例えば小文字の m の場合、最初にコンポーネントの <code>_part.stem</code> を配置し、続けて <code>_part.shoulder</code> を2回配置します。アンカーでうまく繋がることがわかるでしょう。そしてまた、スマートコンポーネントをパラメータで調節できます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/9db59642c9-1605628237/smartM.png"></figure>
+
+<h3 id="__smart-components-as-cjk-radicals">CJK部首をスマートコンポーネントに</h3>
+<p>スマートコンポーネントの本来の目的は、CJK統合漢字をより効率的にデザインすることでした。中国語・日本語・韓国語では、いくつかの文字が再利用されてもっと複雑な表意文字になります。これらの文字は他の文字の根（ラテン語「radix」）となるので、部首（英語「radical」）と呼ばれます。</p>
+<p>そのため、<code>_part</code> で始まるグリフだけではなく、全てのCJK部首もまたスマートグリフとみなされます。当然ながら、スマートコンポーネントの設定はもっと複雑なものになります。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/c7d47b4f62-1605628237/CJKradical.png"></figure>
+
+<h3 id="__smart-scaling-with-the-bounding-box">バウンディングボックスによるスマートな拡大・縮小</h3>
+<p><code>Height</code> および <code>Width</code> という名前（大文字始まり）のプロパティがある場合、「表示」 > 「バウンディングボックスを表示」（Cmd-Opt-Shift-B）をオンにすると、ボックスの白丸のドラッグで <code>Height</code> と <code>Width</code> プロパティが操作できます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/b3a1623dbe-1605628237/cjkweightwidth.gif"></figure>
+<p>このスマートコンポーネントなら、スライダなんかよりずっと便利で直観的にサイズを操作できます。</p>
+
+<h3 id="__smart-handles">スマートハンドル</h3>
+<p>こうして、高さと幅について無様なスライダーを撤去することができました。しかし他の全てのパラメータではどうでしょう？ いえ、心配は要りません。Glyphs 2.5 以降では、スマートコンポーネントで独自のハンドルを追加できるようになりました！ やり方を説明します。</p>
+<p>スマートグリフのレイヤーの全てに、プロパティ名のついたアンカーを追加します。そして、最も然るべき位置にそれらを配置します。以下の2つのCJK部首のスマートレイヤーを見比べて、「Right Arm」アンカーの位置に注目してください。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/c8f54f747e-1605628237/smarthandles.png"></figure>
+<p>アンカー名とプロパティ名が完全に一致していることを確認してください。プロパティの全てをアンカー名として追加する必要はありません。しかし追加するアンカーは全てのレイヤーにある必要があります。すると、スマートコンポーネントでは（プロパティスライダの代わりに）ドラッグ可能なハンドルがグリフに表示されます：</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/90d66b754d-1605628237/smarthandles.gif"></figure>
+<p>ね、すごいでしょ？</p>
+
+<p><small><br />
+サンプルフォント：Vesper、Rob Keller 氏および Kimya Gandhi 氏 提供<br />
+Update 2017-12-11: 注記に代替可能な名前 <code>_smart</code> を追記。スマートな拡大・縮小とスマートハンドルを追記。<br />
+Update 2018-12-07: 誤記訂正、ウェイトじゃなくて、高さ。やれやれ。<br />
+</small></p>          </div>
+
+</body>
+</html>
