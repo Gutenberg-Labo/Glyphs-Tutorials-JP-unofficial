@@ -5,7 +5,7 @@
 
 * ベストエフォートでの運用であり、公式サイトの最新版とは内容が異なる場合があります。
 * 内容には誤訳を含む場合があります。修正のご指摘は大歓迎です。
-* この公開に対し、[Glyphs 公式](https://glyphsapp.com)から警告があれば公開停止に応じます。
+* [Glyphs 公式](https://glyphsapp.com)によると、本翻訳とは別に、[日本語版チュートリアルを公式に準備する予定である](https://forum.glyphsapp.com/t/permission-to-publish-some-japanese-translations-of-the-tutorials/16439/5)そうです。
 
 <br />
 
