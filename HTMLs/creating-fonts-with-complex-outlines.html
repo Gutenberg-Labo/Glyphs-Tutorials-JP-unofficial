@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/creating-fonts-with-complex-outlines" />
+  <title>複雑なアウトラインのフォントの作成 | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">複雑なアウトラインのフォントの作成</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rainer Erich Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button
+      href="https://glyphsapp.com/learn/creating-fonts-with-complex-outlines" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/fr/learn/creating-fonts-with-complex-outlines" aria-label="Français"><span class="Button-text">fr</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/creating-fonts-with-complex-outlines" aria-label="中文"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content"><p>20 December 2016</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>グランジフォント、手書きフォント、滲んだ活版印刷フォント：複雑なフォントを作るあなたのためのチュートリアルです。</p>
+</div>
+
+<div class="Article-contentInner">
+<p>現在のフォント技術は主として「通常の」書体が対象です。つまり使われている技術仕様では次のようなフォントが想定されています。</p>
+<ul>
+<li>アウトラインはシンプルで、ノード数は可能な限り最少である</li>
+<li>極点にノードがある（<a href="https://glyphsapp.com/tutorials/drawing-good-paths">良いパスの描画についてはこちらを参照</a>）</li>
+<li>複数のグリフで同じような形状のパーツを共有する（例えば、小文字の n、h、m の肩パーツはほぼ同じ形である）</li>
+<li>まとまった数（大抵の場合、数百〜千個ほど）のグリフがある</li>
+</ul>
+<p>さて、もしあなたのフォントがこの前提条件から一つでも「外れて」いたら、それがいわゆる「複雑な」アウトラインです。もしあなたのフォントのアウトラインがそうであれば、サブルーチン化やヒンティングを行い、場合によってはパスを調整する必要もあるかもしれません。そうしないとフォントの出力ができないかもしれませんし、さらに悪いことには、出力してリリースできたもののエンドユーザのパフォーマンスに支障がでて、大量のサポートメールを受け取る羽目になるかもしれません。それじゃいけませんね。</p>
+<p>複雑なアウトラインというのは何かというと、こういうものです。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/dd1eb73526-1605628244/adinah.png"></figure>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/3cf594dd98-1605628244/fairwater.png"></figure>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/c448017852-1605628244/letterpress.png"></figure>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/a8d1f420bd-1605628244/weingut.png"></figure>
+<p><small><br />
+タイプフェイス：<a href="http://handfoundry.com/work/#/adinah/">Adinah</a> Andy Lethbridge氏、<a href="http://lauraworthingtontype.com/family/fairwater-collection/">Fairwater</a> Laura Worthington氏、<a href="http://www.facetype.org/?font=letterpress">Letterpress</a> Marcus Sterz氏、<a href="http://www.facetype.org/?font=weingut">Weingut</a> Georg Herold-Wildfellner氏</small></p>
+
+<h3 id="g-__subroutines">サブルーチン</h3>
+<p>サブルーチン化とは、CFFフォント（つまり、PostScriptアウトラインを含んだフォントで、拡張子は.otf）においてファイルサイズを節約する仕組みで、アウトラインから反復的な構造を探し出し、それらをいわゆる「サブルーチン」というものに格納しようとするものです。コンポーネントに少し似ていますが、これはグリフまるごとだけではなく、パスや曲線も扱います。これは出力時に自動で行われるので、通常では気にする必要はありません。</p>
+<p>サブルーチン化は、同じような形状がたくさんあって、グリフ数が数百〜数千程度のような、普通のサイズのフォントで最も効果的に働きます。グランジフォントやスキャンフォントのように、異なる形状があまりに多い場合、サブルーチン化は限界に達します。アウトラインが非常に複雑で細かかったり、グリフあたりのノード数が非常に多かったりする場合もそうです。または、多くのCJKフォントのように、グリフ数が非常に多い、例えば2万個とかそれ以上の数のグリフがあるフォントの場合でもそうなります（もっと知りたいですか？ <a href="https://blogs.adobe.com/CCJKType/2012/02/subroutinization.html">CJKフォントのサブルーチン化に関するKen Lunde氏のブログ記事を読んでください</a>）。これらのどれかに当てはまる場合、出力に異常に時間がかかることに気が付くでしょう。これはサブルーチン化アルゴリズムが何万～何億ものアウトラインから同じような形状を探し出しているからです。大量の図形の中で同じ形状があっても、再利用されているのはごくわずかだったりすると、サブルーチンのせいで、フォントサイズが小さくなるどころか大きくなってしまう場合があり得ます。フォントが全く出力されない場合すらあります。</p>
+<p>「Disable Subroutines」パラメータは、サブルーチン化をオフにします。「ファイル」＞「フォント情報」＞「インスタンス」からそれぞれのインスタンスに行き、各インスタンスの「カスタムパラメータ」テーブルで、＋アイコンから新しいパラメータを追加し、「プロパティ」を「Disable Subroutines」に切り替え、「値」欄に表示されるチェックボックスをオンにします。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/3ea3dcf968-1605628244/disablesubroutines.png"></figure>
+<p>次の場合はサブルーチン化の無効化を検討してみてください。</p>
+<ul>
+<li><strong>グリフ数が非常に多い。</strong>フォントに含まれるグリフが数千個やそれ以上</li>
+<li><strong>似た形状がない。</strong>グランジ、手書き、活版印刷、またはランサムノートフォントのように、フォント全体のポイントとしてはグリフの見ためがなるべく揃っていない</li>
+<li><strong>アウトラインが極めて細密。</strong>ドロップキャップ、シンボル、アイコン、イラスト、ディンバットフォントなど</li>
+<li><strong>ノード数が多い。</strong>一つのグリフに最低でも3桁個のノードがある</li>
+</ul>
+
+<h3 id="g-__hinting">ヒンティング</h3>
+<p><a href="https://www.glyphsapp.com/tutorials/hinting-manual-postscript-hinting">ヒンティング</a>とはアウトライン部分にヒント情報を追加する処理です。ヒントは、グリフのどの部分が重要なステムか、グリッド・フィットで保持すべきか犠牲にするかという、ラスタライザーの決定を補助します。グリッド・フィットとは、「アウトラインを歪めて」ピクセルのグリッドに落とし込む処理です。</p>
+<p>ええ、そうなんです。「ヒンティングとは形状を保持するものではなく、逆に歪ませるものです」。ヒンティングは、小さなサイズのピクセルへとうまく落とし込むために、形状への忠実度を犠牲にします。その結果画面上のテキストはよりきれいに、より鮮明に、より統一感が出て、さらに読みやすくなります。しかし、ヒンティングにはアウトラインに多くの条件が必要です。それは出来るだけきれいで「普通」でなければならないのです。</p>
+<p>次の場合はヒンティングを付けないことを検討してみてください。</p>
+<ul>
+<li>意図的に一貫性をもたせていない、不均質な、 <strong>形状に似たところがない</strong>フォント</li>
+<li>ある文字の終筆を次の文字の入筆と正確に一致させなければならない、<strong>連続するスクリプトのフォント</strong></li>
+<li><strong>極めて細密なアウトライン</strong>のフォント</li>
+<li>グリフあたりの <strong>ノード数が非常に多い</strong>フォント</li>
+<li>「ファイル」＞「フォント情報」＞「マスター」で<strong>アライメントゾーンがない</strong>フォント</li>
+<li>「ファイル」＞「フォント情報」＞「マスター」で<strong>スタンダードステムが設定されていない</strong>フォント</li>
+<li>以下のような<strong>通常ではないアウトライン</strong>を持つフォント
+<ul>
+<li>極点にノードがない</li>
+<li>ステムの太さが異なっていたり、不均質である</li>
+<li>アライメントゾーンに常には届かない</li>
+<li>「ラフ」や「ハッチング」のような装飾効果だけでなく、インライン、アウトライン、点線、影、3D効果といったフィルタをかけて制作している</li>
+</ul></li>
+</ul>
+<p>フォントのヒンティングを避けるには、<a href="https://www.glyphsapp.com/tutorials/hinting-postscript-autohinting">オートヒンティング</a>を無効にすることと、設定されたヒントを手動で削除することの、2つを行う必要があります。オートヒンティングを削除するには、単に「ファイル」＞「出力」ダイアログで「オートヒント」オプションを無効にするだけです。あるいは、もちろん「ファイル」＞「フォント情報」＞「インスタンス」で「Autohint」カスタムパラメータの値をオフにします。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/af0117a245-1605628244/autohintingoff.png"></figure>
+<p>これまでに手動で設定されたヒントを削除するには、フォントビューで左下の隅にある歯車アイコンを押下して、「スマートフィルタを追加」を選択します。表示されたダイアログで、スマートフィルタに何か妥当な名前をつけ、「ヒンティングされている：はい」を設定します。「OK」を押下してダイアログを確定し左のサイドバーからスマートフィルタを選択します。そしてグリフを探してヒントを手動で削除します。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/54e0417f3c-1605628244/glyphswithhints.png"></figure>
+<p>もしくは、もっと簡単に、手動によるヒントを削除するスクリプトがあります。私の<a href="https://github.com/mekkablue/Glyphs-Scripts/">GitHubのmekkablue Scriptsリポジトリ</a>の、「Hinting」＞「Delete all Hints in Font」、などなどです。インストール方法はリポジトリのreadmeに書かれています。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/3b2b870441-1605628244/hintingscripts.png"></figure>
+<p>そうして完成したOpenTypeフォントにヒントが混入していないかを確かめるために、フォントをテストします。出力したOTFをGlyphsで開き、前の段落で説明したスマートフィルタを適用します。あるいは、<a href="http://fontmaster.nl">DTL OTMaster</a>といったアプリでグリフを検査します。</p>
+
+<h3 id="g-__paths">パス</h3>
+<p>これまで複雑なパス、つまりノード数の多いパスについて説明しました。あなたは複雑なアウトラインをデザインし、局所的なフォント関係者の提案に沿ってサブルーチン化とヒンティングを無効にした、善良な市民であるとします。それでも、CFFベースのOTFでは<strong>多数の小さな曲線セグメント</strong>が問題になり得るので、まだ問題があるかもしれません。</p>
+<p>まず、そういうフォントは画面上では問題ないかもしれませんが、プリンタでは「サブパスが多すぎて」エラーになることがあります。ラスタライズの際に、それぞれの小さな曲線セグメントはたくさんの小さな線分、いわゆる「サブパス」と呼ばれるものに分割されます。これらは本当に小さいので、ラスタライズの解像度の閾値を大きく下回ってしまいます。レーザープリンタでは、この解像度は比較的高いかもしれませんが、足し合わされて完全な曲線セグメントへと置き換えられることになるサブパスは、非常に短く、もちろん、数も非常に多くなります。これは、たくさんのサブパスに分割された曲線セグメントを拡大したものです。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/b3e7208123-1605628244/subpaths.png"></figure>
+<p>次に、そういうフォントをMicrosoft Windowsで扱うとパフォーマンスに問題が生じる可能性があります。例えば、6文字の単語を入力して、それから、文字が次々と現れるまで10秒とかそのくらい待つという感じです。そもそもWindowsはCFFアウトラインの扱いに問題を抱えていて、レドモンド（訳注：MS社の本拠地）からやって来た我々の善き友人たるOSにとって「複雑な」CFFはあまりにも遠い橋になりかねません。</p>
+<p>この問題を扱うには2つの方法があります。</p>
+<p>一つ目は、デザインに問題なければ、全ての曲線セグメントを線分に置き換えることです。この解決策の背景となる根拠とはレンダリングは曲線セグメントより線分の方がずっと容易であることです。</p>
+<p>これを行うプラグインがあります。Retractorです。「ウィンドウ」＞「プラグインマネージャ」から探し出してインストールしましょう。このプラグインは「フィルタ」カスタムパラメータを使えば出力時に自動で起動させられます（詳細は<a href="https://github.com/mekkablue/Retractor">フィルタのreadme</a>を参照）。グランジフォント、滲みフォント、活版印刷フォントといった、非常に小さな曲線セグメントを持つフォントでは通常はこれを推奨します。</p>
+<p>アウトラインに大きめの曲線セグメントがある時は、全てを小さな線分へ置き換えるラフフィルタ（「フィルタ」＞「ラフ」）を使ってみてはいかがでしょうか。変位させる値は小さめか、おそらく0でも構いませんが、「セグメントのサイズ」は少しだけ大きくしましょう。このフィルタもまたカスタムパラメータによって起動させることができて、フィルタのウィンドウの左下の隅にある歯車アイコンからクリップボードにコピーし、「ファイル」＞「フォント情報」＞「インスタンス」で「カスタムパラメータ」テーブルにペーストすればOKです。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/fa378c1989-1605628244/roughen.png"></figure>
+<p>二つ目は、デザイン上曲線セグメントをきちんと保持する必要がある場合は、フォントをTrueTypeアウトラインで出力することを検討してください。ここでの考え方は、実際はTrueTypeの方がCFF/PostScriptよりも複雑な処理をできるということです。フォントをTrueTypeで出力するには、「ファイル」＞「出力」＞で「True Type として保存」オプションをオンにするか、「ファイル」＞「フォント情報」＞「インスタンス」で「Save as TrueType」カスタムパラメータを使用します。とても簡単です。</p>          </div>
+
+</body>
+</html>
