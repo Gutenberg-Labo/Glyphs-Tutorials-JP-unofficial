@@ -108,4 +108,4 @@ by Rainer Erich Scheichelbauer
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/fa378c1989-1605628244/roughen.png">
 
-2つ目は、デザイン上曲線セグメントをきちんと保持する必要がある場合、フォントをTrueTypeアウトラインで出力することを検討してください。ここでの考え方は、実際はTrueTypeの方がCFF/PostScriptよりも複雑な処理をできるということです。フォントをTrueTypeで出力するには、「ファイル」＞「出力」＞で「True Type として保存」オプションをオンにするか、「ファイル」＞「フォント情報」＞「インスタンス」で「Save as TrueType」カスタムパラメータを使用します。とても簡単です。
+2つ目は、デザイン上曲線セグメントをきちんと保持する必要がある場合、フォントをTrueTypeアウトラインで出力することを検討してください。ここでの考え方は、実際はTrueTypeの方がCFF/PostScriptよりも複雑な処理をできるということです。フォントをTrueTypeで出力するには、「ファイル」＞「出力」＞で「True Type として保存」オプションをオンにするか、「ファイル」＞「フォント情報」＞「インスタンス」で「Save as TrueType」カスタムパラメータを使用します。簡単ですね。
