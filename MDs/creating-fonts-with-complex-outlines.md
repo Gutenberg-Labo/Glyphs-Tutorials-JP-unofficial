@@ -35,7 +35,7 @@ by Rainer Erich Scheichelbauer
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/a8d1f420bd-1605628244/weingut.png">
 
-タイプフェイス：[Adinah](http://handfoundry.com/work/#/adinah/) Andy Lethbridge氏、[Fairwater](http://lauraworthingtontype.com/family/fairwater-collection/) Laura Worthington氏、[Letterpress](http://www.facetype.org/?font=letterpress) Marcus Sterz氏、[http://www.facetype.org/?font=weingut](Weingut) Georg Herold-Wildfellner氏
+タイプフェイス：[Adinah](http://handfoundry.com/work/#/adinah/) Andy Lethbridge氏、[Fairwater](http://lauraworthingtontype.com/family/fairwater-collection/) Laura Worthington氏、[Letterpress](http://www.facetype.org/?font=letterpress) Marcus Sterz氏、[Weingut](http://www.facetype.org/?font=weingut) Georg Herold-Wildfellner氏
 
 ### サブルーチン
 
