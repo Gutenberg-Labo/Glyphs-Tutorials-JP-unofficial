@@ -19,7 +19,8 @@ Updates are very infrequent, but there is a plan to increase the contents.
 
 ## Index
 
-* [複数レイヤーのカラーフォントの作成 (Creating a Layered Color Font)](https://github.com/Gutenberg-Labo/Glyphs-Tutorials-JP-unofficial/blob/main/MDs/creating-a-layered-color-font.md)
-* [SVGカラーフォントの作成 (Creating an SVG Color Font)](https://github.com/Gutenberg-Labo/Glyphs-Tutorials-JP-unofficial/blob/main/MDs/creating-an-svg-color-font.md)
-* [複雑なアウトラインのフォントの作成 (Creating Fonts with Complex Outlines)](https://github.com/Gutenberg-Labo/Glyphs-Tutorials-JP-unofficial/blob/main/MDs/creating-fonts-with-complex-outlines.md)
-* [図形の再利用：スマートコンポーネント (Reusing Shapes: Smart Components)](https://github.com/Gutenberg-Labo/Glyphs-Tutorials-JP-unofficial/blob/main/MDs/smart-components.md)
+* [複数レイヤーのカラーフォントの作成 (Creating a Layered Color Font)](/MDs/creating-a-layered-color-font.md)
+* [SVGカラーフォントの作成 (Creating an SVG Color Font)](/MDs/creating-an-svg-color-font.md)
+* [複雑なアウトラインのフォントの作成 (Creating Fonts with Complex Outlines)](/MDs/creating-fonts-with-complex-outlines.md)
+* [Glyphsの過去バージョン (Older Versions of Glyphs)](/MDs/older-versions-of-glyphs.md)
+* [図形の再利用：スマートコンポーネント (Reusing Shapes: Smart Components)](/MDs/smart-components.md)
