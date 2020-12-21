@@ -85,7 +85,7 @@ Glyphs Miniの場合は、バージョン番号のすぐ前に `Mini` を追加�
 | 3.0.1 | 3033 |
 | 3.0.2 | 3040 |
 
-**例：** バージョン2.6.1はビルド番号1193から始まります。したがって、ビルド番号1194、1195、1196なども2.6.1のURL、例えば `updates.glyphsapp.com/Glyphs2.6.1-1196.zip` からアクセス可能です。ビルド番号を指定して404エラーが出たら、おそらくその番号のビルドは後のバージョンに統合されたのでしょう。
+**例：** バージョン2.6.1はビルド番号1193から始まります。したがって、ビルド番号1194、1195、1196なども2.6.1のURL、例えば `updates.glyphsapp.com/Glyphs2.6.1-1196.zip` からアクセス可能です。ビルド番号を指定して404エラーが出たら、おそらくその番号のビルドは後のビルドへ統合されたのでしょう。
 
 ### Glyphs Mini ビルド番号
 
@@ -108,7 +108,7 @@ Glyphs Miniの場合は、バージョン番号のすぐ前に `Mini` を追加�
 
 ## PowerPC用のGlyphs
 
-Intel G4またはG5以前のCPUを搭載した非常に古いMacをお使いの場合、PPC対応の最新版とIntel [Universal Binary](http://en.wikipedia.org/wiki/Universal_binary)を、[updates.glyphsapp.com/latestPPC.php](https://updates.glyphsapp.com/latestPPC.php)のリンクから入手できます。この記事を書いている時点で、PPC対応の最新版はバージョン1.2.6です。
+Intel G4またはG5以前のCPUを搭載した非常に古いMacをお使いの場合、PPC対応の最新版とIntel [Universal Binary](http://en.wikipedia.org/wiki/Universal_binary)を、[updates.glyphsapp.com/latestPPC.php](https://updates.glyphsapp.com/latestPPC.php)のリンクから入手できます。この記事を書いた時点では、PPC対応の最新版はバージョン1.2.6です。
 
 ********
 
