@@ -129,6 +129,7 @@ GlyphsまたはGlyphs Miniを開こうとしたら、このようなセキュリ
 4. 現れたFinderのウィンドウから、「Terminal.app」を探してダブルクリックしてください。Terminalウィンドウが現れて、大体このような感じに表示されます。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/dbb61fe797-1605628239/terminal-0-open.png">
 ウインドウの大きさは話に関係しませんが、気になるなら、右下をドラッグすればサイズを変更できます。
+
 5. **Glyphs 3**をお使いの場合、次の行を選択してコピー（Cmd-C）してください。  
 `sudo /Applications/Glyphs\ 3.app/Contents/MacOS/Glyphs -disableUI 1`
 
