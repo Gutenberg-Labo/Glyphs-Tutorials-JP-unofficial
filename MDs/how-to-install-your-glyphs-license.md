@@ -45,13 +45,13 @@ Published on 29 February 2016
 現在インストール済みのGlyphsまたはGlyphs Miniをアプリケーションフォルダからゴミ箱へ移します。
 </li>
 <li>
-ゴミ箱を空にする。
+ゴミ箱を空にします。
 </li>
 <li>
-それから[最新バージョンのGlyphs 3](http://updates.glyphsapp.com/latest3.php)、または[最新バージョンのGlyphs 2](http://updates.glyphsapp.com/latest2.php)、あるいは[最新バージョンのGlyphs Mini 2](http://updates.glyphsapp.com/latestMini2.php)を再ダウンロードする（自動的に解凍されなかった場合、下記のNoteを参考に.zipファイルを解凍してください）
+それから<a href="http://updates.glyphsapp.com/latest3.php">最新バージョンのGlyphs 3</a>、または<a href="http://updates.glyphsapp.com/latest2.php">最新バージョンのGlyphs 2</a>、あるいは<a href="http://updates.glyphsapp.com/latestMini2.php">最新バージョンのGlyphs Mini 2</a>を再ダウンロードします（自動的に解凍されなかった場合、下記のNoteを参考に.zipファイルを解凍してください）
 </li>
 <li>
-ダウンロードしたてのアプリをダウンロードフォルダから「アプリケーション」フォルダへ移動する。
+ダウンロードしたてのアプリをダウンロードフォルダから「アプリケーション」フォルダへ移動します。
 </li>
 <li>
 そしてアプリを右クリックし、コンテキストメニューの一番上の「開く」を選択します。
