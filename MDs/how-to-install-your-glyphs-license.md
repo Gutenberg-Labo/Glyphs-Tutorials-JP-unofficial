@@ -123,40 +123,53 @@ GlyphsまたはGlyphs Miniを開こうとしたら、このようなセキュリ
 
 まだうまく行きませんか？ 残念ながら、あなたはこの問題を抱える0.01%のユーザです。おそらく、ライセンスの有効期限が切れたというウィンドウが表示され続けているのではないでしょうか。お手数をかけますが、でも私たちはあなたを助けられると思います。ということで、厳しいですがやりましょう。ターミナルを使います。以下の手順でお願いします。
 
-1. 「Glyphs 3.app」、「Glyphs.app」、または「Glyphs Mini.app」が「アプリケーション」フォルダ内にあることを確かめてください。
-
-2. （複製した）`.glyphs3License` 、`.glyphs2License` あるいは `.glyphsMini2License` ファイルをデスクトップに置いてください。
-
-3. Finderで、メニューから「移動」＞「ユーティリティ」（Cmd-Shift-U）を選択します。
-
-4. 現れたFinderのウィンドウから、「Terminal.app」を探してダブルクリックしてください。Terminalウィンドウが現れて、大体このような感じに表示されます。  
+<ol>
+<li>
+「Glyphs 3.app」、「Glyphs.app」、または「Glyphs Mini.app」が「アプリケーション」フォルダ内にあることを確かめてください。
+</li>
+<li>
+（複製した）`.glyphs3License` 、`.glyphs2License` あるいは `.glyphsMini2License` ファイルをデスクトップに置いてください。
+</li>
+<li>
+Finderで、メニューから「移動」＞「ユーティリティ」（Cmd-Shift-U）を選択します。
+</li>
+<li>
+現れたFinderのウィンドウから、「Terminal.app」を探してダブルクリックしてください。Terminalウィンドウが現れて、大体このような感じに表示されます。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/dbb61fe797-1605628239/terminal-0-open.png">  
 ウインドウの大きさは話に関係しませんが、気になるなら、右下をドラッグすればサイズを変更できます。
-
-5. **Glyphs 3**をお使いの場合、次の行を選択してコピー（Cmd-C）してください。  
+</li>
+<li>
+**Glyphs 3**をお使いの場合、次の行を選択してコピー（Cmd-C）してください。  
 `sudo /Applications/Glyphs\ 3.app/Contents/MacOS/Glyphs -disableUI 1`  
 **Glyphs 2**をお使いの場合は、次の行を選択してコピー（Cmd-C）してください。  
 `sudo /Applications/Glyphs.app/Contents/MacOS/Glyphs -disableUI 1`  
 もし**Glyphs Mini**をお使いなら、次の行を選択してコピー（Cmd-C）してください。  
 `sudo /Applications/Glyphs\ Mini.app/Contents/MacOS/Glyphs\ Mini -disableUI 1`
-
-6. ターミナルのウィンドウに戻って、今コピーした行をペースト（Cmd-V）してください。このような感じになります。  
+</li>
+<li>
+ターミナルのウィンドウに戻って、今コピーした行をペースト（Cmd-V）してください。このような感じになります。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/c6a9afbd85-1605628239/terminal-1-paste.png">
-
-7. さて、非常に重要なのですが、「スペースキーを押します」。次のステップへ進むにはこの行の `1` の後ろにスペースが必要です。さっきとの違いにご注意ください。  
+</li>
+<li>
+さて、非常に重要なのですが、「スペースキーを押します」。次のステップへ進むにはこの行の `1` の後ろにスペースが必要です。さっきとの違いにご注意ください。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/217029d8f5-1605628239/terminal-2-space.png">
-
-8. このウィンドウへ `.glyphs3License` 、`.glyphs2License` あるいは `.glyphsMini2License` のファイルをドラッグします。  
+</li>
+<li>
+このウィンドウへ `.glyphs3License` 、`.glyphs2License` あるいは `.glyphsMini2License` のファイルをドラッグします。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/63f29428aa-1605628239/terminal-3-drop.png">  
 ターミナルウィンドウ内のテキストに何やらほげほげと追加され、このような感じになります。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/4d68b168b3-1605628239/terminal-4-return.png">
-
-9. そこでリターンキーを押すと、ターミナルからユーザアカウントのパスワード（Macのログインパスワード）の入力を求められます。  
+</li>
+<li>
+そこでリターンキーを押すと、ターミナルからユーザアカウントのパスワード（Macのログインパスワード）の入力を求められます。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/ac1a5bbeca-1605628240/terminal-5-password.png">  
-パスワードを入力してリターンキーを押します。<strong>注意：通常はパスワードは中黒の点々（•••）で表示され文字は見えませんが、ターミナルではパスワードは常にそう扱われるので、それでOKです。見えないまま入力して、リターンキーを押してください。</strong>入力をミスしても、慌てずに、もう一度入力してください。  
-
-10. リターンキーを押して、パスワードの入力が正しければ、サンクスメッセージを含むテキストが、新たに何行か表示されます。  
+パスワードを入力してリターンキーを押します。<strong>注意：通常はパスワードは中黒の点々（•••）で表示され文字は見えませんが、ターミナルではパスワードは常にそう扱われるので、それでOKです。見えないまま入力して、リターンキーを押してください。</strong>入力をミスしても、慌てずに、もう一度入力してください。
+<li>
+<li>
+リターンキーを押して、パスワードの入力が正しければ、サンクスメッセージを含むテキストが、新たに何行か表示されます。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/13d700334f-1605628239/terminal-6-thankyou.png">
+</li>
+</ol>
 
 おめでとう。できました！ いますぐアプリを起動して、「Glyphs」＞「登録...」または「Glyphs Mini」＞「登録...」をそれぞれ選択すれば、登録できたことが確認できます。さあ「ファイル」＞「新規作成」（Cmd-N）から素敵なフォントを作りましょう。
 
