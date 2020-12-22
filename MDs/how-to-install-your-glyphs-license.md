@@ -139,11 +139,11 @@ Finderで、メニューから「移動」＞「ユーティリティ」（Cmd-S
 ウインドウの大きさは話に関係しませんが、気になるなら、右下をドラッグすればサイズを変更できます。
 </li>
 <li>
-**Glyphs 3**をお使いの場合、次の行を選択してコピー（Cmd-C）してください。  
+<strong>Glyphs 3</strong>をお使いの場合、次の行を選択してコピー（Cmd-C）してください。  
 `sudo /Applications/Glyphs\ 3.app/Contents/MacOS/Glyphs -disableUI 1`  
-**Glyphs 2**をお使いの場合は、次の行を選択してコピー（Cmd-C）してください。  
+<strong>Glyphs 2</strong>をお使いの場合は、次の行を選択してコピー（Cmd-C）してください。  
 `sudo /Applications/Glyphs.app/Contents/MacOS/Glyphs -disableUI 1`  
-もし**Glyphs Mini**をお使いなら、次の行を選択してコピー（Cmd-C）してください。  
+もし<strong>Glyphs Mini</strong>をお使いなら、次の行を選択してコピー（Cmd-C）してください。  
 `sudo /Applications/Glyphs\ Mini.app/Contents/MacOS/Glyphs\ Mini -disableUI 1`
 </li>
 <li>
