@@ -40,13 +40,27 @@ Published on 29 February 2016
 
 最初にとるべき手段はダウンロードのやり直しです。次の手順に従ってください。
 
-1. 現在インストール済みのGlyphsまたはGlyphs Miniをアプリケーションフォルダからゴミ箱へ移す。
-2. ゴミ箱を空にする。
-3. それから[最新バージョンのGlyphs 3](http://updates.glyphsapp.com/latest3.php)、または[最新バージョンのGlyphs 2](http://updates.glyphsapp.com/latest2.php)、あるいは[最新バージョンのGlyphs Mini 2](http://updates.glyphsapp.com/latestMini2.php)を再ダウンロードする（自動的に解凍されなかった場合、下記のNoteを参考に.zipファイルを解凍してください）
-4. ダウンロードしたてのアプリをダウンロードフォルダから「アプリケーション」フォルダへ移動する。
-5. そしてアプリを右クリックし、コンテキストメニューの一番上の「開く」を選択します。  
+<ol>
+<li>
+現在インストール済みのGlyphsまたはGlyphs Miniをアプリケーションフォルダからゴミ箱へ移します。
+</li>
+<li>
+ゴミ箱を空にする。
+</li>
+<li>
+それから[最新バージョンのGlyphs 3](http://updates.glyphsapp.com/latest3.php)、または[最新バージョンのGlyphs 2](http://updates.glyphsapp.com/latest2.php)、あるいは[最新バージョンのGlyphs Mini 2](http://updates.glyphsapp.com/latestMini2.php)を再ダウンロードする（自動的に解凍されなかった場合、下記のNoteを参考に.zipファイルを解凍してください）
+</li>
+<li>
+ダウンロードしたてのアプリをダウンロードフォルダから「アプリケーション」フォルダへ移動する。
+</li>
+<li>
+そしてアプリを右クリックし、コンテキストメニューの一番上の「開く」を選択します。
 <img alt="Right click the app icon, and choose Open from the context menu." src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/68ea2a5c9b-1607121762/rightclicktoopen.png">
-6. ダイアログが表示されたら確認し、ライセンスファイルを再び開いてみてください。
+</li>
+<li>
+ダイアログが表示されたら確認し、ライセンスファイルを再び開いてみてください。
+</li>
+</ol>
 
 > ### Note
 > ダウンロードしたファイルを解凍する際は、macOS標準の解凍ツール「アーカイブユーティリティ」の使用をお勧めします。「サードパーティ製のツールで解凍したところアプリが壊れてしまい開けなかった」という報告を受けています。
