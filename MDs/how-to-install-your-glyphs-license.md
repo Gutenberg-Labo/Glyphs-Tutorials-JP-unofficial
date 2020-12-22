@@ -139,12 +139,12 @@ Finderで、メニューから「移動」＞「ユーティリティ」（Cmd-S
 ウインドウの大きさは話に関係しませんが、気になるなら、右下をドラッグすればサイズを変更できます。
 </li>
 <li>
-<strong>Glyphs 3</strong>をお使いの場合、次の行を選択してコピー（Cmd-C）してください。  
-`sudo /Applications/Glyphs\ 3.app/Contents/MacOS/Glyphs -disableUI 1`  
-<strong>Glyphs 2</strong>をお使いの場合は、次の行を選択してコピー（Cmd-C）してください。  
-`sudo /Applications/Glyphs.app/Contents/MacOS/Glyphs -disableUI 1`  
-もし<strong>Glyphs Mini</strong>をお使いなら、次の行を選択してコピー（Cmd-C）してください。  
-`sudo /Applications/Glyphs\ Mini.app/Contents/MacOS/Glyphs\ Mini -disableUI 1`
+<strong>Glyphs 3</strong>をお使いの場合、次の行を選択してコピー（Cmd-C）してください。<br />
+<code>sudo /Applications/Glyphs\ 3.app/Contents/MacOS/Glyphs -disableUI 1</code><br />
+<strong>Glyphs 2</strong>をお使いの場合は、次の行を選択してコピー（Cmd-C）してください。<br />
+<code>sudo /Applications/Glyphs.app/Contents/MacOS/Glyphs -disableUI 1</code><br />
+もし<strong>Glyphs Mini</strong>をお使いなら、次の行を選択してコピー（Cmd-C）してください。<br />
+<code>sudo /Applications/Glyphs\ Mini.app/Contents/MacOS/Glyphs\ Mini -disableUI 1</code>
 </li>
 <li>
 ターミナルのウィンドウに戻って、今コピーした行をペースト（Cmd-V）してください。このような感じになります。  
