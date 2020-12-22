@@ -47,7 +47,6 @@ Published on 29 February 2016
 5. そしてアプリを右クリックし、コンテキストメニューの一番上の「開く」を選択します。  
 <img alt="Right click the app icon, and choose Open from the context menu." src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/68ea2a5c9b-1607121762/rightclicktoopen.png">
 6. ダイアログが表示されたら確認し、ライセンスファイルを再び開いてみてください。
-<br />
 
 > ### Note
 > ダウンロードしたファイルを解凍する際は、macOS標準の解凍ツール「アーカイブユーティリティ」の使用をお勧めします。「サードパーティ製のツールで解凍したところアプリが壊れてしまい開けなかった」という報告を受けています。
