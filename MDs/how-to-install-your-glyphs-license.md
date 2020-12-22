@@ -164,7 +164,7 @@ Finderで、メニューから「移動」＞「ユーティリティ」（Cmd-S
 そこでリターンキーを押すと、ターミナルからユーザアカウントのパスワード（Macのログインパスワード）の入力を求められます。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/ac1a5bbeca-1605628240/terminal-5-password.png">  
 パスワードを入力してリターンキーを押します。<strong>注意：通常はパスワードは中黒の点々（•••）で表示され文字は見えませんが、ターミナルではパスワードは常にそう扱われるので、それでOKです。見えないまま入力して、リターンキーを押してください。</strong>入力をミスしても、慌てずに、もう一度入力してください。
-<li>
+</li>
 <li>
 リターンキーを押して、パスワードの入力が正しければ、サンクスメッセージを含むテキストが、新たに何行か表示されます。  
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/13d700334f-1605628239/terminal-6-thankyou.png">
