@@ -8,7 +8,7 @@ by Rainer Erich Scheichelbauer
 
 <br />
 
-20 December 2016  
+20 December 2016
 
 ********
 

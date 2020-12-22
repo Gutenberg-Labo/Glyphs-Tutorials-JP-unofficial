@@ -9,11 +9,11 @@ by Rainer Erich Scheichelbauer
 <br />
 
 1 December 2016  
-Published on 16 September 2014  
+Published on 16 September 2014
 
 ********
 
-Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作成できます。その方法を見てください。
+Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作成できます。その方法を説明します。
 
 ********
 
