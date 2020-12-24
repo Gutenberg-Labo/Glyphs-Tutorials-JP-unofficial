@@ -1,4 +1,4 @@
-# Glyphsのダウンロード／更新ができない時
+# Glyphsをダウンロード／更新できない時
 
 [(Original page)](https://glyphsapp.com/learn/cannot-download-or-update-glyphs)  
 
