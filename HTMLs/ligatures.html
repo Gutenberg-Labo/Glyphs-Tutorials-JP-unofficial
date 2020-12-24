@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/ligatures" />
+  <title>リガチャー（合字） | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">リガチャー（合字）</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rainer Erich Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/ligatures" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/fr/learn/ligatures" aria-label="Français"><span class="Button-text">fr</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/ligatures" aria-label="中文"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content" ><p><span>3 December 2020&nbsp;</span><span>Published on 25 October 2012</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>リガチャーの作り方を知りたいですか？ 超簡単です。やってみましょう。</p>
+</div>
+
+<div class="Article-contentInner">
+<p>文字と文字がぶつかって見た目が悪くなるときがあります。後ろの文字まで届く小文字の f でよく起こります。l や b 、h のような、アセンダーのある文字とぶつかってしまうのです。となると書体デザイナーはリガチャーグリフの作成を決断することになります。</p>
+
+<h3 id="g-__creating-the-ligature">リガチャーの作成</h3>
+<p>小文字の f と小文字の h がぶつかり合うとします。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/bb452c8657-1605628224/liga-1.png"></figure>
+<p>いけませんね。そこで「グリフ」＞「グリフを追加...」を選択して <code>f_h</code> 、つまり、リガチャーの要素にあたるそれぞれのグリフ名をアンダースコアでつなげたものを入力します。Glyphsは <code>f</code> と <code>h</code> のコンポーネントからリガチャーを事前に用意します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/69d6031e0e-1605628224/liga-2.png"></figure>
+<p>さて、これらのコンポーネントをそれぞれパスへ変換し、元の <code>f</code> や <code>h</code> へのリンクを削除します。これは「グリフ」メニューから「コンポーネントを分解」（Cmd-Shift-D）を選択すれば行えます。これでアウトラインが用意できました。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Pro Tip</h3>
+<div class="ProTip-content"><p>マルチプルマスターの場合、Optionキーを押すとメニューのコマンドが「グリフ」＞「全てのマスターでコンポーネントを分解」（Cmd-Opt-Shift-D）に変わります。</p></div>
+</div></aside>
+
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/ac1bc0fae4-1605628224/liga-3.png"></figure>
+<p>アウトラインを好きなように編集できます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/2515f3c07a-1605628224/liga-4.png"></figure>
+<p>はいはい、笑わないで。確かにリガチャーの作成はあまり得意じゃないですよ。そんなことより、とにかく、グリフの作成はこれで完了です。ところでグリフはどうやったら動作するのでしょうか？</p>
+
+<h3 id="g-__creating-the-ligature-feature">リガチャー用フィーチャーの作成</h3>
+<p>リガチャーはOpenTypeフィーチャーによって動作します。作成したリガチャーのグリフに適切な名前がついていたら、Glyphsはリガチャーを自動で作成します。「ファイル」＞「フォント情報」（Cmd-I）を開いて、「フィーチャー」タブに行き、左下にある「更新」ボタンを押下するだけです。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/8def759af7-1607121762/features-updated.png"></figure>
+<p>そしてGlyphsは、多分数あるフィーチャーの中で、<code>dlig</code> というフィーチャーを生成します。これをクリックするとフィーチャーのコードが表示されます。</p>
+<pre><code>sub f h by f_h;</code></pre>
+<p>これはつまり、<code>f</code> – <code>h</code> と続く文字列をリガチャーグリフ <code>f_h</code> に置き換えることを意味します。正に私たちがやりたいことです。イェーイ！</p>
+
+<h3 id="g-__liga-vs-dlig">liga 対 dlig</h3>
+<p>でもちょっと待ってください。なぜ <code>dlig</code> なのでしょうか？ これは<a href="https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#dlig">任意のリガチャー（discretionary ligatures）</a>の略で、このフィーチャーは「デフォルトでは無効」、つまりユーザが最初に有効にしなくてはならないということを意味します。</p>
+<p>デフォルトで有効にするには、<code>liga</code>（<a href="https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#liga">通常のリガチャー（standard ligatures）</a>）というフィーチャーに含めます。一番良い方法はグリフ名に <code>.liga</code> というサフィックスを追加することです。今の例でいえば、リガチャーのグリフ名を <code>f_h.liga</code> に変更します。</p>
+<p>さあこの丸まった矢印のボタンを再び押しましょう。ご覧ください、<code>liga</code> フィーチャーにこの行が含まれました。</p>
+<pre><code>sub f h by f_h.liga;</code></pre>
+<p>そうです！ ちなみに、いくつかのリガチャーは即刻 <code>liga</code> に登録されるので、サフィックスは要りません。そういうリガチャーは次のもので全部です。</p>
+<pre><code>fi
+fl
+f_f
+f_f_i
+f_f_l</code></pre>
+<p><code>fi</code> と <code>fl</code> が上記の命名規則に従っていないことに気付かれたかもしれません。それはこれらが歴史的な例外だからです。この2つのグリフ名はOpenTypeのずっと以前から存在していました。やりたければグリフ名を <code>f_i</code> 、<code>f_l</code> にしても構いませんが、実際のところ、<code>.liga</code> サフィックスを付けないと <code>dlig</code> になってしまいます。</p>
+
+<h3 id="g-__testing-ligatures">リガチャーのテスト</h3>
+<p>実際に動作するかどうか試してみませんか？ 編集タブ（Cmd-T）を開き、リガチャーになる文字列を含む単語、例えば、今の場合なら「hifhum」と入力してください（この単語には意味はないと思いますが、もし意味があったなら、嫌な意味ではありませんように）。そしてウィンドウの左下の隅にある「フィーチャー」ボタンを押下して現れたポップアップメニューからリガチャーのフィーチャーを選択してください。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/9f6a439b9a-1607121762/features-menu.png"></figure>
+<p>するとリガチャーが適用されます。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/20d112b386-1605628224/liga-7.gif"></figure>
+<p>もしうまくいかなかったら、グリフ名が正しいことを確認してから「フォント情報」＞「フィーチャー」で「更新」ボタンを押すか、あるいは編集ビューのフィーチャーのポップアップメニューから「フィーチャーを更新」を選択するかして、フィーチャーのコードを再生成してみてください。</p>
+<p>さてさて、そんなところです。リガチャー作成を楽しんでください！</p>
+
+<p><small><br />
+Update 2016-02-19: スクリーンショットをGlyphs 2に更新。<br />
+Update 2019-04-10: メニューの「レイヤー」を「グリフ」に変更。<br />
+Update 2020-12-04: リンクとスクリーンショットを更新、Glyphs 3にマイナーチェンジ。<br />
+</small></p>          </div>
+
+</body>
+</html>

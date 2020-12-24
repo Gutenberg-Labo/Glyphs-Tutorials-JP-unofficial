@@ -27,5 +27,6 @@ Updates are very infrequent or extremely fickle, but content would be added acco
 |           Creating an SVG Color Font | [SVGカラーフォントの作成](/MDs/creating-an-svg-color-font.md)                      | 2020-Dec-16 |
 | Creating Fonts with Complex Outlines | [複雑なアウトラインのフォントの作成](/MDs/creating-fonts-with-complex-outlines.md) | 2020-Dec-22 |
 |   How to Install Your Glyphs License | [ライセンスのインストール方法](/MDs/how-to-install-your-glyphs-license.md)         | 2020-Dec-23 |
+|                            Ligatures | [リガチャー（合字）](/MDs/ligatures.md)                                            | 2020-Dec-24 |
 |             Older Versions of Glyphs | [Glyphsの過去バージョン](/MDs/older-versions-of-glyphs.md)                         | 2020-Dec-22 |
 |     Reusing Shapes: Smart Components | [図形の再利用：スマートコンポーネント](/MDs/smart-components.md)                   | 2020-Dec-16 |
