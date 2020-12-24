@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/cannot-download-or-update-glyphs" />
+  <title>Glyphsのダウンロード／更新ができない時 | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">Glyphsのダウンロード／更新ができない時</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rainer Erich Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/cannot-download-or-update-glyphs" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/fr/learn/cannot-download-or-update-glyphs" aria-label="Français"><span class="Button-text">fr</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/cannot-download-or-update-glyphs" aria-label="中文"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content"><p><span>15 December 2020&nbsp;</span><span>Published on 26 March 2020</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>Safari でアクセスできませんか？ サイトが開きませんか？ Glyphsの更新ができませんか？ 「ウィンドウ」＞「プラグインマネージャー」が真っ白なままですか？ ここでは再びダウンロード出来るように、その対策を説明します。</p>
+</div>
+
+<div class="Article-contentInner">
+<h3 id="g-__try-the-download-links-directly">URLから直接ダウンロード</h3>
+<p>アプリはupdatesサーバからダウンロードできます。</p>
+<ul>
+<li>Glyphs 3: <a href="https://updates.glyphsapp.com/latest3.php">https://updates.glyphsapp.com/latest3.php</a></li>
+<li>Glyphs 2: <a href="https://updates.glyphsapp.com/latest2.php">https://updates.glyphsapp.com/latest2.php</a></li>
+<li>Glyphs Mini 2: <a href="https://updates.glyphsapp.com/latestMini2.php">https://updates.glyphsapp.com/latestMini2.php</a></li>
+</ul>
+<p>このURLを直接試してみてください。もしダウンロードできず、ブラウザにエラーメッセージが表示された場合は、以下の手順を実行して下さい。</p>
+
+<h3 id="g-__fix-a-damaged-hosts-file">破損したhostsファイルの修正</h3>
+<p>過去にあったケースでは、アプリの更新やダウンロードができなかった時に一番よくある原因は、「hostsデータベース」ファイルの破損です。詳しく言うと、それは <code>/etc/hosts/</code> 内にあるテキストファイルなのですが、いくつかの悪い「ヘルパー」ツールがこれをいじってしまうことがあります。これを修正するには、単純にTerminal.appで次のコマンドを実行します。パスワードを聞かれたら入力してください。</p>
+<pre><code>sudo sed -i '' '/glyphsapp/d' /etc/hosts</code></pre>
+<p>Terminal.appを触るのは不安で、どうしたらいいかわからないという方のために、手をお貸しします。以下の手順に従ってください。</p>
+<ol>
+<li>上記の行を選択してクリップボードにコピー（Cmd-C）します。</li>
+<li>Terminal.appを立ち上げ、必要であれば新しいタブを開きます（Cmd-T）。
+<ul>
+<li>Terminal.appの場所がわからない場合、Spotlight検索を開き（キーボードショートカットを変更していなければ、デフォルトではCmd-Space）、<code>term</code> …と入力してリターンキーを押します。</li>
+</ul>
+</li>
+<li>先ほどコピーした行をTerminal.appにペーストします。すると次のようになるはずです（あなたの場合は「mekkablue」ではなくて、あなた自身のユーザアカウント名が表示されます）。
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/cbeee89f97-1605628254/terminal-sed-1.png"></figure>
+</li>
+<li>リターンキーを押して入力を確定すると、こんな感じでパスワード入力を求められます。
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/bf127700a3-1605628254/terminal-sed-2.png"></figure>
+</li>
+<li>そこでMacのログインパスワードを入力します。<strong>注意：他の場所でパスワードを入力したとき表示される中黒の点々（•••）はここでは表示されません。それでOKです。</strong>ターミナルでパスワードを入力する時はそうなっている、それだけです。パスワードは「何も見えずに」入力しなければなりません。つまり、これまでにキーを何回押したかはわからないまま、リターンキーを押して確定してください。</li>
+<li>入力が全て正しく行われたら、処理が静かに行われ、ターミナルは次のコマンド待ちの状態になります。
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/752e370c2b-1605628254/terminal-sed-3.png"></figure>
+</li>
+</ol>
+<p>この後は、ログアウトして再びログインするか、あるいはMacを再起動してください。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/9f0d323213-1608562153/restart.png"></figure>
+<p>うまくいったでしょうか？ おめでとうございます。これでGlyphsをエンジョイできます。なお、「ヘルパー」ツールについては次のセクションを参照してください。</p>
+<h3 id="g-__get-rid-of-helper-apps">「ヘルパー」アプリの削除</h3>
+<p>システムメンテナンスツールとか、システムオプティマイザーとか、ウイルス対策アプリとか使っていませんか？ たとえば、Avastとか、CleanMyMacとか、MacCleanerとか？</p>
+<p><strong>アンインストールしてください。</strong></p>
+<p>いや、本当に。こいつらを消して。</p>
+<p>これらの「ツール」のほとんどは、Macには完全に無用の長物です。実際のところ、これらのほとんどは「マルウェアそのもの」です。もちろん、この種のソフトウェアのベンダーたちは、あなたを怖がらせ、ありとあらゆる嘘を並べては驚かせて、そのツールであなたのMacを「保護」します。その戯言を真に受けてはいけません。それどころか、真実は、Macにはウイルスは存在しないし、macOSは自己防衛機能を持った非常に優れたオペレーティングシステムです。ヘルパーやオプティマイザー、メモリクリーナーなんて、他人が売りつけようとしているものは一切必要ありません。「一切」です。</p>
+<p>言うまでもなく、マルウェアのベンダーたちは、今述べたことは「神話」だと主張するでしょう。だまされないでください。Macでこういったツールの使用が役に立つなんてシナリオは私には考えられません。私からのアドバイスはこれらの全てのメンテナンスツールやウイルス対策アプリを削除すること。こいつらにできるのは台無しにすることくらいです。</p>
+<p>いつもの原因たちです。</p>
+<ul>
+<li><strong>CleanMyMac</strong>：Glyphsをぶち壊すことがわかっています。こいつはアプリを「管理」するふりをする機能を持っていますが、実際にはアプリの機能を台無しにして破壊します。CleanMyMacをアンインストールして、Macを再起動し、Glyphsを再ダウンロードして再インストールしてください。</li>
+<li><strong>Avast</strong>（または他の同じようなMac用ウイルス対策アプリ）：私が「これまで」見た限り、こいつはMacの動作を遅くし、時には極端に遅くして、毎回の動作ごとにカーソルを回転ビーチボールにしやがります。ウイルスを検出したり脅威を「ブロックした」とか表示するので、このソフトを使うと安心できる気がしますが、そんなのナンセンスです。Avastをアンインストールして、Macを再起動し、Glyphsを再ダウンロードして再インストールしてください。</li>
+<li><strong>MacCleaner</strong>：ド直球のマルウェアで、インターネット接続を乗っ取っておのれらの広告ページにリダイレクトします。控えめに言って邪悪だと思います。Macを再び完全に機能させるには、こんな奴は駆除して、Macを再起動し、Glyphsを再ダウンロードして再インストールしてください。</li>
+<li><strong>Little Snitch</strong>：本当はマルウェアではありません。しかし扱い方を知らないと、同じく動作を台無しにしてしまう可能性があります。Glyphs.appからの接続と、<code>updates.glyphsapp.com</code> および <code>glyphsapp.com</code> への接続を「すべて許可」にしてください。使い方がわからなければ、Little Snitchはアンインストールして、Macを再起動し、Glyphsを再ダウンロードして再インストールしてください。</li>
+</ul>
+<p>大事なことなので2回言います。これらのアプリは使い続けると、問題が発生「します」。こいつらを消してくれないと私たちはあなたを助けられません。マジで。</p>
+<p>ほんと毒舌でごめんなさい。</p>
+
+<h3 id="g-__verify-your-internet-connection">インターネット接続の確認</h3>
+<p>そうです。インターネット接続を確認しましょう。</p>
+<ul>
+<li>ウェブサイトはまだ開けますか？</li>
+<li>他のサイトから他のアプリやzipファイルをダウンロードできますか？</li>
+</ul>
+<p>この質問のどちらかが「いいえ」なら、別の方法でネットに接続してください。現在の接続が不十分か、特定のファイル形式のダウンロードがブロックされています。<br />
+両方の質問に「はい」なら、次の質問をご確認ください。</p>
+<ul>
+<li>同じMacの別のユーザアカウントではアプリをダウンロードできますか？</li>
+</ul>
+<p>もし「はい」なら、ユーザ設定に何か問題があります。ブラウザの設定の削除を検討してください。Shiftキーを押したまま再起動してキャッシュをリセットし、それからキーを何も押さずに再起動することを検討してください。<br />
+これに「いいえ」なら、次の質問です。</p>
+<ul>
+<li>別のMacではアプリをダウンロードできますか？</li>
+</ul>
+<p>「はい」の場合、お使いのMacの設定に問題があります。最初の手順のhostsファイルの修正は行いましたか？ それをもう一度やってみてください。Macの再起動を忘れないでくださいね。それでもうまくいかなかったなら、次にいきましょう。</p>
+
+<h3 id="g-__faulty-dns-servers">DNSサーバの不良</h3>
+<p>再起動しても、まだうまくいきませんか？ DNSサーバーを <code>1.1.1.1</code> か、 <code>8.8.8.8</code> あるいは <code>8.8.4.4</code> に変更して、もう一度試してみてください。やり方は次の通りです。</p>
+<ol>
+<li>「システム環境設定」を開きます。</li>
+<li>「システム環境設定」の、「ネットワーク」を開きます。</li>
+<li>「ネットワーク」で、右下にある「詳細」ボタンをクリックします。</li>
+<li>現れたダイアログシートで、上部にある「DNS」というタブを選択します。</li>
+<li>「DNSサーバ」と書かれたフィールドの下にある「＋ボタン」をクリックします。</li>
+<li>エントリに <code>1.1.1.1</code> を追加し、リターンキーを押して確定します。</li>
+<li>OKボタンを押してダイアログシートを確定します。</li>
+<li>環境設定の画面に戻り、「適用」をクリックします。</li>
+</ol>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/b15b4e201e-1605628253/dns-server.png"></figure>
+<p>これでうまくいくか試してみてください。うまくいかなかったら、Macを再起動してみてください。それでもうまくいかないときは、同じ手順をもう一度行いますが、ステップ6で代わりに <code>8.8.8.8</code> または <code>8.8.4.4</code> を使用してください。そしてもう一度、Macを再起動してみてください。</p>
+<blockquote>
+<p>背景情報：<a href="https://blog.cloudflare.com/announcing-1111/">1.1.1.1 の裏話</a>と<a href="https://developers.google.com/speed/public-dns">GoogleのDNSサーバ・8.8.8.8 と 8.8.4.4 について</a>はこちらをご覧ください。</p>
+</blockquote>
+
+<h3 id="g-__report-in-the-forum">フォーラムへの報告</h3>
+<p>ここまでやってもうまくいかなかった場合、それは本当に、本当にレアケースです。お疲れ様です。Terminal.appで次のコマンドを実行し、その結果を<a href="https://forum.glyphsapp.com">フォーラム</a>へ報告してください。</p>
+<pre><code>ping -o updates.glyphsapp.com
+dig updates.glyphsapp.com
+curl -I https://updates.glyphsapp.com/</code></pre>
+<blockquote>
+<p>ヒント：3行すべてを一度にコピー（Cmd-C）して、Terminal.appに切り替え、新しいTerminalタブ（Cmd-T）にペースト（Cmd-V）して、リターンキーを押し、終わるまで数秒待ってから、全選択（Cmd-A）して、内容をフォーラムの新規投稿にコピペすればOKです。入力欄のコードオプションで書式を整えてください。そうしていただけたら読みやすいです。</p>
+</blockquote>
+<p>そうしたら助けに行きます。macOSのバージョン（Sierra？ High Sierra？ Mojave？ Catalina？）とお使いのハードウェア（iMacか、MacBookかなど）の情報もお忘れなく。</p>
+<p>参考までに、結果はこのような感じになるはずです。</p>
+<pre><code class="language-shell">mekkabook-air:~ mekka$     ping -o updates.glyphsapp.com
+
+PING updates.glyphsapp.com (172.104.142.40): 56 data bytes
+64 bytes from 172.104.142.40: icmp_seq=0 ttl=51 time=25.713 ms
+--- updates.glyphsapp.com ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 25.713/25.713/25.713/0.000 ms
+
+mekkabook-air:~ mekka$     dig updates.glyphsapp.com
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; updates.glyphsapp.com
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 8784
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;updates.glyphsapp.com.     IN  A
+
+;; ANSWER SECTION:
+updates.glyphsapp.com.  3521    IN  A   172.104.142.40
+
+;; Query time: 182 msec
+;; SERVER: 83.169.184.33#53(83.169.184.33)
+;; WHEN: Thu Mar 26 22:33:23 CET 2020
+;; MSG SIZE  rcvd: 66
+
+mekkabook-air:~ mekka$     curl -I https://updates.glyphsapp.com/
+
+HTTP/2 403
+server: nginx
+date: Thu, 26 Mar 2020 21:33:23 GMT
+content-type: text/html; charset=utf-8
+content-length: 162
+strict-transport-security: max-age=15768000; includeSubDomains; preload;
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+
+mekkabook-air:~ mekka$</code></pre>
+<p>いくつかの単語は違うはずですが（特に日付、時刻、マシン名、ログイン名）、それ以外の部分は大体同じになるはずです。あなたの結果と比較するとすでに手掛かりがあるかもしれません。しかしフォーラムで見てみましょう。そこでお手伝いいたします。</p>
+
+<p><small><br />
+Update 2020-04-02: 細かい文法を修正、DNSのスクリーンショットを追加、DNSサーバに関する背景情報のリンクを追加。<br />
+Update 2020-07-29: 最初の段落にプラグインマネージャーへの言及と、Glyphs Miniタグを追加。<br />
+Update 2020-12-16: Glyphs 3のリンクを追加、マイナーチェンジ。<br />
+</small></p>          </div>
+
+</body>
+</html>

@@ -22,6 +22,8 @@ Updates are very infrequent or extremely fickle, but content would be added acco
 
 |                           原タイトル | 日本語訳                                                                           | 更新日      |
 |-------------------------------------:|:-----------------------------------------------------------------------------------|:------------|
+|    Cannot download or update Glyphs? | [Glyphsのダウンロード／更新ができない時](/MDs/cannot-download-or-update-glyphs.md) | 2020-Dec-24 |
+
 |        Creating a Layered Color Font | [複数レイヤーのカラーフォントの作成](/MDs/creating-a-layered-color-font.md)        | 2020-Dec-22 |
 |           Creating an SVG Color Font | [SVGカラーフォントの作成](/MDs/creating-an-svg-color-font.md)                      | 2020-Dec-16 |
 | Creating Fonts with Complex Outlines | [複雑なアウトラインのフォントの作成](/MDs/creating-fonts-with-complex-outlines.md) | 2020-Dec-22 |
