@@ -45,7 +45,7 @@ Terminal.appを触るのは不安で、どうしたらいいかわからない�
 Terminal.appを立ち上げ、必要であれば新しいタブを開きます（Cmd-T）。
 <ul>
 <li>
-Terminal.appの場所がわからない場合、Spotlight検索を開き（キーボードショートカットを変更していなければ、デフォルトではCmd-Space）、`term` …と入力してリターンキーを押します。
+Terminal.appの場所がわからない場合、Spotlight検索を開き（キーボードショートカットを変更していなければ、デフォルトではCmd-Space）、<code>term</code> …と入力してリターンキーを押します。
 </li>
 </ul>
 </li>
