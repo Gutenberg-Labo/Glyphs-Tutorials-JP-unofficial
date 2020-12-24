@@ -21,9 +21,9 @@ Safari でアクセスできませんか？ サイトが開きませんか？ Gl
 
 アプリはupdatesサーバからダウンロードできます。
 
-* Glyphs 3: <https://updates.glyphsapp.com/latest3.php>
-* Glyphs 2: <https://updates.glyphsapp.com/latest2.php>
-* Glyphs Mini 2: <https://updates.glyphsapp.com/latestMini2.php>
+* Glyphs 3：<https://updates.glyphsapp.com/latest3.php>
+* Glyphs 2：<https://updates.glyphsapp.com/latest2.php>
+* Glyphs Mini 2：<https://updates.glyphsapp.com/latestMini2.php>
 
 このURLを直接試してみてください。もしダウンロードできず、ブラウザにエラーメッセージが表示された場合は、以下の手順を実行して下さい。
 
