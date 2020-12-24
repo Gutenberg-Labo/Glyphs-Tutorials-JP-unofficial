@@ -173,7 +173,7 @@ for myFont in Glyphs.fonts:
         print( myGlyph.name, myGlyph.category, myGlyph.subCategory, myGlyph.unicode )
 ```
 
-レポートに別の情報を含めたいですか？ [Glyphs Python Documentation](http://docu.glyphsapp.com/#gsglyph" title="Glyphs.app Python Scripting API Documentation — Glyphs.app Python Scripting API 0.3 documentation)にアクセスし、他にどんなGlyphのオブジェクト（「GSGlyph」）やFontのオブジェクト（「GSFont」）があって何ができるか見てください。  
+レポートに別の情報を含めたいですか？ [Glyphs Python Documentation](http://docu.glyphsapp.com/#gsglyph "Glyphs.app Python Scripting API Documentation — Glyphs.app Python Scripting API 0.3 documentation")にアクセスし、他にどんなGlyphのオブジェクト（「GSGlyph」）やFontのオブジェクト（「GSFont」）があって何ができるか見てください。  
 
 [パート2](https://glyphsapp.com/learn/scripting-glyphs-part-2)では、GSGlyphをもう少し深く、ノードの扱いまで掘り下げます。  
 
