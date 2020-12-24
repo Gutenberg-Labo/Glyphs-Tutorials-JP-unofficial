@@ -49,17 +49,17 @@ Terminal.appの場所がわからない場合、Spotlight検索を開き（キ�
 </li>
 </ul>
 </li>
-<li>先ほどコピーした行をTerminal.appにペーストします。すると次のようになるはずです（あなたの場合は「mekkablue」ではなくて、あなた自身のユーザアカウント名が表示されます）。
+<li>先ほどコピーした行をTerminal.appにペーストします。すると次のようになるはずです（あなたの場合は「mekkablue」ではなくて、あなた自身のユーザアカウント名が表示されます）。<br />
 <img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/cbeee89f97-1605628254/terminal-sed-1.png">
 </li>
-<li>リターンキーを押して入力を確定すると、こんな感じでパスワード入力を求められます。
+<li>リターンキーを押して入力を確定すると、こんな感じでパスワード入力を求められます。<br />
 <img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/bf127700a3-1605628254/terminal-sed-2.png">
 </li>
 <li>
 そこでMacのログインパスワードを入力します。<strong>注意：他の場所でパスワードを入力したとき表示される中黒の点々（•••）はここでは表示されません。それでOKです。</strong>ターミナルでパスワードを入力する時はそうなっている、それだけです。パスワードは「何も見えずに」入力しなければなりません。つまり、これまでにキーを何回押したかはわからないまま、リターンキーを押して確定してください。
 </li>
 <li>
-入力が全て正しく行われたら、処理が静かに行われ、ターミナルは次のコマンド待ちの状態になります。
+入力が全て正しく行われたら、処理が静かに行われ、ターミナルは次のコマンド待ちの状態になります。<br />
 <img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/752e370c2b-1605628254/terminal-sed-3.png">
 </li>
 </ol>
