@@ -21,11 +21,15 @@ Published on 25 October 2012
 
 ### リガチャーの作成
 
-<p>小文字の f と小文字の h がぶつかり合うとします。</p>
-<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/bb452c8657-1605628224/liga-1.png"></figure>
-<p>いけませんね。そこで「グリフ」＞「グリフを追加...」を選択して `f_h` 、つまり、リガチャーの要素にあたるそれぞれのグリフ名をアンダースコアでつなげたものを入力します。Glyphsは `f` と `h` のコンポーネントからリガチャーを事前に用意します。</p>
-<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/69d6031e0e-1605628224/liga-2.png"></figure>
-<p>さて、これらのコンポーネントをそれぞれパスへ変換し、元の `f` や `h` へのリンクを削除します。これは「グリフ」メニューから「コンポーネントを分解」（Cmd-Shift-D）を選択すれば行えます。これでアウトラインが用意できました。</p>
+小文字の f と小文字の h がぶつかり合うとします。  
+
+<img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/bb452c8657-1605628224/liga-1.png">
+
+いけませんね。そこで「グリフ」＞「グリフを追加...」を選択して `f_h` 、つまり、リガチャーの要素にあたるそれぞれのグリフ名をアンダースコアでつなげたものを入力します。Glyphsは `f` と `h` のコンポーネントからリガチャーを事前に用意します。  
+
+<img alt="" src="https://glyphsapp.com/media/pages/learn/ligatures/69d6031e0e-1605628224/liga-2.png">
+
+さて、これらのコンポーネントをそれぞれパスへ変換し、元の `f` や `h` へのリンクを削除します。これは「グリフ」メニューから「コンポーネントを分解」（Cmd-Shift-D）を選択すれば行えます。これでアウトラインが用意できました。  
 
 > ### Pro Tip
 > マルチプルマスターの場合、Optionキーを押すとメニューのコマンドが「グリフ」＞「全てのマスターでコンポーネントを分解」（Cmd-Opt-Shift-D）に変わります。
