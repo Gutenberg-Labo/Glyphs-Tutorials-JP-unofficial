@@ -46,7 +46,7 @@ print( "Hello World!" )
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/scripting-glyphs-part-1/c18e7c01e3-1607121762/macrowindow-2.png">
 
-「実行」（Cmd-Return）を何度か押下していると、実行結果の領域はすぐに溢れかえってしまうでしょう。「消去」（Cmd-K）押下して一掃してください。
+「実行」（Cmd-Return）を何度か押下していると、実行結果の領域はすぐに溢れかえってしまうでしょう。「消去」（Cmd-K）を押下して一掃してください。
 
 ### オブジェクト
 
@@ -140,7 +140,7 @@ print( myGlyph.subCategory, end=" " )
 print( myGlyph.unicode )
 ```
 
-これで私たち変更するのは1行目のグリフ名だけにできました。
+これで私たちが変更するのは1行目のグリフ名だけにできました。
 
 ### ループ処理
 
