@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/scripting-glyphs-part-1" />
+  <title>Glyphsでスクリプト パート1 | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">Glyphsでスクリプト パート1</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rafał Buchner &amp; Rainer Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/scripting-glyphs-part-1" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/scripting-glyphs-part-1" aria-label="中文"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content"><p><span>1 December 2020&nbsp;</span><span>Published on 22 June 2012</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>Pythonのチュートリアル・第1回です。予備知識は必要ありません。この第1回目は、「マクロパネル」ウィンドウでの最初のステップです。</p>
+</div>
+
+<div class="Article-contentInner">
+<p>この複数回のチュートリアルで、Pythonを使い始めましょう。午前中に全部に目を通し、お昼を食べたら、その日の午後には初めてのスクリプトが書けます。楽しんでください！</p>
+
+<h3 id="g-__the-macro-panel">マクロパネル</h3>
+<p>メニューの「ウィンドウ」から「マクロパネル」（Opt-Cmd-M）を選択します。このようなウィンドウが現れます。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/scripting-glyphs-part-1/554ce0317a-1607121762/macrowidnow-0.png"></figure>
+<p>上半分はPythonのコードを記述する場所です。下半分でGlyphsがあなたのコードに反応して動作します。横方向の区切り線は好きな位置までドラッグできます。それでは、Glyphsが反応するコードを何か入力してみましょう。まずは上半分に次の行を入力してください。</p>
+<pre><code class="language-python">print( "Hello World!" )</code></pre>
+<p>大文字／小文字の区別は重要なので、<code>Print</code> じゃなくて、<code>print</code> と書いてください。<br />
+ <code>print</code> コマンドの後の開きカッコは極めて重要です。クォーテーションは本来のカーブしている引用符ではなくて、真っ直ぐなマヌケ引用符（タイポグラフィ的に言えば、これは本当はインチ記号）です。printとクォーテーションの間のスペースは必要ありませんが、閉じるクォーテーションは必要です。使うクォーテーションはシングルクォーテーション <code>'...'</code> でもダブルクォーテーション <code>"..."</code> でも構いません。</p>
+<p>実行ボタン（Cmd-Return、fn-Return、拡張キーボードではEnter）を押下すると、このような表示になるはずです。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/scripting-glyphs-part-1/e071fa1446-1607121762/macrowindow-1.png"></figure>
+
+<h3 id="g-__strings-integers-floats-and-objects">文字列、整数、不動小数点、オブジェクト</h3>
+<p>さて、Pythonの <code>print</code> コマンドは実行結果の領域に何かを出力します。このコマンドの括弧の間にあるものなら何でも出力されます。テキストはクォーテーションで囲む必要があります。プログラマたちはこれを数字ではなくて文字列と呼びます。</p>
+<p>数字といえば、Pythonに任意の計算結果を出力させることもできます。Pythonは整数（「整数」）と小数（「不動小数点」）を区別して扱っていて、入力値が整数か小数かによって結果も同じように出力されます。5を2で割ると結果は2となりますが、5.0を2.0で割ると2.5となります。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/scripting-glyphs-part-1/c18e7c01e3-1607121762/macrowindow-2.png"></figure>
+<p>「実行」（Cmd-Return）を何度か押下していると、実行結果の領域はすぐに溢れかえってしまうでしょう。「消去」（Cmd-K）押下して一掃してください。</p>
+
+<h3 id="g-__objects">オブジェクト</h3>
+<p>さて、Pythonにちょっと他のものを表示させてみましょう。これを試してみてください。</p>
+<pre><code class="language-python">print( Glyphs )</code></pre>
+<p>結果はあまり驚くものではありません。しかしこの <code>Glyphs</code> は文字列でも数値の計算でもなく、オブジェクトと呼ばれるものです。さて、<code>Glyphs</code> というオブジェクトは他のサブオブジェクトを含んでいます。そうしたサブオブジェクトを参照するには、<code>Glyphs</code> にピリオドを付けてサブオブジェクトの名前を追加します。これを試してみてください。</p>
+<pre><code class="language-python">print( Glyphs.fonts )
+print( Glyphs.font )</code></pre>
+<p>するとPythonはカッコの中に現在開いているフォントのリストを出力し（ <code>print Glyphs.fonts</code> の結果）、加えて最前面のフォントを出力します（ <code>print Glyphs.font</code> の結果）。もしフォントを開いていなければ、空のリスト（中に何も入っていないカッコ）と <code>None</code> が結果として出力されます。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/scripting-glyphs-part-1/ce67f5ad4c-1607121762/macrowidnow-3.png"></figure>
+
+<h3 id="g-__lists">リスト</h3>
+<p>フォントをいくつか開いてから、マクロパネルに戻って「消去」（Cmd-K）を押下し、もう一度「実行」（Cmd-Return）を押下します。別のフォントを前面に持ってきて再度コードを実行するとどうなるかを見てください。</p>
+<p>そんな感じで、「Glyphs.fonts」はフォントのリストを返します。リスト内のフォントを個別に参照するには、次のように、0から始まる数字を、ブラケットに入れて追加します。</p>
+<pre><code class="language-python">print( Glyphs.fonts[0] ) # 1st open font, same as Glyphs.font
+print( Glyphs.fonts[1] ) # 2nd open font</code></pre>
+<p>そうそう、ナンバーサイン <code>#</code> はコメントを表します。この後に続く文字はすべて無視されます。コードに説明のコメントを挿入しておくのは良いアイデアです。何年も後になってスクリプトを修正したり適応させようとするときに、自分のコメントに感謝することになります。本当ですよ。</p>
+<p>そして多分もうお気づきだと思いますが、<code>Glyphs.font</code> は <code>Glyphs.fonts[0]</code> のショートカットとして使えます。</p>
+<p>そしてご想像の通り、フォントにもサブオブジェクトがあります。それらもまた、ピリオドとオブジェクト名を追加することで参照できます。これを試してみてください。</p>
+<pre><code class="language-python">print( Glyphs.font.glyphs )</code></pre>
+<p>ID番号もしくはグリフ名をブラケットに入れて追加すれば、グリフを個別に参照できます。これを試してみてください。</p>
+<pre><code class="language-python">print( Glyphs.font.glyphs[7] )
+print( Glyphs.font.glyphs["a"] )</code></pre>
+<p>ここでも、ピリオドを追加すればグリフに含まれる情報をいくらでも参照できます。これを試してみてください。</p>
+<pre><code class="language-python">print( Glyphs.font.glyphs["a"].name )
+print( Glyphs.font.glyphs["a"].category )
+print( Glyphs.font.glyphs["a"].subCategory )
+print( Glyphs.font.glyphs["a"].unicode )</code></pre>
+<p>コピー＆ペーストが使えることは、覚えておいてください。行を毎回入力しなおす必要はありません。</p>
+
+<h3 id="g-__variables">変数</h3>
+<p>まあ確かに、グリフ情報を参照するのにこれはちょっと効率の悪いやり方です。b について同じ情報を得るために、4行に渡って a を b に変換しなければなりません。なので変数を導入します。</p>
+<pre><code class="language-python">glyphname = "b"
+print( Glyphs.font.glyphs[glyphname].name )
+print( Glyphs.font.glyphs[glyphname].category )
+print( Glyphs.font.glyphs[glyphname].subCategory )
+print( Glyphs.font.glyphs[glyphname].unicode )</code></pre>
+<p>全ての情報を改行せずに1行にまとめるときは、printコマンドの終わりにコンマを打って <code>end=" "</code> を追加してください。</p>
+<pre><code class="language-python">glyphname = "b"
+print( Glyphs.font.glyphs[glyphname].name, end=" " )
+print( Glyphs.font.glyphs[glyphname].category, end=" " )
+print( Glyphs.font.glyphs[glyphname].subCategory, end=" " )
+print( Glyphs.font.glyphs[glyphname].unicode end=" " )</code></pre>
+<p>さて、プログラミングとは全てを何度も再入力せずに済むようにすることです。繰り返しの作業はPythonに任せるべきです。全ての行に同じものが書かれていますよね？ それ用に別の変数を追加し、見やすいように空行を1つ追加します。</p>
+<pre><code class="language-python">glyphname = "b"
+myGlyph = Glyphs.font.glyphs[glyphname]
+
+print( myGlyph.name, end=" " )
+print( myGlyph.category, end=" " )
+print( myGlyph.subCategory, end=" " )
+print( myGlyph.unicode )</code></pre>
+<p>これで私たち変更するのは1行目のグリフ名だけにできました。</p>
+
+<h3 id="g-__looping">ループ処理</h3>
+<p>ところで例えば、フォント内のそれぞれのグリフの情報を得るには、どうすれば良いでしょうか？ 確かに、ブロック全体を何百回とコピー＆ペーストして全てのグリフ名を変更することはできます。でもそれはロボットではない人間にとっては飽き飽きする作業なので、Pythonにやらせてしまいましょう。</p>
+<pre><code class="language-python">for myGlyph in Glyphs.font.glyphs:
+    print( myGlyph.name, end=" " )
+    print( myGlyph.category, end=" " )
+    print( myGlyph.subCategory, end=" " )
+    print( myGlyph.unicode )</code></pre>
+<p><code>print</code> の行が全てインデントされていることに注意してください。行のインデントが全て同じになっている限り、ある個数のスペースやタブが使えます。Pythonはインデントの仕方がちょっとうるさいので、1つのスタイルを決めて「それにこだわって」ください。私はタブが好きなので、今後の例ではタブを使うことにします。</p>
+<p>Pythonは全てのグリフを1つずつ処理しては、その度にグリフ情報の行を表示します。はい！ これが、実際に使える、このチュートリアルの最初の成果です。例えば、これをコピーしてメールにペーストすればステータスレポートにすることができます。これをもう少し便利なものにするべく、<code>print</code> コマンドを1つだけ残してコードを2行にまとめましょう。</p>
+<pre><code class="language-python">for myGlyph in Glyphs.font.glyphs:
+    print( myGlyph.name, myGlyph.category, myGlyph.subCategory, myGlyph.unicode )</code></pre>
+<p>さて、開いている全てのフォントのグリフ情報のレポートを出しましょう。幸いにも、インデントは入れ子にできます。これでどうでしょう。</p>
+<pre><code class="language-python">for myFont in Glyphs.fonts:
+    print()
+    print( "Report for:", myFont.familyName )
+    for myGlyph in myFont.glyphs:
+        print( myGlyph.name, myGlyph.category, myGlyph.subCategory, myGlyph.unicode )</code></pre>
+<p>レポートに別の情報を含めたいですか？ <a href="http://docu.glyphsapp.com/#gsglyph" title="Glyphs.app Python Scripting API Documentation — Glyphs.app Python Scripting API 0.3 documentation">Glyphs Python Documentation</a>にアクセスし、他にどんなGlyphのオブジェクト（「GSGlyph」）やFontのオブジェクト（「GSFont」）があって何ができるか見てください。</p>
+<p><a href="https://glyphsapp.com/learn/scripting-glyphs-part-2">パート2</a>では、GSGlyphをもう少し深く、ノードの扱いまで掘り下げます。</p>
+
+<p><small><br />
+Update 2014-10-04: Glyphs.fontのショートカットと、パート2へのリンクを追加。<br />
+Update 2015-07-30: スクリーンショットをGlyphs 2に更新。<br />
+Update 2016-12-08: スクリーンショットを更新、書式を修正、Glyphs.currentDocumentをGlyphs.fontに差し替え。<br />
+Update 2016-12-09: 最初の段落を追加。<br />
+Update 2020-12-02: Python3に更新。<br />
+</small></p>          </div>
+
+</body>
+</html>

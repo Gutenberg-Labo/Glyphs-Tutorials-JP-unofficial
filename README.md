@@ -29,4 +29,5 @@ Updates are very infrequent or extremely fickle, but content would be added acco
 |   How to Install Your Glyphs License | [ライセンスのインストール方法](/MDs/how-to-install-your-glyphs-license.md)         | 2020-Dec-23 |
 |                            Ligatures | [リガチャー（合字）](/MDs/ligatures.md)                                            | 2020-Dec-24 |
 |             Older Versions of Glyphs | [Glyphsの過去バージョン](/MDs/older-versions-of-glyphs.md)                         | 2020-Dec-22 |
+|             Scripting Glyphs, Part 1 | [Glyphsでスクリプト パート1](/MDs/scripting-glyphs-part-1.md)                      | 2020-Dec-24 |
 |     Reusing Shapes: Smart Components | [図形の再利用：スマートコンポーネント](/MDs/smart-components.md)                   | 2020-Dec-16 |
