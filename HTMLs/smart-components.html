@@ -40,7 +40,7 @@
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/d2650f8a15-1605628237/nameOfTheComponentGlyph.png"></figure>
 <p><code>_part.shoulder</code> という名の分割グリフができました。この肩パーツにアンカーを追加して他のパーツと接続できるようにしましょう。まずは、m が作れるように、続くパーツに接続用のアンカーを追加します。これに <code>connect</code> という名前をつけ、ステムの右端に合わせましょう。</p>
 <blockquote>
-<p><strong>Tip</strong>：スマートコンポーネントの名前には、<code>_part</code> の代わりに <code>_smart</code> というプレフィックスも使えます。</p>
+<p><strong>Tip：</strong> スマートコンポーネントの名前には、<code>_part</code> の代わりに <code>_smart</code> というプレフィックスも使えます。</p>
 </blockquote>
 <p>そして、<code>_part.shoulder</code> には、吸着先のパーツに繋がるためのアンカーが必要です。吸着先のアンカーが <code>connect</code> という名であるならば、対応するアンカーは先頭にアンダースコアをつけた <code>_connect</code> という名でなければなりません。これらのアンカーはすべて同じ高さ（つまりy座標）になければならないので、アンカーはベースライン上に置くことをお勧めします。すると、このようになります。</p>
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/908fe8f6ba-1605628237/partWithAnchors.png"></figure>
@@ -88,7 +88,7 @@
 <p>こうして、高さと幅について無様なスライダーを撤去することができました。しかし他の全てのパラメータではどうでしょう？ いえ、心配は要りません。Glyphs 2.5 以降では、スマートコンポーネントで独自のハンドルを追加できるようになりました！ やり方を説明します。</p>
 <p>スマートグリフのレイヤーの全てに、プロパティ名のついたアンカーを追加します。そして、最も然るべき位置にそれらを配置します。以下の2つのCJK部首のスマートレイヤーを見比べて、「Right Arm」アンカーの位置に注目してください。</p>
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/c8f54f747e-1605628237/smarthandles.png"></figure>
-<p>アンカー名とプロパティ名が完全に一致していることを確認してください。プロパティの全てをアンカー名として追加する必要はありません。しかし追加するアンカーは全てのレイヤーにある必要があります。すると、スマートコンポーネントでは（プロパティスライダの代わりに）ドラッグ可能なハンドルがグリフに表示されます：</p>
+<p>アンカー名とプロパティ名が完全に一致していることを確認してください。プロパティの全てをアンカー名として追加する必要はありません。しかし追加するアンカーは全てのレイヤーにある必要があります。すると、スマートコンポーネントでは（プロパティスライダの代わりに）ドラッグ可能なハンドルがグリフに表示されます。</p>
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/smart-components/90d66b754d-1605628237/smarthandles.gif"></figure>
 <p>ね、すごいでしょ？</p>
 

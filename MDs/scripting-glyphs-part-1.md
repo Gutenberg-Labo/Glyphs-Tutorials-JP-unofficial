@@ -21,7 +21,7 @@ Pythonのチュートリアル・第1回です。予備知識は必要ありま�
 
 ### マクロパネル
 
-メニューの「ウィンドウ」から「マクロパネル」（Opt-Cmd-M）を選択します。このようなウィンドウが現れます。
+メニューの「ウィンドウ」から「マクロパネル」（Opt-Cmd-M）を選択します。このようなウィンドウが現れます。  
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/scripting-glyphs-part-1/554ce0317a-1607121762/macrowidnow-0.png">
 
@@ -31,8 +31,8 @@ Pythonのチュートリアル・第1回です。予備知識は必要ありま�
 print( "Hello World!" )
 ```
 
-大文字／小文字の区別は重要なので、`Print` じゃなくて、`print` と書いてください。<br />
- `print` コマンドの後の開きカッコは極めて重要です。クォーテーションは本来のカーブしている引用符ではなくて、真っ直ぐなマヌケ引用符（タイポグラフィ的に言えば、これは本当はインチ記号）です。printとクォーテーションの間のスペースは必要ありませんが、閉じるクォーテーションは必要です。使うクォーテーションはシングルクォーテーション `'...'` でもダブルクォーテーション `"..."` でも構いません。  
+大文字／小文字の区別は重要なので、`Print` じゃなくて、`print` と書いてください。  
+`print` コマンドの後の開きカッコは極めて重要です。クォーテーションは本来のカーブしている引用符ではなくて、真っ直ぐなマヌケ引用符（タイポグラフィ的に言えば、これは本当はインチ記号）です。printとクォーテーションの間のスペースは必要ありませんが、閉じるクォーテーションは必要です。使うクォーテーションはシングルクォーテーション `'...'` でもダブルクォーテーション `"..."` でも構いません。  
 
 実行ボタン（Cmd-Return、fn-Return、拡張キーボードではEnter）を押下すると、このような表示になるはずです。  
 
@@ -175,7 +175,7 @@ for myFont in Glyphs.fonts:
 
 レポートに別の情報を含めたいですか？ [Glyphs Python Documentation](http://docu.glyphsapp.com/#gsglyph "Glyphs.app Python Scripting API Documentation — Glyphs.app Python Scripting API 0.3 documentation")にアクセスし、他にどんなGlyphのオブジェクト（「GSGlyph」）やFontのオブジェクト（「GSFont」）があって何ができるか見てください。  
 
-[パート2](https://glyphsapp.com/learn/scripting-glyphs-part-2)では、GSGlyphをもう少し深く、ノードの扱いまで掘り下げます。  
+[パート2](https://glyphsapp.com/learn/scripting-glyphs-part-2)では、GSGlyphをもう少し深く、ノードの扱いまで掘り下げます。
 
 ********
 

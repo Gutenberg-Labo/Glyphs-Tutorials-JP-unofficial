@@ -39,7 +39,7 @@ Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作�
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/405be428bc-1605628235/colorfont-3.png">
 
-「全く」同じ値を使うと、補間が行われることはありません。ここでは補間したいのではなく、異なるレイヤーを描画して出力したいだけなのでそれでOKです。  
+「全く」同じ値を使うと、補間が行われることはありません。ここでは補間したいのではなく、異なるレイヤーを描画して出力したいだけなのでそれでOKです。
 
 ### レイヤーグリフの編集
 
@@ -67,7 +67,7 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/fae16b9ae7-1605628235/colorfont-8.png">
 
-おめでとう。最初のレイヤーグリフができました。  
+おめでとう。最初のレイヤーグリフができました。
 
 ### マルチプルレイヤーの編集
 
@@ -75,7 +75,7 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/493cdc6a67-1605628236/colorfont-9.gif">
 
-いくつかのメニューコマンドは一度に全てのレイヤーで動作します。「グリフ」＞「全マスターのメトリクス情報を更新」（Cmd-Opt-Ctrl-M）が使えますし、「パス」＞「全マスターのパス方向を修正」（Cmd-Opt-Shift-R）ならもう使っています。  
+いくつかのメニューコマンドは一度に全てのレイヤーで動作します。「グリフ」＞「全マスターのメトリクス情報を更新」（Cmd-Opt-Ctrl-M）が使えますし、「パス」＞「全マスターのパス方向を修正」（Cmd-Opt-Shift-R）ならもう使っています。
 
 ### メトリクスの維持とカーニングの同期
 
@@ -115,7 +115,7 @@ Adobe Illustratorでエリアタイプのオブジェクト（つまりテキス
 
 ********
 
-サンプルフォント：[SAPPERLOT](https://github.com/DrTypo/sapperlot)、Thomas Maier氏 提供  
+サンプルフォント： [SAPPERLOT](https://github.com/DrTypo/sapperlot)、Thomas Maier氏 提供  
 
 <br />
 

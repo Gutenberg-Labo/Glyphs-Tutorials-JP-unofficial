@@ -37,7 +37,7 @@
 <p>このチュートリアルは、OpenType-SVGカラーフォントについて「です」。</p>
 <p>Glyphsで、フォントにSVG情報を取り込む方法は2つあります。（A）個別の <code>.svg</code> 画像ファイルから取り込む方法と、（B）既存のカラーフォントから取り込む方法です。後者は、異なるマスター上のレイヤーフォント、インデックス付きの「カラー」レイヤーを持つCPAL/COLRフォント、または「iColor」レイヤーを持つApple形式のsbixフォントのどれかからです。</p>
 
-<h3 id="__option-a-from-svg-image-files">オプションA：SVG画像ファイルから取り込む</h3>
+<h3 id="__option-a-from-svg-image-files">オプションA： SVG画像ファイルから取り込む</h3>
 <p>使えるSVG画像が個別のファイルで既にある場合、それをそれぞれのグリフに配置すれば、SVGテーブル付きフォントを出力できます。この方法ではベクターアニメーションのようなイカれたものも含めて、SVGファイル形式の機能がフル活用できます。</p>
 <p>前準備として、.glyphsファイルを好きな場所に保存し、SVGファイル用に「Images」というサブフォルダを作っておいてください。.glyphsファイルに保存されるのは画像の相対パスだけなので、画像がサブフォルダにあれば簡単にまとめておけます。</p>
 <p>さて例が必要です。SVG画像が手元になければ、ここに1つ用意します。大文字の <code>O</code> として赤い丸を回転させてみましょう。このSVGコードを選択してコピー（Cmd-C）してください。</p>
@@ -66,7 +66,7 @@
 <p>さてここからが本題です。マスターレイヤーに置くのは何であれ黒白のフォールバック用グリフで、SVGテーブルに格納された色情報を表示できないアプリケーションではこれが表示されます。何それと思われたかもしれませんが、マスターレイヤーというのは「レイヤー」パレットで太字で表されるレイヤーのことで、今の例では「Regular」という名前です。</p>
 <p>でも新しい <code>svg</code> レイヤーには、.svg画像ファイルをドラッグしてドロップできます。アニメーションは動作しませんが、画像はすぐに表示されます。リンクした画像はサイズを変えたり、好きな位置に動かすことができます。</p>
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/395d4555a6-1605628244/placedsvgineditview.png"></figure>
-<p>スペーシングに関する注意：<code>svg</code> レイヤーの幅はマスターレイヤーから継承されるので、グリフの間隔を広げるにはそちらに切り戻す必要があります。この例では、配置したSVGを拡大縮小や変形させていないのであれば、幅は800に設定するのがちょうど良いでしょう。それをやるには、レイヤーパレットの「Regular」レイヤーをクリックして、灰色の情報ボックスで幅を800に変更します。</p>
+<p>スペーシングに関する注意： <code>svg</code> レイヤーの幅はマスターレイヤーから継承されるので、グリフの間隔を広げるにはそちらに切り戻す必要があります。この例では、配置したSVGを拡大縮小や変形させていないのであれば、幅は800に設定するのがちょうど良いでしょう。それをやるには、レイヤーパレットの「Regular」レイヤーをクリックして、灰色の情報ボックスで幅を800に変更します。</p>
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/c192bb4b7d-1605628244/setwidthto800.png"></figure>
 <p>それはさておき、フォントをWebフォントに出力します。「ファイル」＞「出力」＞「Webフォント」で、フォーマットにはWOFFとWOFF2を使います。CFFやTTFは関係ありません。</p>
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/7587f4ca36-1605628243/exportwoff.png"></figure>
@@ -78,13 +78,13 @@
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/0c481c0f5f-1605628243/animatedredcircle.gif"></figure>
 <p>ジャジャーン！ だけど、フォントでのアニメーションはプロセッサに高負荷をかけることになるのでどうか気をつけてください。コンピュータのファンは狂ったようにフル回転するでしょうし、モバイルではバッテリーが直葬になってユーザは全員あなたに微妙な感情を持つでしょう。警告しましたよ。</p>
 
-<h3 id="__option-b-from-an-existing-color-font">オプションB：既存のカラーフォントから取り込む</h3>
+<h3 id="__option-b-from-an-existing-color-font">オプションB： 既存のカラーフォントから取り込む</h3>
 Glyphsで既存のさまざまな形式のカラーフォントを取り込み、SVGとしてエクスポートできます。カラーフォントをこれらのソース形式のどれかで作成すると、そのソース形式「と」SVGとの両方にエクスポートできる利点があります。</p>
 <p>選択肢は3つあります。</p>
 <ol>
-<li><a href="/tutorials/creating-a-layered-color-font">複数レイヤーフォント</a>：2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。</li>
-<li><a href="/tutorials/creating-a-microsoft-color-font">CPAL/COLRフォント</a>：グリフに <code>Color</code> レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。</li>
-<li><a href="/tutorials/creating-an-apple-color-font">sbixフォント</a>：グリフの<code>iColor</code> レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。</li>
+<li><a href="/tutorials/creating-a-layered-color-font">複数レイヤーフォント</a>： 2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。</li>
+<li><a href="/tutorials/creating-a-microsoft-color-font">CPAL/COLRフォント</a>： グリフに <code>Color</code> レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。</li>
+<li><a href="/tutorials/creating-an-apple-color-font">sbixフォント</a>： グリフの<code>iColor</code> レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。</li>
 </ol>
 <p>オプションを見て、どれかの形式を選び、SVGのエクスポートを追加する方法は以下をお読みください。</p>
 <p><strong>複数レイヤーフォントの場合：</strong> <a href="/tutorials/creating-a-layered-color-font">こちらのチュートリアルの手順に従ってください。</a>「ファイル」＞「フォント情報」＞「マスター」の「Master Color」パラメータで色が設定されているかを確認してください。</p>
@@ -121,8 +121,8 @@ Glyphsで既存のさまざまな形式のカラーフォントを取り込み�
 <p><small><br />
 Update 2017-01-20: サポートブラウザのリストにMicrosoft Edgeを追加。<br />
 Update 2018-03-26: sbixからSVGへの変換を追加。<br />
-Update 2018-04-14: SVGをサポートするOSとアプリを更新。Behdadさんありがとう！<br />
-Update 2019-02-01: 誤記を訂正し、兄弟（brothers）という単語を兄弟姉妹（siblings）に置換。Nathalieさんありがとう！<br />
+Update 2018-04-14: SVGをサポートするOSとアプリを更新（Behdadさんありがとう！）。<br />
+Update 2019-02-01: 誤記を訂正し、兄弟（brothers）という単語を兄弟姉妹（siblings）に置換（Nathalieさんありがとう！）。<br />
 Update 2019-11-15: 「オプションB」の導入部を更新。<br />
 </small></p>          </div>
 

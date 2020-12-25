@@ -35,7 +35,7 @@ by Rainer Erich Scheichelbauer
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/a8d1f420bd-1605628244/weingut.png">
 
-タイプフェイス：[Adinah](http://handfoundry.com/work/#/adinah/) Andy Lethbridge氏、[Fairwater](http://lauraworthingtontype.com/family/fairwater-collection/) Laura Worthington氏、[Letterpress](http://www.facetype.org/?font=letterpress) Marcus Sterz氏、[Weingut](http://www.facetype.org/?font=weingut) Georg Herold-Wildfellner氏
+タイプフェイス： [Adinah](http://handfoundry.com/work/#/adinah/) Andy Lethbridge氏、[Fairwater](http://lauraworthingtontype.com/family/fairwater-collection/) Laura Worthington氏、[Letterpress](http://www.facetype.org/?font=letterpress) Marcus Sterz氏、[Weingut](http://www.facetype.org/?font=weingut) Georg Herold-Wildfellner氏
 
 ### サブルーチン
 
@@ -47,7 +47,7 @@ by Rainer Erich Scheichelbauer
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-fonts-with-complex-outlines/3ea3dcf968-1605628244/disablesubroutines.png">
 
-次の場合はサブルーチン化の無効化を検討してみてください。
+次の場合はサブルーチン化の無効化を検討してみてください。  
 
 * **グリフ数が非常に多い**。フォントに含まれるグリフが数千個やそれ以上
 * **似た形状がない**。グランジ、手書き、活版印刷、またはランサムノートフォントのように、フォント全体のポイントとしてはグリフの見ためがなるべく揃っていない
@@ -60,14 +60,14 @@ by Rainer Erich Scheichelbauer
 
 ええ、そうなんです。「ヒンティングとは形状を保持するものではなく、逆に歪ませるものです」。ヒンティングは、小さなサイズのピクセルへとうまく落とし込むために、形状への忠実度を犠牲にします。その結果画面上のテキストはよりきれいに、より鮮明に、より統一感が出て、さらに読みやすくなります。しかし、ヒンティングにはアウトラインに多くの条件が必要です。それは出来るだけきれいで「普通」でなければならないのです。  
 
-次の場合はヒンティングを付けないことを検討してみてください。
+次の場合はヒンティングを付けないことを検討してみてください。  
 
 * 意図的に一貫性をもたせていない、不均質な、**形状に似たところがない**フォント
 * ある文字の終筆を次の文字の入筆と正確に一致させなければならない、**連続するスクリプトのフォント**
 * **極めて細密なアウトライン**のフォント
 * グリフあたりの**ノード数が非常に多い**フォント
 * 「ファイル」＞「フォント情報」＞「マスター」で**アライメントゾーンがない**フォント
-* 「ファイル」＞「フォント情報」＞「マスター」で**スタンダードステムが設定されていない**フォント<
+* 「ファイル」＞「フォント情報」＞「マスター」で**スタンダードステムが設定されていない**フォント
 * 以下のような**通常ではないアウトライン**を持つフォント
     * 極点にノードがない</li>
     * ステムの太さが異なっていたり、不均質である</li>

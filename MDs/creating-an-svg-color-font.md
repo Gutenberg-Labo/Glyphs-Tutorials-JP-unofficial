@@ -32,7 +32,7 @@ SVGについて調べると、[Scalable Vector Graphics](https://ja.wikipedia.or
 
 Glyphsで、フォントにSVG情報を取り込む方法は2つあります。（A）個別の `.svg` 画像ファイルから取り込む方法と、（B）既存のカラーフォントから取り込む方法です。後者は、異なるマスター上のレイヤーフォント、インデックス付きの「カラー」レイヤーを持つCPAL/COLRフォント、または「iColor」レイヤーを持つApple形式のsbixフォントのどれかからです。
 
-### オプションA：SVG画像ファイルから取り込む
+### オプションA： SVG画像ファイルから取り込む
 
 使えるSVG画像が個別のファイルで既にある場合、それをそれぞれのグリフに配置すれば、SVGテーブル付きフォントを出力できます。この方法ではベクターアニメーションのようなイカれたものも含めて、SVGファイル形式の機能がフル活用できます。  
 
@@ -77,7 +77,7 @@ Glyphsで、フォントにSVG情報を取り込む方法は2つあります。�
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/395d4555a6-1605628244/placedsvgineditview.png">
 
-スペーシングに関する注意：`svg` レイヤーの幅はマスターレイヤーから継承されるので、グリフの間隔を広げるにはそちらに切り戻す必要があります。この例では、配置したSVGを拡大縮小や変形させていないのであれば、幅は800に設定するのがちょうど良いでしょう。それをやるには、レイヤーパレットの「Regular」レイヤーをクリックして、灰色の情報ボックスで幅を800に変更します。  
+スペーシングに関する注意： `svg` レイヤーの幅はマスターレイヤーから継承されるので、グリフの間隔を広げるにはそちらに切り戻す必要があります。この例では、配置したSVGを拡大縮小や変形させていないのであれば、幅は800に設定するのがちょうど良いでしょう。それをやるには、レイヤーパレットの「Regular」レイヤーをクリックして、灰色の情報ボックスで幅を800に変更します。  
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/c192bb4b7d-1605628244/setwidthto800.png">
 
@@ -95,15 +95,15 @@ Macでは、OpenType-SVGフォントをサポートするブラウザは[Firefox
 
 ジャジャーン！ だけど、フォントでのアニメーションはプロセッサに高負荷をかけることになるのでどうか気をつけてください。コンピュータのファンは狂ったようにフル回転するでしょうし、モバイルではバッテリーが直葬になってユーザは全員あなたに微妙な感情を持つでしょう。警告しましたよ。
 
-### オプションB：既存のカラーフォントから取り込む
+### オプションB： 既存のカラーフォントから取り込む
 
 Glyphsで既存のさまざまな形式のカラーフォントを取り込み、SVGとしてエクスポートできます。カラーフォントをこれらのソース形式のどれかで作成すると、そのソース形式「と」SVGとの両方にエクスポートできる利点があります。  
 
 選択肢は3つあります。  
 
-1. [複数レイヤーフォント](https://glyphsapp.com/tutorials/creating-a-layered-color-font)：2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。
-2. [CPAL/COLRフォント](https://glyphsapp.com/tutorials/creating-a-microsoft-color-font)：グリフに `Color` レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。
-3. [sbixフォント](https://glyphsapp.com/tutorials/creating-an-apple-color-font)：グリフの`iColor` レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。
+1. [複数レイヤーフォント](https://glyphsapp.com/tutorials/creating-a-layered-color-font)： 2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。
+2. [CPAL/COLRフォント](https://glyphsapp.com/tutorials/creating-a-microsoft-color-font)： グリフに `Color` レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。
+3. [sbixフォント](https://glyphsapp.com/tutorials/creating-an-apple-color-font)： グリフの`iColor` レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。
 
 オプションを見て、どれかの形式を選び、SVGのエクスポートを追加する方法は以下をお読みください。  
 
@@ -147,12 +147,12 @@ Glyphsで既存のさまざまな形式のカラーフォントを取り込み�
 * Adobe TypeKitの[カラーフォントコンセプトページ](https://color.typekit.com/) SVGフォントもあり
 * Adobeヘルプページ [OpenType-SVGカラーフォント](https://helpx.adobe.com/typekit/using/ot-svg-color-fonts.html)
 
-この記事を書いた時点では、SVGテーブルはFirefox、Windows 10+、そしてAdobeアプリでサポートされています。  
+この記事を書いた時点では、SVGテーブルはFirefox、Windows 10+、そしてAdobeアプリでサポートされています。
 
 ********
 
 Update 2017-01-20: サポートブラウザのリストにMicrosoft Edgeを追加。  
 Update 2018-03-26: sbixからSVGへの変換を追加。  
-Update 2018-04-14: SVGをサポートするOSとアプリを更新。Behdadさんありがとう！  
-Update 2019-02-01: 誤記を訂正し、兄弟（brothers）という単語を兄弟姉妹（siblings）に置換。Nathalieさんありがとう！  
+Update 2018-04-14: SVGをサポートするOSとアプリを更新（Behdadさんありがとう！）。  
+Update 2019-02-01: 誤記を訂正し、兄弟（brothers）という単語を兄弟姉妹（siblings）に置換（Nathalieさんありがとう！）。  
 Update 2019-11-15: 「オプションB」の導入部を更新。
