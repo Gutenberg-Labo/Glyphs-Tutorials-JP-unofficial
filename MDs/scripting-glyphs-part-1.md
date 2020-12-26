@@ -175,7 +175,7 @@ for myFont in Glyphs.fonts:
 
 レポートに別の情報を含めたいですか？ [Glyphs Python Documentation](http://docu.glyphsapp.com/#gsglyph "Glyphs.app Python Scripting API Documentation — Glyphs.app Python Scripting API 0.3 documentation")にアクセスし、他にどんなGlyphのオブジェクト（「GSGlyph」）やFontのオブジェクト（「GSFont」）があって何ができるか見てください。  
 
-[第2回](/scripting-glyphs-part-2.md)では、GSGlyphをもう少し深く、ノードの扱いまで掘り下げます。  
+[第2回](./scripting-glyphs-part-2.md)では、GSGlyphをもう少し深く、ノードの扱いまで掘り下げます。  
 
 ********
 
