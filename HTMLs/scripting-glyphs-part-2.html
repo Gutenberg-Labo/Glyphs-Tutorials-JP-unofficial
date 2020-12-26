@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/scripting-glyphs-part-2" />
+  <title>Glyphsでスクリプト・2 | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">Glyphsでスクリプト・2</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rafał Buchner &amp; Rainer Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/scripting-glyphs-part-2" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/scripting-glyphs-part-2" aria-label="中文"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content" ><p><span>1 December 2020&nbsp;</span><span>Published on 28 June 2012</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>第1回では、フォントとグリフ情報の出力方法を習いました。今回はもう一歩進んでフォントを実際に操作しようと思います。お好きなフォントをコピーしてPython筋肉をウォームアップしましょう。</p>
+</div>
+
+<div class="Article-contentInner">
+<p>このチュートリアルは、最初に<a href="./scripting-glyphs-part-1.html">Glyphsでスクリプト・1</a>を読み終わっていることが前提です。</p>
+
+<h3 id="g-__glyphs-and-layers">グリフとレイヤー</h3>
+<p>まず、Glyphsで文字がどう構成されているかを思い起こすことから始めましょう。全てのパス、アンカー、ガイドラインといった、文字の作図や編集で扱われるものは、「グリフ」の単純なプロパティではありません。むしろ、それらはグリフが保持する「レイヤー」の中の1つに属しています。レイヤーには手動で追加されたものとマスターレイヤー (補間で使用されるもの）の2つがあります。</p>
+
+<h3 id="g-__selectedlayers">レイヤー選択</h3>
+<p>さて、手を付ける前に、選択されたレイヤーはどれかを判断しなくてはなりません。その方法を説明します。マクロパネルを開き、次のように入力します。</p>
+<pre><code class="language-python">print( Glyphs.font.selectedLayers )</code></pre>
+<p>するとこんな感じのものが出力されます。</p>
+<pre><code class="language-python">(
+    "GSLayer &lt;0x7fe471526320&gt;: [Bold Italic] (A)",
+    "GSLayer &lt;0x7fe47152fbb0&gt;: [Bold Italic] (B)",
+    "GSLayer &lt;0x7fe471530d30&gt;: [Bold Italic] (C)"
+)</code></pre>
+<p>それで、今何をしたのでしょうか？ まず、現在開いている、つまり最前面のフォントの <code>Glyphs</code> オブジェクトを取得してその <code>font</code> プロパティを参照しました。フォントを開いていないとエラーになります。確かに、結果（「GSLayer…」）はちょっと意味が分からないものですが、これはGlyphsがレイヤーを呼び出す方法です。16進数のIDコードの後に、レイヤー名、そしてそれぞれのグリフ名が続きます。</p>
+<p>幸いにも、これらを直接取り扱う必要はありません。Pythonに仕事をさせればよいのです。ということで、最初の行は次のようにしておきます。</p>
+<pre><code class="language-python">myLayers = Glyphs.font.selectedLayers</code></pre>
+
+<h3 id="g-__accessingpaths">パスの参照</h3>
+<p>これをもう少し拡張してみましょう。</p>
+<pre><code class="language-python">myLayers = Glyphs.font.selectedLayers
+for thisLayer in myLayers:
+    print( thisLayer.parent.name )
+    print( thisLayer.paths )</code></pre>
+<p>マクロパネルでこれを実行すると、次のようなものが出力で表示されます。</p>
+<pre><code class="language-plaintext">A
+(&lt;GSPath 57 nodes and 29 segments&gt;, &lt;GSPath 10 nodes and 4 segments&gt;)
+B
+(&lt;GSPath 53 nodes and 23 segments&gt;, &lt;GSPath 42 nodes and 16 segments&gt;)
+C
+(&lt;GSPath 57 nodes and 23 segments&gt;)</code></pre>
+<p>これは、何をしたのでしょうか？ <code>font</code> から <code>selectedLayers</code> を取り出すことで、ユーザが選択した全てのレイヤーを取得し、それを変数 <code>myLayers</code> に代入しました。</p>
+<p>2行目で、<code>myLayers</code> に含まれる全てのレイヤーをループ処理します。レイヤーは1つずつ次々に処理されます。まず処理中のレイヤーを <code>thisLayer</code> と名付け、それから <code>thisLayer</code> の親の名前を取得してマクロパネルに表示し、最後に <code>thisLayer</code> にあるパスを取得して同じくマクロパネルにそれを表示します。その後ループは <code>myLayers</code> 内の次のレイヤーに移って、一連の同じ処理がまた始まります。それは <code>myLayers</code> 内の最後のレイヤーが処理されるまで続きます。</p>
+<p>ここにこっそり忍び込ませたものがあります。<code>parent</code> です。ピリオドの後にサブオブジェクト名を追加して、オブジェクト内のサブオブジェクトにアクセスするという話は覚えていますか？ 現在Glyphsで開いている全てのフォントを参照するには、<code>Glyphs.fonts</code> と入力します。最初に開いたフォントのファミリー名を知るには、<code>Glyphs.fonts[0].familyName</code> などと入力します。こうしてオブジェクトのツリーを掘り下げることができます。しかし、あるオブジェクトをすでに参照中でその階層を1段「さかのぼる」必要がある場合もあります。その場合に、オブジェクトの <code>parent</code> を参照します。</p>
+<p>この例では、あるレイヤーを <code>thisLayer</code> として取り込んで、そのレイヤーがどのグリフのものであるかを知りたいので、そのレイヤーの親である <code>thisLayer.parent</code> を参照します。そして最後にこの親であるグリフの名前 <code>thisLayer.parent.name</code> を参照し、その結果を <code>print</code> コマンドに渡します。</p>
+<p>最後の行が、「聖杯」、つまりフォントを構成するパスそのものに到っているもので、私たち全員にとって重要です。次のステップで私たちはパスにとんでもないことをやるので、フォントのコピーを確実に取っておいてください。警告しましたよ。</p>
+
+<h3 id="g-__paths-and-nodes">パスとノード</h3>
+<p>さあ、選択したレイヤーに何かヤバイことをしたいと思います。全てのノードを左右へランダムに動かしてみましょう。次のようにやります。Pythonで正か負の値の乱数を生成して最初に選択したレイヤーの最初のパスの最初のノードのx座標に加算します。そして他の全てのノード、パス、レイヤーに対してそれを繰り返します。</p>
+<p>Pythonには乱数の生成機能がありますが、これを使うには特別な招待状が必要です。これを「モジュールのインポート」とか「ライブラリのインポート」と呼びます。そこで、まず乱数生成機能をインポートすることから始めます。</p>
+<pre><code class="language-python">import random</code></pre>
+<p>ところでここだけの話、<code>import random</code> する時は、その度に乱数の「種（seed）」関数を呼び出すのが良いです。</p>
+<pre><code class="language-python">random.seed()</code></pre>
+<p><code>seed</code> の後ろのカッコに気がつきましたか？ このカッコはいわゆる「メソッド」を表します。そうです、オブジェクトは別のオブジェクトを含むことができますが、メソッド（または「関数」）を含むこともできます。メソッドは所属するオブジェクトになんらかの動きをします。<code>seed()</code> 関数は乱数生成機能に対しつべこべ言わずに「本当に」ランダムな値を出力するよう指示します。そうしておかないと、乱数生成機能が再び同じ値を出力してしまう可能性があって、それは実に望ましくありません。</p>
+<p>さてさて、いよいよ全ての選択されたレイヤーと、全てのパス、そして全てのノードを当たってやるべき処理を行います。</p>
+<pre><code class="language-python">import random
+random.seed()
+
+myLayers = Glyphs.font.selectedLayers
+for thisLayer in myLayers:
+    for thisPath in thisLayer.paths:
+        for thisNode in thisPath.nodes:
+            thisNode.x += random.randint( -50, 50 )</code></pre>
+<p>最後の行以外は、説明は不要でしょう。変数 <code>thisNode</code> にはパス上のオンカーブ点またはオフカーブ点が代入されます。前の行で全てのノードを反復処理しています。プロパティの <code>x</code> は、もちろんそのノードのx座標です。</p>
+<p>演算子 <code>+=</code> は「左側の変数に右側の値を足す」ことを意味しており、例えば、<code>x+=5</code> では x の値を 5 増やします。そのためこの <code>+=</code> は「インクリメント演算子」と呼ばれます。これは <code>x=x+5</code> をもっと短く効率的に記述する方法です。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Pro Tip</h3>
+<div class="ProTip-content">
+<p>クラスに含まれるメソッドやオブジェクトを確認するには、Pythonの組み込み関数である <code>help()</code> を実行します。例えば、<code>import random</code> した後に <code>help(random)</code> を実行できます。<code>help()</code> 関数はそのカッコ内に記述されたもののマニュアルを出力します。</p>
+<p><code>help(random)</code> で出力されるテキストの量に辟易するときは、代わりとしてマニュアルを <code>randint</code> に限定して <code>help(random.randint)</code> を実行してみてください。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/scripting-glyphs-part-2/65166e789c-1605628219/help.png"></figure>
+</div>
+</div></aside>
+
+<p>さて、乱数の部分についてです。まず、数行前でインポートした <code>random</code> モジュールを使います。そしてその中のメソッド <code>randint()</code> で「ランダムな整数」を取得します。他のメソッドと同様に、<code>randint()</code> の後ろにはカッコがついています。メソッドにこのカッコ内から入力値を渡すと、その入力に基づいて出力が得られます。<code>randint()</code> メソッドは、カンマで区切られた2つの値を「最小値」と「最大値」として受け取り、その最小値と最大値の間にある整数を1つランダムに返します。最小値 <code>-50</code> 、最大値 <code>50</code> を <code>randint()</code> に入力し、乱数を出力として受け取りたいわけです。</p>
+<p>つまり、最後の行は、それぞれのノードのx座標を取得してその値に-50〜50の範囲にある乱数値を加える、ということをしています。おわかりいただけたでしょうか？</p>
+<p>今のところまで大丈夫ですか？ OK？ それで、次は何をしましょう？ このスクリプトを「スクリプト」メニューの項目に入れて、好きな時にいつでも使えるようにしましょう。どうやって？ それは<a href="https://glyphsapp.com/learn/scripting-glyphs-part-3">Glyphsでスクリプト・3</a>でご説明します。</p>
+
+<p><small><br />
+Update 2014-10-04: 第1回と第3回へのリンクを追加。<br />
+Update 2016-12-08: 書式を修正、廃止になった警告を削除、help関数に関するpro tipを追加。<br />
+Update 2019-02-06: 文章と書式を微調整。<br />
+Update 2019-02-12: 誤記訂正。<br />
+Update 2020-12-02: Python3に更新。<br />
+</small></p>          </div>
+
+</body>
+</html>

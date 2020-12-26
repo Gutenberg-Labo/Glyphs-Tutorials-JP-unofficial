@@ -9,11 +9,11 @@ by Rainer Erich Scheichelbauer
 <br />
 
 3 December 2020  
-Published on 29 February 2016
+Published on 29 February 2016  
 
 ********
 
-メールでGlyphsライセンスのダウンロードURLを受け取ったものの、それをどうするのかわからない？ 心配ご無用、お教えします。
+メールでGlyphsライセンスのダウンロードURLを受け取ったものの、それをどうするのかわからない？ 心配ご無用、お教えします。  
 
 ********
 
@@ -34,36 +34,24 @@ Published on 29 February 2016
 
 さあ「OK」をクリックして、基本的にはそれでいけます。イェーイ！  
 
-あ、あれ……うまくいかなかったですか？ ではインストール時に問題が起きたユーザの大半を救ったヒントをいくつかお教えしましょう。
+あ、あれ……うまくいかなかったですか？ ではインストール時に問題が起きたユーザの大半を救ったヒントをいくつかお教えしましょう。  
 
 ## 1. アプリを再ダウンロード
 
 最初にとるべき手段はダウンロードのやり直しです。次の手順に従ってください。  
 
 <ol>
-<li>
-現在インストール済みのGlyphsまたはGlyphs Miniをアプリケーションフォルダからゴミ箱へ移します。
-</li>
-<li>
-ゴミ箱を空にします。
-</li>
-<li>
-それから<a href="http://updates.glyphsapp.com/latest3.php">最新バージョンのGlyphs 3</a>、または<a href="http://updates.glyphsapp.com/latest2.php">最新バージョンのGlyphs 2</a>、あるいは<a href="http://updates.glyphsapp.com/latestMini2.php">最新バージョンのGlyphs Mini 2</a>を再ダウンロードします（自動的に解凍されなかった場合、下記のNoteを参考に.zipファイルを解凍してください）
-</li>
-<li>
-ダウンロードしたてのアプリをダウンロードフォルダから「アプリケーション」フォルダへ移動します。
-</li>
-<li>
-そしてアプリを右クリックし、コンテキストメニューの一番上の「開く」を選択します。
-<img alt="Right click the app icon, and choose Open from the context menu." src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/68ea2a5c9b-1607121762/rightclicktoopen.png">
-</li>
-<li>
-ダイアログが表示されたら確認し、ライセンスファイルを再び開いてみてください。
-</li>
+<li>現在インストール済みのGlyphsまたはGlyphs Miniをアプリケーションフォルダからゴミ箱へ移します。</li>
+<li>ゴミ箱を空にします。</li>
+<li>それから<a href="http://updates.glyphsapp.com/latest3.php">最新バージョンのGlyphs 3</a>、または<a href="http://updates.glyphsapp.com/latest2.php">最新バージョンのGlyphs 2</a>、あるいは<a href="http://updates.glyphsapp.com/latestMini2.php">最新バージョンのGlyphs Mini 2</a>を再ダウンロードします（自動的に解凍されなかった場合、下記のNoteを参考に.zipファイルを解凍してください）。</li>
+<li>ダウンロードしたてのアプリをダウンロードフォルダから「アプリケーション」フォルダへ移動します。</li>
+<li>そしてアプリを右クリックし、コンテキストメニューの一番上の「開く」を選択します。
+<img alt="Right click the app icon, and choose Open from the context menu." src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/68ea2a5c9b-1607121762/rightclicktoopen.png"></li>
+<li>ダイアログが表示されたら確認し、ライセンスファイルを再び開いてみてください。</li>
 </ol>
 
 > ### Note
-> ダウンロードしたファイルを解凍する際は、macOS標準の解凍ツール「アーカイブユーティリティ」の使用をお勧めします。「サードパーティ製のツールで解凍したところアプリが壊れてしまい開けなかった」という報告を受けています。
+> ダウンロードしたファイルを解凍する際は、macOS標準の解凍ツール「アーカイブユーティリティ」の使用をお勧めします。「サードパーティ製のツールで解凍したところアプリが壊れてしまい開けなかった」という報告を受けています。  
 
 ## 2. Glyphsが起動しない？
 
@@ -103,7 +91,7 @@ GlyphsまたはGlyphs Miniを開こうとしたら、このようなセキュリ
 * Macが[セーフモードで起動](https://support.apple.com/en-us/HT201262)したことが確認できるまで、Shiftキーは押したままにします。
 * 今度は「普通に」、つまり、何もキーを押さずに、2回目の再起動をします。
 
-これで潜在的なキャッシュの問題や、または操作中に溜まっていたと思われる他の問題を修正できるかもしれません。
+これで潜在的なキャッシュの問題や、または操作中に溜まっていたと思われる他の問題を修正できるかもしれません。  
 
 ## 4. ByHostのパーミッション
 
@@ -121,7 +109,7 @@ GlyphsまたはGlyphs Miniを開こうとしたら、このようなセキュリ
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/69e2f07ecd-1605628239/license7.png">
 
-それらのファイルを全て削除して、それからもう一度試してみてください。
+それらのファイルを全て削除して、それからもう一度試してみてください。  
 
 ## 5. 新規ユーザでインストール
 
@@ -131,65 +119,45 @@ GlyphsまたはGlyphs Miniを開こうとしたら、このようなセキュリ
 
 最後に、今のアカウントをログアウトし（アップルメニューの最後の項目）、現れたログイン画面で新しいユーザアカウントにログインして、別のユーザに切り替えます。そこで、もう一度アプリを開いてみてください。「共有」フォルダのライセンスファイルにアクセスできるはずです。  
 
-もしこれでうまくいったら、ユーザアカウントに何か問題があるということがわかります。
+もしこれでうまくいったら、ユーザアカウントに何か問題があるということがわかります。  
 
 ## 6. ターミナルからインストール
 
 まだうまく行きませんか？ 残念ながら、あなたはこの問題を抱える0.01%のユーザです。おそらく、ライセンスの有効期限が切れたというウィンドウが表示され続けているのではないでしょうか。お手数をかけますが、でも私たちはあなたを助けられると思います。ということで、厳しいですがやりましょう。ターミナルを使います。以下の手順でお願いします。  
 
 <ol>
-<li>
-「Glyphs 3.app」、「Glyphs.app」、または「Glyphs Mini.app」が「アプリケーション」フォルダ内にあることを確かめてください。
-</li>
-<li>
-（複製した）<code>.glyphs3License</code> 、<code>.glyphs2License</code> あるいは <code>.glyphsMini2License</code> ファイルをデスクトップに置いてください。
-</li>
-<li>
-Finderで、メニューから「移動」＞「ユーティリティ」（Cmd-Shift-U）を選択します。
-</li>
-<li>
-現れたFinderのウィンドウから、「Terminal.app」を探してダブルクリックしてください。Terminalウィンドウが現れて、大体このような感じに表示されます。
+<li>「Glyphs 3.app」、「Glyphs.app」、または「Glyphs Mini.app」が「アプリケーション」フォルダ内にあることを確かめてください。</li>
+<li>（複製した）<code>.glyphs3License</code> 、<code>.glyphs2License</code> あるいは <code>.glyphsMini2License</code> ファイルをデスクトップに置いてください。</li>
+<li>Finderで、メニューから「移動」＞「ユーティリティ」（Cmd-Shift-U）を選択します。</li>
+<li>現れたFinderのウィンドウから、「Terminal.app」を探してダブルクリックしてください。Terminalウィンドウが現れて、大体このような感じに表示されます。
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/dbb61fe797-1605628239/terminal-0-open.png">
-ウインドウの大きさは話に関係しませんが、気になるなら、右下をドラッグすればサイズを変更できます。
-</li>
-<li>
-<strong>Glyphs 3</strong>をお使いの場合、次の行を選択してコピー（Cmd-C）してください。<br />
+ウインドウの大きさは話に関係しませんが、気になるなら、右下をドラッグすればサイズを変更できます。</li>
+<li><strong>Glyphs 3</strong>をお使いの場合、次の行を選択してコピー（Cmd-C）してください。<br />
 <code>sudo /Applications/Glyphs\ 3.app/Contents/MacOS/Glyphs -disableUI 1</code><br />
 <strong>Glyphs 2</strong>をお使いの場合は、次の行を選択してコピー（Cmd-C）してください。<br />
 <code>sudo /Applications/Glyphs.app/Contents/MacOS/Glyphs -disableUI 1</code><br />
 もし<strong>Glyphs Mini</strong>をお使いなら、次の行を選択してコピー（Cmd-C）してください。<br />
-<code>sudo /Applications/Glyphs\ Mini.app/Contents/MacOS/Glyphs\ Mini -disableUI 1</code>
-</li>
-<li>
-ターミナルのウィンドウに戻って、今コピーした行をペースト（Cmd-V）してください。このような感じになります。
-<img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/c6a9afbd85-1605628239/terminal-1-paste.png">
-</li>
-<li>
-さて、非常に重要なのですが、「スペースキーを押します」。次のステップへ進むにはこの行の <code>1</code> の後ろにスペースが必要です。さっきとの違いにご注意ください。
-<img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/217029d8f5-1605628239/terminal-2-space.png">
-</li>
-<li>
-このウィンドウへ <code>.glyphs3License</code> 、<code>.glyphs2License</code> あるいは <code>.glyphsMini2License</code> のファイルをドラッグします。
+<code>sudo /Applications/Glyphs\ Mini.app/Contents/MacOS/Glyphs\ Mini -disableUI 1</code></li>
+<li>ターミナルのウィンドウに戻って、今コピーした行をペースト（Cmd-V）してください。このような感じになります。
+<img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/c6a9afbd85-1605628239/terminal-1-paste.png"></li>
+<li>さて、非常に重要なのですが、「スペースキーを押します」。次のステップへ進むにはこの行の <code>1</code> の後ろにスペースが必要です。さっきとの違いにご注意ください。
+<img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/217029d8f5-1605628239/terminal-2-space.png"></li>
+<li>このウィンドウへ <code>.glyphs3License</code> 、<code>.glyphs2License</code> あるいは <code>.glyphsMini2License</code> のファイルをドラッグします。
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/63f29428aa-1605628239/terminal-3-drop.png">
 ターミナルウィンドウ内のテキストに何やらほげほげと追加され、このような感じになります。
-<img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/4d68b168b3-1605628239/terminal-4-return.png">
-</li>
-<li>
-そこでリターンキーを押すと、ターミナルからユーザアカウントのパスワード（Macのログインパスワード）の入力を求められます。
+<img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/4d68b168b3-1605628239/terminal-4-return.png"></li>
+<li>そこでリターンキーを押すと、ターミナルからユーザアカウントのパスワード（Macのログインパスワード）の入力を求められます。
 <img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/ac1a5bbeca-1605628240/terminal-5-password.png">
-パスワードを入力してリターンキーを押します。<strong>注意：通常のパスワード入力で表示される中黒の点々（•••）が現れませんが、ターミナルでのパスワード入力は常にそうなっているので、それでOKです。見えないまま入力して、リターンキーを押してください。</strong>入力をミスしても、慌てずに、もう一度入力してください。
-</li>
-<li>
-リターンキーを押して、パスワードの入力が正しければ、サンクスメッセージを含むテキストが、新たに何行か表示されます。
-<img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/13d700334f-1605628239/terminal-6-thankyou.png">
-</li>
+パスワードを入力してリターンキーを押します。<strong>注意：通常のパスワード入力で表示される中黒の点々（•••）が現れませんが、ターミナルでのパスワード入力は常にそうなっているので、それでOKです。見えないまま入力して、リターンキーを押してください。</strong>入力をミスしても、慌てずに、もう一度入力してください。</li>
+<li>リターンキーを押して、パスワードの入力が正しければ、サンクスメッセージを含むテキストが、新たに何行か表示されます。
+<img alt="" src="https://glyphsapp.com/media/pages/learn/how-to-install-your-glyphs-license/13d700334f-1605628239/terminal-6-thankyou.png"></li>
 </ol>
 
-おめでとう。できました！ いますぐアプリを起動して、「Glyphs」＞「登録...」または「Glyphs Mini」＞「登録...」をそれぞれ選択すれば、登録できたことが確認できます。さあ「ファイル」＞「新規作成」（Cmd-N）から素敵なフォントを作りましょう。
+おめでとう。できました！ いますぐアプリを起動して、「Glyphs」＞「登録...」または「Glyphs Mini」＞「登録...」をそれぞれ選択すれば、登録できたことが確認できます。さあ「ファイル」＞「新規作成」（Cmd-N）から素敵なフォントを作りましょう。  
 
 ## 7. 最後の楽園：フォーラム
 
-以上全部やってみてもダメだったときは、[Glyphsフォーラム](https://forum.glyphsapp.com/)に投稿してください。私たちが助けに行きます。
+以上全部やってみてもダメだったときは、[Glyphsフォーラム](https://forum.glyphsapp.com/)に投稿してください。私たちが助けに行きます。  
 
 ********
 
@@ -200,4 +168,4 @@ Update 2018-04-07: アーカイブユーティリティについての注記を�
 Update 2018-09-14: アプリを開くことについて段落を追加。タイトルを微妙に再構成。  
 Update 2018-11-16: 「ターミナルからインストール」のセクションにスクリーンショットなどを追加して拡張。  
 Update 2018-08-22: 誤記訂正（Nathalie Dumontさんありがとう！）。  
-Update 2020-12-03: Glyphs 3について追加。
+Update 2020-12-03: Glyphs 3について追加。  

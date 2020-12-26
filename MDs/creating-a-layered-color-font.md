@@ -9,17 +9,17 @@ by Rainer Erich Scheichelbauer
 <br />
 
 1 December 2016  
-Published on 16 September 2014
+Published on 16 September 2014  
 
 ********
 
-Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作成できます。その方法を説明します。
+Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作成できます。その方法を説明します。  
 
 ********
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/17a16877d2-1605628236/Sapperlot.png">
 
-複数レイヤーフォントはユーザにとって楽しいものですが、作成者の作業はいつも大変でした。でも、それがとても簡単になりました。Glyphsは、複数レイヤーフォントのデザイナー向けに大きな改善をいくつか行いました。
+複数レイヤーフォントはユーザにとって楽しいものですが、作成者の作業はいつも大変でした。でも、それがとても簡単になりました。Glyphsは、複数レイヤーフォントのデザイナー向けに大きな改善をいくつか行いました。  
 
 ### マスターとインスタンスの作成
 
@@ -39,7 +39,7 @@ Glyphsを使えば、複数レイヤーのカラーフォントを簡単に作�
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/405be428bc-1605628235/colorfont-3.png">
 
-「全く」同じ値を使うと、補間が行われることはありません。ここでは補間したいのではなく、異なるレイヤーを描画して出力したいだけなのでそれでOKです。
+「全く」同じ値を使うと、補間が行われることはありません。ここでは補間したいのではなく、異なるレイヤーを描画して出力したいだけなのでそれでOKです。  
 
 ### レイヤーグリフの編集
 
@@ -67,7 +67,7 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/fae16b9ae7-1605628235/colorfont-8.png">
 
-おめでとう。最初のレイヤーグリフができました。
+おめでとう。最初のレイヤーグリフができました。  
 
 ### マルチプルレイヤーの編集
 
@@ -75,7 +75,7 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-layered-color-font/493cdc6a67-1605628236/colorfont-9.gif">
 
-いくつかのメニューコマンドは一度に全てのレイヤーで動作します。「グリフ」＞「全マスターのメトリクス情報を更新」（Cmd-Opt-Ctrl-M）が使えますし、「パス」＞「全マスターのパス方向を修正」（Cmd-Opt-Shift-R）ならもう使っています。
+いくつかのメニューコマンドは一度に全てのレイヤーで動作します。「グリフ」＞「全マスターのメトリクス情報を更新」（Cmd-Opt-Ctrl-M）が使えますし、「パス」＞「全マスターのパス方向を修正」（Cmd-Opt-Shift-R）ならもう使っています。  
 
 ### メトリクスの維持とカーニングの同期
 
@@ -91,9 +91,9 @@ Cmd-1 を押して「Front」レイヤーに移動し、キャップハイトか
 
 ### レイヤーフォントをInDesignで適用
 
-他のプロジェクトと同様にフォントをエクスポートします。いつものように、[Adobe Fonts](https://glyphsapp.com/tutorials/testing-your-fonts-in-adobe-apps)フォルダを使うことをお勧めします。  
+他のプロジェクトと同様にフォントをエクスポートします。いつものように、[Adobe Fonts](https://glyphsapp.com/learn/testing-your-fonts-in-adobe-apps)フォルダを使うことをお勧めします。  
 
-さて、InDesignで行うべきは、完全に同じ内容のテキストフレームを複数用意し、それぞれを別のスタイルで重ねることです。[これは InDesign の配置とリンクツールを使えば実現できます](http://www.lynda.com/articles/indesign-secrets-how-to-place-and-link-text-without-its-formatting)。
+さて、InDesignで行うべきは、完全に同じ内容のテキストフレームを複数用意し、それぞれを別のスタイルで重ねることです。[これは InDesign の配置とリンクツールを使えば実現できます](http://www.lynda.com/articles/indesign-secrets-how-to-place-and-link-text-without-its-formatting)。  
 
 ### Illustratorでフォントを重ねる
 
@@ -105,7 +105,7 @@ Adobe Illustratorでエリアタイプのオブジェクト（つまりテキス
 
 あるいは、2つ目は、小文字 d の全レイヤーの上部に、ごく小さな、多分ちょうど1ユニット幅の正方形を追加することです。全ての色のレイヤーの同じ高さにコピー＆ペーストして、この文字の中で最も高いパスオブジェクトとなるようにしてください。デザインの中でちょうど良い位置を探して、あまり目立たないようにしてください。そうすれば、Illustratorは小文字 d を測定して、全てのレイヤーを同じ高さとして検出し、デフォルトでそれらを全て揃えます。そしてあなたの受信箱がサポート依頼で溢れかえることもないでしょう。  
 
-なお繰り返しますが、AIでフォントをテストするためにも、[Adobe Fontsフォルダ](https://glyphsapp.com/tutorials/testing-your-fonts-in-adobe-apps)を使うようにしてください。
+なお繰り返しますが、AIでフォントをテストするためにも、[Adobe Fontsフォルダ](https://glyphsapp.com/learn/testing-your-fonts-in-adobe-apps)を使うようにしてください。  
 
 ### Sapperlot ソースファイル
 
@@ -122,4 +122,4 @@ Adobe Illustratorでエリアタイプのオブジェクト（つまりテキス
 Update 2014-12-24: 「Illustratorでフォントを重ねる」の段落を追加。  
 Update 2016-11-30: 「Link Metrics With First Master」パラメータについての段落を追加。  
 Update 2016-12-01: 誤記と更新日時を修正。  
-Update 2017-01-18: 「Link Metrics With Master」パラメータについてのスクリーンショットと段落を追加。
+Update 2017-01-18: 「Link Metrics With Master」パラメータについてのスクリーンショットと段落を追加。  

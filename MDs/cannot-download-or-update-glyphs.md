@@ -9,11 +9,11 @@ by Rainer Erich Scheichelbauer
 <br />
 
 15 December 2020  
-Published on 26 March 2020
+Published on 26 March 2020  
 
 ********
 
-Safari でアクセスできませんか？ サイトが開きませんか？ Glyphsの更新ができませんか？ 「ウィンドウ」＞「プラグインマネージャー」が真っ白なままですか？ ここでは再びダウンロード出来るように、その対策を説明します。
+Safari でアクセスできませんか？ サイトが開きませんか？ Glyphsの更新ができませんか？ 「ウィンドウ」＞「プラグインマネージャー」が真っ白なままですか？ ここでは再びダウンロード出来るように、その対策を説明します。  
 
 ********
 
@@ -25,7 +25,7 @@ Safari でアクセスできませんか？ サイトが開きませんか？ Gl
 * Glyphs 2： <https://updates.glyphsapp.com/latest2.php>
 * Glyphs Mini 2： <https://updates.glyphsapp.com/latestMini2.php>
 
-このURLを直接試してみてください。もしダウンロードできず、ブラウザにエラーメッセージが表示された場合は、以下の手順を実行して下さい。
+このURLを直接試してみてください。もしダウンロードできず、ブラウザにエラーメッセージが表示された場合は、以下の手順を実行して下さい。  
 
 ### 破損したhostsファイルの修正
 
@@ -38,37 +38,26 @@ sudo sed -i '' '/glyphsapp/d' /etc/hosts
 Terminal.appを触るのは不安で、どうしたらいいかわからないという方のために、手をお貸しします。以下の手順に従ってください。  
 
 <ol>
-<li>
-上記の行を選択してクリップボードにコピー（Cmd-C）します。
-</li>
-<li>
-Terminal.appを立ち上げ、必要であれば新しいタブを開きます（Cmd-T）。
+<li>上記の行を選択してクリップボードにコピー（Cmd-C）します。</li>
+<li>Terminal.appを立ち上げ、必要であれば新しいタブを開きます（Cmd-T）。
 <ul>
-<li>
-Terminal.appの場所がわからない場合、Spotlight検索を開き（キーボードショートカットを変更していなければ、デフォルトではCmd-Space）、<code>term</code> …と入力してリターンキーを押します。
-</li>
+<li>Terminal.appの場所がわからない場合、Spotlight検索を開き（キーボードショートカットを変更していなければ、デフォルトではCmd-Space）、<code>term</code> …と入力してリターンキーを押します。</li>
 </ul>
 </li>
 <li>先ほどコピーした行をTerminal.appにペーストします。すると次のようになるはずです（あなたの場合は「mekkablue」ではなくて、あなた自身のユーザアカウント名が表示されます）。<br />
-<img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/cbeee89f97-1605628254/terminal-sed-1.png">
-</li>
+<img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/cbeee89f97-1605628254/terminal-sed-1.png"></li>
 <li>リターンキーを押して入力を確定すると、こんな感じでパスワード入力を求められます。<br />
-<img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/bf127700a3-1605628254/terminal-sed-2.png">
-</li>
-<li>
-そこでMacのログインパスワードを入力します。<strong>注意：他の場所でパスワードを入力したとき表示される中黒の点々（•••）はここでは表示されません。それでOKです。</strong>ターミナルでパスワードを入力する時はそうなっている、それだけです。パスワードは「何も見えずに」入力しなければなりません。つまり、これまでにキーを何回押したかはわからないまま、リターンキーを押して確定してください。
-</li>
-<li>
-入力が全て正しく行われたら、処理が静かに行われ、ターミナルは次のコマンド待ちの状態になります。<br />
-<img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/752e370c2b-1605628254/terminal-sed-3.png">
-</li>
+<img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/bf127700a3-1605628254/terminal-sed-2.png"></li>
+<li>そこでMacのログインパスワードを入力します。<strong>注意：他の場所でパスワードを入力したとき表示される中黒の点々（•••）はここでは表示されません。それでOKです。</strong>ターミナルでパスワードを入力する時はそうなっている、それだけです。パスワードは「何も見えずに」入力しなければなりません。つまり、これまでにキーを何回押したかはわからないまま、リターンキーを押して確定してください。</li>
+<li>入力が全て正しく行われたら、処理が静かに行われ、ターミナルは次のコマンド待ちの状態になります。<br />
+<img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/752e370c2b-1605628254/terminal-sed-3.png"></li>
 </ol>
 
 この後は、ログアウトして再びログインするか、あるいはMacを再起動してください。  
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/cannot-download-or-update-glyphs/9f0d323213-1608562153/restart.png">
 
-うまくいったでしょうか？ おめでとうございます。これでGlyphsをエンジョイできます。なお、「ヘルパー」ツールについては次のセクションを参照してください。
+うまくいったでしょうか？ おめでとうございます。これでGlyphsをエンジョイできます。なお、「ヘルパー」ツールについては次のセクションを参照してください。  
 
 ### 「ヘルパー」アプリの削除
 
@@ -91,7 +80,7 @@ Terminal.appの場所がわからない場合、Spotlight検索を開き（キ�
 
 大事なことなので2回言います。これらのアプリは使い続けると、問題が発生「します」。こいつらを消してくれないと私たちはあなたを助けられません。マジで。  
 
-ほんと毒舌でごめんなさい。
+ほんと毒舌でごめんなさい。  
 
 ### インターネット接続の確認
 
@@ -110,7 +99,7 @@ Terminal.appの場所がわからない場合、Spotlight検索を開き（キ�
 
 * 別のMacではアプリをダウンロードできますか？
 
-「はい」の場合、お使いのMacの設定に問題があります。最初の手順のhostsファイルの修正は行いましたか？ それをもう一度やってみてください。Macの再起動を忘れないでくださいね。それでもうまくいかなかったなら、次にいきましょう。
+「はい」の場合、お使いのMacの設定に問題があります。最初の手順のhostsファイルの修正は行いましたか？ それをもう一度やってみてください。Macの再起動を忘れないでくださいね。それでもうまくいかなかったなら、次にいきましょう。  
 
 ### DNSサーバの不良
 
@@ -129,8 +118,7 @@ Terminal.appの場所がわからない場合、Spotlight検索を開き（キ�
 
 これでうまくいくか試してみてください。うまくいかなかったら、Macを再起動してみてください。それでもうまくいかないときは、同じ手順をもう一度行いますが、ステップ6で代わりに `8.8.8.8` または `8.8.4.4` を使用してください。そしてもう一度、Macを再起動してみてください。  
 
-> 背景情報： [1.1.1.1 の裏話](https://blog.cloudflare.com/announcing-1111/)と
-[GoogleのDNSサーバ・8.8.8.8 と 8.8.4.4 について](https://developers.google.com/speed/public-dns)はこちらをご覧ください。
+> 背景情報： [1.1.1.1 の裏話](https://blog.cloudflare.com/announcing-1111/)と、[GoogleのDNSサーバ・8.8.8.8 と 8.8.4.4 について](https://developers.google.com/speed/public-dns)はこちらをご覧ください。  
 
 ### フォーラムへの報告
 
@@ -142,7 +130,7 @@ dig updates.glyphsapp.com
 curl -I https://updates.glyphsapp.com/
 ```
 
-> ヒント： 3行すべてを一度にコピー（Cmd-C）して、Terminal.appに切り替え、新しいTerminalタブ（Cmd-T）にペースト（Cmd-V）して、リターンキーを押し、終わるまで数秒待ってから、全選択（Cmd-A）して、内容をフォーラムの新規投稿にコピペすればOKです。入力欄のコードオプションで書式を整えてください。そうしていただけたら読みやすいです。
+> ヒント： 3行すべてを一度にコピー（Cmd-C）して、Terminal.appに切り替え、新しいTerminalタブ（Cmd-T）にペースト（Cmd-V）して、リターンキーを押し、終わるまで数秒待ってから、全選択（Cmd-A）して、内容をフォーラムの新規投稿にコピペすればOKです。入力欄のコードオプションで書式を整えてください。そうしていただけたら読みやすいです。  
 
 そうしたら助けに行きます。macOSのバージョン（Sierra？ High Sierra？ Mojave？ Catalina？）とお使いのハードウェア（iMacか、MacBookかなど）の情報もお忘れなく。  
 
@@ -193,10 +181,10 @@ x-xss-protection: 1; mode=block
 mekkabook-air:~ mekka$
 ```
 
-いくつかの単語は違うはずですが（特に日付、時刻、マシン名、ログイン名）、それ以外の部分は大体同じになるはずです。あなたの結果と比較するとすでに手掛かりがあるかもしれません。しかしフォーラムで見てみましょう。そこでお手伝いいたします。
+いくつかの単語は違うはずですが（特に日付、時刻、マシン名、ログイン名）、それ以外の部分は大体同じになるはずです。あなたの結果と比較するとすでに手掛かりがあるかもしれません。しかしフォーラムで見てみましょう。そこでお手伝いいたします。  
 
 ********
 
 Update 2020-04-02: 細かい文法を修正、DNSのスクリーンショットを追加、DNSサーバに関する背景情報のリンクを追加。  
 Update 2020-07-29: 最初の段落にプラグインマネージャーへの言及と、Glyphs Miniタグを追加。  
-Update 2020-12-16: Glyphs 3のリンクを追加、マイナーチェンジ。
+Update 2020-12-16: Glyphs 3のリンクを追加、マイナーチェンジ。  

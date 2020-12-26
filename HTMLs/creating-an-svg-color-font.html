@@ -82,21 +82,21 @@
 Glyphsで既存のさまざまな形式のカラーフォントを取り込み、SVGとしてエクスポートできます。カラーフォントをこれらのソース形式のどれかで作成すると、そのソース形式「と」SVGとの両方にエクスポートできる利点があります。</p>
 <p>選択肢は3つあります。</p>
 <ol>
-<li><a href="/tutorials/creating-a-layered-color-font">複数レイヤーフォント</a>： 2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。</li>
-<li><a href="/tutorials/creating-a-microsoft-color-font">CPAL/COLRフォント</a>： グリフに <code>Color</code> レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。</li>
-<li><a href="/tutorials/creating-an-apple-color-font">sbixフォント</a>： グリフの<code>iColor</code> レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。</li>
+<li><a href="./creating-a-layered-color-font.html">複数レイヤーフォント</a>： 2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。</li>
+<li><a href="https://glyphsapp.com/learn/creating-a-microsoft-color-font">CPAL/COLRフォント</a>： グリフに <code>Color</code> レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。</li>
+<li><a href="https://glyphsapp.com/learn/creating-an-apple-color-font">sbixフォント</a>： グリフの<code>iColor</code> レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。</li>
 </ol>
 <p>オプションを見て、どれかの形式を選び、SVGのエクスポートを追加する方法は以下をお読みください。</p>
-<p><strong>複数レイヤーフォントの場合：</strong> <a href="/tutorials/creating-a-layered-color-font">こちらのチュートリアルの手順に従ってください。</a>「ファイル」＞「フォント情報」＞「マスター」の「Master Color」パラメータで色が設定されているかを確認してください。</p>
-<p>「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。スタイル名には「レギュラー」とか「マルチカラー」、「SVG」など納得のいく名前をつけます。そしてその新しいインスタンスにカスタムパラメータ「Color Layers to SVG」を追加し、「値」をオンにしてください。</p>
-<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/a268aa8cad-1605628243/colorlayerstosvg.png"></figure>
-<p><strong>CPAL/COLRフォントの場合：</strong> <a href="/tutorials/creating-a-microsoft-color-font">こちらのチュートリアルの手順に従ってください。</a>「ファイル」＞「フォント情報」＞「マスター」で最初のマスターの「カスタムパラメータ」セクションで「Color Palettes」が1つ以上設定されていることと、グリフ内の「Color」レイヤーに番号、つまり <code>Color 0</code> 、<code>Color 1</code> 、<code>Color 2</code>、……が振られていることを確認してください。</p>
+<p><strong>CPAL/COLRフォントの場合：</strong> <a href="https://glyphsapp.com/learn/creating-a-microsoft-color-font">こちらのチュートリアルの手順に従ってください。</a>「ファイル」＞「フォント情報」＞「マスター」で最初のマスターの「カスタムパラメータ」セクションで「Color Palettes」が1つ以上設定されていることと、グリフ内の「Color」レイヤーに番号、つまり <code>Color 0</code> 、<code>Color 1</code> 、<code>Color 2</code>、……が振られていることを確認してください。</p>
 <p>「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。これに適切なスタイル名をつけてください。そしてそのインスタンスの「カスタムパラメータ」セクションにパラメータ「Color Palette for SVG」を追加し、その値には含めたいカラーパレットのインデックスを設定します。上述の「Color Palettes」パラメータで定義したパレットが1つだけであれば、値に <code>0</code> を設定します。</p>
 <p>そして、カスタムパラメータ「Export SVG Table」を追加し、チェックボックスをオンにします。純粋にSVGフォントだけが欲しいなら、カスタムパラメータ「Export COLR Table」を追加してそのチェックボックスをオフにするのもありだと思います。</p>
-<p>「ファイル」＞「フォント情報」＞「インスタンス」で新しいインスタンスを作成し、カスタムパラメータ「SBIX to SVG」を追加して値に適切なiColorのサイズを入力します。こうすることで同じサイズのインデックスのiColorレイヤーからsbix画像が取り込まれ、SVG画像に変換されます。例えば、カスタムパラメータの値に256を指定すると、Glyphsは全ての <code>iColor 256</code> レイヤーを探し出してSVGに変換します。</p>
+<p><strong>複数レイヤーフォントの場合：</strong> <a href="./creating-a-layered-color-font.html">こちらのチュートリアルの手順に従ってください。</a>「ファイル」＞「フォント情報」＞「マスター」の「Master Color」パラメータで色が設定されているかを確認してください。</p>
+<p>「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。スタイル名には「レギュラー」とか「マルチカラー」、「SVG」など納得のいく名前をつけます。そしてその新しいインスタンスにカスタムパラメータ「Color Layers to SVG」を追加し、「値」をオンにしてください。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/a268aa8cad-1605628243/colorlayerstosvg.png"></figure>
+<p><strong>sbixフォントの場合：</strong> <a href="https://glyphsapp.com/learn/creating-an-apple-color-font">こちらのチュートリアルの手順に従ってください。</a>「ファイル」＞「フォント情報」＞「インスタンス」で新しいインスタンスを作成し、カスタムパラメータ「SBIX to SVG」を追加して値に適切なiColorのサイズを入力します。こうすることで同じサイズのインデックスのiColorレイヤーからsbix画像が取り込まれ、SVG画像に変換されます。例えば、カスタムパラメータの値に256を指定すると、Glyphsは全ての <code>iColor 256</code> レイヤーを探し出してSVGに変換します。</p>
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/596ec67efe-1605628244/sbix2svgparameter.png"></figure>
 <p>純粋にSVGフォントだけが欲しい場合は、カスタムパラメータに「Export sbix Table」を追加してそのチェックボックスをオフにしても良いと思います。</p>
-<p>さあ「ファイル」＞「出力」＞「Webフォント（Cmd-E）」で出力します。もうそれだけで、それ以上のことはありません。上で説明したようにフォントをFirefoxでテストします（オプションA参照）。</p>
+<p>さあ「ファイル」＞「出力」＞「Webフォント」（Cmd-E）で出力します。もうそれだけで、それ以上のことはありません。上で説明したようにフォントをFirefoxでテストします（オプションA参照）。</p>
 
 <h3 id="__more-custom-parameters">カスタムパラメータについての詳細</h3>
 <p>「ファイル」＞「フォント情報」＞「インスタンス」（Cmd-I）の、「カスタムパラメータ」では、次の3つのパラメータのどれかまたは全てを追加できます。</p>
@@ -113,7 +113,7 @@ Glyphsで既存のさまざまな形式のカラーフォントを取り込み�
 <li>公式 <a href="https://www.w3.org/TR/SVG11/">SVG 1.1 仕様書</a>（W3）</li>
 <li>公式 <a href="https://www.microsoft.com/typography/otspec/svg.htm">SVGテーブル仕様</a>（Microsoft Typography）</li>
 <li>Roel Nieskens氏のSVGテストページ <a href="https://pixelambacht.nl/lapislegit/">LapisLegit</a>（ブラウザがクラッシュする可能性あり。気をつけて！）</li>
-<li>Adobe TypeKitの<a href="https://color.typekit.com/">カラーフォントコンセプトページ</a> SVGフォントもあり</li>
+<li>Adobe TypeKitの<a href="https://color.typekit.com/">カラーフォントコンセプトページ</a>。SVGフォントもあり</li>
 <li>Adobeヘルプページ <a href="https://helpx.adobe.com/typekit/using/ot-svg-color-fonts.html">OpenType-SVGカラーフォント</a></li>
 </ul>
 <p>この記事を書いた時点では、SVGテーブルはFirefox、Windows 10+、そしてAdobeアプリでサポートされています。</p>

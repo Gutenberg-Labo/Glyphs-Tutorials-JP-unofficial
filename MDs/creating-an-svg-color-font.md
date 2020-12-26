@@ -8,21 +8,21 @@ by Rainer Erich Scheichelbauer
 
 <br />
 
-20 January 2017
+20 January 2017  
 
 ********
 
-Glyphsは何種類かあるOpenType-SVGフォントの作成方法を提供します。このチュートリアルを読めば、そのほぼ全容が分かります。
+Glyphsは何種類かあるOpenType-SVGフォントの作成方法を提供します。このチュートリアルを読めば、そのほぼ全容が分かります。  
 
 ********
 
-SVGについて調べると、[Scalable Vector Graphics](https://ja.wikipedia.org/wiki/Scalable_Vector_Graphics)の略であることが分かります。ここまでは良いのですが、フォントの分野でこの用語を使うと、実際とは異なる意味になってしまうことがあります。
+SVGについて調べると、[Scalable Vector Graphics](https://ja.wikipedia.org/wiki/Scalable_Vector_Graphics)の略であることが分かります。ここまでは良いのですが、フォントの分野でこの用語を使うと、実際とは異なる意味になってしまうことがあります。  
 
 ### SVGフォント形式
 
 まず第一に、SVGというWebフォントの**ファイル形式**がありました。このファイルの拡張子名は `.svg` またはzip圧縮された `.svgz` でした。これは初期iPhoneのSafariでしかサポートされなかったので、すぐに忘れ去られました。そして幸運なことに、絶滅してしまいました。それは他のフォント形式と比べるとサイズが巨大で、単なるアウトラインしか提供していませんでした。つまり、カーニングも、ヒントもなく、OpenTypeテーブルの提供するその他の良い機能は何一つありませんでした。言い換えれば、OpenTypeフォントですらありませんでした。GlyphsはOpenTypeフォントエディタですから、そんなSVGフォントは生成できません。  
 
-このチュートリアルでは、このレガシーなSVGフォントのファイル形式については「触れません」。
+このチュートリアルでは、このレガシーなSVGフォントのファイル形式については「触れません」。  
 
 ### SVG OpenTypeテーブル
 
@@ -30,7 +30,7 @@ SVGについて調べると、[Scalable Vector Graphics](https://ja.wikipedia.or
 
 このチュートリアルは、OpenType-SVGカラーフォントについて「です」。  
 
-Glyphsで、フォントにSVG情報を取り込む方法は2つあります。（A）個別の `.svg` 画像ファイルから取り込む方法と、（B）既存のカラーフォントから取り込む方法です。後者は、異なるマスター上のレイヤーフォント、インデックス付きの「カラー」レイヤーを持つCPAL/COLRフォント、または「iColor」レイヤーを持つApple形式のsbixフォントのどれかからです。
+Glyphsで、フォントにSVG情報を取り込む方法は2つあります。（A）個別の `.svg` 画像ファイルから取り込む方法と、（B）既存のカラーフォントから取り込む方法です。後者は、異なるマスター上のレイヤーフォント、インデックス付きの「カラー」レイヤーを持つCPAL/COLRフォント、または「iColor」レイヤーを持つApple形式のsbixフォントのどれかからです。  
 
 ### オプションA： SVG画像ファイルから取り込む
 
@@ -87,13 +87,13 @@ Glyphsで、フォントにSVG情報を取り込む方法は2つあります。�
 
 Macでは、OpenType-SVGフォントをサポートするブラウザは[Firefox](https://www.mozilla.org/en-US/firefox/new/)しかありません。Windowsでは、[Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge)もサポートしています。なのでOpenType-SVGフォントをテストするにはこれらのブラウザを使う必要があります。テストのために、WOFFを表示させるためのHTMLとCSSのコードを含んだHTMLファイルを作成するか、あるいは[mekkablueのスクリプトのリポジトリ](https://github.com/mekkablue/Glyphs-Scripts)から「Test」＞「Webfont Test HTML」スクリプトを実行するかしましょう。このスクリプトは現在のフォント用のHTMLファイルを最後に使われたWebフォント出力先に生成します。  
 
-> もしスクリプトを使うことに慣れてなければ、ちょっと時間を取ってスクリプトのreadmeのインストール手順を読み、それに従ってスクリプトをインストールしてみてください。その後、Optionキーを押しながら「スクリプト」＞「スクリプトの再読み込み」（Cmd-Opt-Shift-Y）を選択します。
+> もしスクリプトを使うことに慣れてなければ、ちょっと時間を取ってスクリプトのreadmeのインストール手順を読み、それに従ってスクリプトをインストールしてみてください。その後、Optionキーを押しながら「スクリプト」＞「スクリプトの再読み込み」（Cmd-Opt-Shift-Y）を選択します。  
 
 スクリプトがうまく動いて出力先フォルダが開きます。あとはHTMLファイルをDockのFirefoxアイコンにドラッグ（または右クリックから「このアプリケーションで開く」＞「Firefox.app」）して、大文字の O を入力するだけです。さあどうぞ！  
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/0c481c0f5f-1605628243/animatedredcircle.gif">
 
-ジャジャーン！ だけど、フォントでのアニメーションはプロセッサに高負荷をかけることになるのでどうか気をつけてください。コンピュータのファンは狂ったようにフル回転するでしょうし、モバイルではバッテリーが直葬になってユーザは全員あなたに微妙な感情を持つでしょう。警告しましたよ。
+ジャジャーン！ だけど、フォントでのアニメーションはプロセッサに高負荷をかけることになるのでどうか気をつけてください。コンピュータのファンは狂ったようにフル回転するでしょうし、モバイルではバッテリーが直葬になってユーザは全員あなたに微妙な感情を持つでしょう。警告しましたよ。  
 
 ### オプションB： 既存のカラーフォントから取り込む
 
@@ -101,31 +101,31 @@ Glyphsで既存のさまざまな形式のカラーフォントを取り込み�
 
 選択肢は3つあります。  
 
-1. [複数レイヤーフォント](https://glyphsapp.com/tutorials/creating-a-layered-color-font)： 2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。
-2. [CPAL/COLRフォント](https://glyphsapp.com/tutorials/creating-a-microsoft-color-font)： グリフに `Color` レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。
-3. [sbixフォント](https://glyphsapp.com/tutorials/creating-an-apple-color-font)： グリフの`iColor` レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。
+1. [複数レイヤーフォント](/creating-a-layered-color-font.md)： 2つ以上のマスターを重ね合わせたもの。マスターに互換性は必要ありませんが、「Master Color」を割り当てる必要があります。
+2. [CPAL/COLRフォント](https://glyphsapp.com/learn/creating-a-microsoft-color-font)： グリフに `Color` レイヤーを持つフォントで、各レイヤーには定義済みのカラーパレットの色がリンクされます。
+3. [sbixフォント](https://glyphsapp.com/learn/creating-an-apple-color-font)： グリフの`iColor` レイヤー上に任意の解像度のビットマップ画像が配置されているフォント。
 
 オプションを見て、どれかの形式を選び、SVGのエクスポートを追加する方法は以下をお読みください。  
 
-**複数レイヤーフォントの場合：** [こちらのチュートリアルの手順に従ってください。](https://glyphsapp.com/tutorials/creating-a-layered-color-font)「ファイル」＞「フォント情報」＞「マスター」の「Master Color」パラメータで色が設定されているかを確認してください。  
-
-「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。スタイル名には「レギュラー」とか「マルチカラー」、「SVG」など納得のいく名前をつけます。そしてその新しいインスタンスにカスタムパラメータ「Color Layers to SVG」を追加し、「値」をオンにしてください。  
-
-<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/a268aa8cad-1605628243/colorlayerstosvg.png">
-
-**CPAL/COLRフォントの場合：** [こちらのチュートリアルの手順に従ってください。](https://glyphsapp.com/tutorials/creating-a-microsoft-color-font)「ファイル」＞「フォント情報」＞「マスター」で最初のマスターの「カスタムパラメータ」セクションで「Color Palettes」が1つ以上設定されていることと、グリフ内の「Color」レイヤーに番号、つまり `Color 0` 、`Color 1` 、`Color 2`、……が振られていることを確認してください。  
+**CPAL/COLRフォントの場合：** [こちらのチュートリアルの手順に従ってください。](https://glyphsapp.com/learn/creating-a-microsoft-color-font)「ファイル」＞「フォント情報」＞「マスター」で最初のマスターの「カスタムパラメータ」セクションで「Color Palettes」が1つ以上設定されていることと、グリフ内の「Color」レイヤーに番号、つまり `Color 0` 、`Color 1` 、`Color 2`、……が振られていることを確認してください。  
 
 「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。これに適切なスタイル名をつけてください。そしてそのインスタンスの「カスタムパラメータ」セクションにパラメータ「Color Palette for SVG」を追加し、その値には含めたいカラーパレットのインデックスを設定します。上述の「Color Palettes」パラメータで定義したパレットが1つだけであれば、値に `0` を設定します。  
 
 そして、カスタムパラメータ「Export SVG Table」を追加し、チェックボックスをオンにします。純粋にSVGフォントだけが欲しいなら、カスタムパラメータ「Export COLR Table」を追加してそのチェックボックスをオフにするのもありだと思います。  
 
-「ファイル」＞「フォント情報」＞「インスタンス」で新しいインスタンスを作成し、カスタムパラメータ「SBIX to SVG」を追加して値に適切なiColorのサイズを入力します。こうすることで同じサイズのインデックスのiColorレイヤーからsbix画像が取り込まれ、SVG画像に変換されます。例えば、カスタムパラメータの値に256を指定すると、Glyphsは全ての `iColor 256` レイヤーを探し出してSVGに変換します。  
+**複数レイヤーフォントの場合：** [こちらのチュートリアルの手順に従ってください。](/creating-a-layered-color-font.md)「ファイル」＞「フォント情報」＞「マスター」の「Master Color」パラメータで色が設定されているかを確認してください。  
+
+「ファイル」＞「フォント情報」＞「インスタンス」で、SVGテーブルを含むフォント用の新しいインスタンスを作成します。スタイル名には「レギュラー」とか「マルチカラー」、「SVG」など納得のいく名前をつけます。そしてその新しいインスタンスにカスタムパラメータ「Color Layers to SVG」を追加し、「値」をオンにしてください。  
+
+<img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/a268aa8cad-1605628243/colorlayerstosvg.png">
+
+**sbixフォントの場合：** [こちらのチュートリアルの手順に従ってください。](https://glyphsapp.com/learn/creating-an-apple-color-font)「ファイル」＞「フォント情報」＞「インスタンス」で新しいインスタンスを作成し、カスタムパラメータ「SBIX to SVG」を追加して値に適切なiColorのサイズを入力します。こうすることで同じサイズのインデックスのiColorレイヤーからsbix画像が取り込まれ、SVG画像に変換されます。例えば、カスタムパラメータの値に256を指定すると、Glyphsは全ての `iColor 256` レイヤーを探し出してSVGに変換します。  
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-an-svg-color-font/596ec67efe-1605628244/sbix2svgparameter.png">
 
 純粋にSVGフォントだけが欲しい場合は、カスタムパラメータに「Export sbix Table」を追加してそのチェックボックスをオフにしても良いと思います。  
 
-さあ「ファイル」＞「出力」＞「Webフォント（Cmd-E）」で出力します。もうそれだけで、それ以上のことはありません。上で説明したようにフォントをFirefoxでテストします（オプションA参照）。
+さあ「ファイル」＞「出力」＞「Webフォント」（Cmd-E）で出力します。もうそれだけで、それ以上のことはありません。上で説明したようにフォントをFirefoxでテストします（オプションA参照）。  
 
 ### カスタムパラメータについての詳細
 
@@ -135,7 +135,7 @@ Glyphsで既存のさまざまな形式のカラーフォントを取り込み�
 * 「Export SVG Table」
 * 「Export sbix Table」
 
-これらはどのカラーテーブルを生成して実際のOpenTypeフォントに含めるか、含めないかを制御します。Webフォントのファイルサイズを抑えるためには、これらのテーブルから1つだけを出力し、他のテーブルはすべて無効にした方が良いかもしれません。例えば、オプションBで説明した方法でCPAL/COLRに基づいた設定からSVGテーブルを出力するときは、COLRテーブルの生成を抑制する方が良いでしょう。
+これらはどのカラーテーブルを生成して実際のOpenTypeフォントに含めるか、含めないかを制御します。Webフォントのファイルサイズを抑えるためには、これらのテーブルから1つだけを出力し、他のテーブルはすべて無効にした方が良いかもしれません。例えば、オプションBで説明した方法でCPAL/COLRに基づいた設定からSVGテーブルを出力するときは、COLRテーブルの生成を抑制する方が良いでしょう。  
 
 ### SVGについての詳細
 
@@ -144,10 +144,10 @@ Glyphsで既存のさまざまな形式のカラーフォントを取り込み�
 * 公式 [SVG 1.1 仕様書](https://www.w3.org/TR/SVG11/)（W3）
 * 公式 [SVGテーブル仕様](https://www.microsoft.com/typography/otspec/svg.htm)（Microsoft Typography）
 * Roel Nieskens氏のSVGテストページ [LapisLegit](https://pixelambacht.nl/lapislegit/)（ブラウザがクラッシュする可能性あり。気をつけて！）
-* Adobe TypeKitの[カラーフォントコンセプトページ](https://color.typekit.com/) SVGフォントもあり
+* Adobe TypeKitの[カラーフォントコンセプトページ](https://color.typekit.com/)。SVGフォントもあり
 * Adobeヘルプページ [OpenType-SVGカラーフォント](https://helpx.adobe.com/typekit/using/ot-svg-color-fonts.html)
 
-この記事を書いた時点では、SVGテーブルはFirefox、Windows 10+、そしてAdobeアプリでサポートされています。
+この記事を書いた時点では、SVGテーブルはFirefox、Windows 10+、そしてAdobeアプリでサポートされています。  
 
 ********
 
@@ -155,4 +155,4 @@ Update 2017-01-20: サポートブラウザのリストにMicrosoft Edgeを追�
 Update 2018-03-26: sbixからSVGへの変換を追加。  
 Update 2018-04-14: SVGをサポートするOSとアプリを更新（Behdadさんありがとう！）。  
 Update 2019-02-01: 誤記を訂正し、兄弟（brothers）という単語を兄弟姉妹（siblings）に置換（Nathalieさんありがとう！）。  
-Update 2019-11-15: 「オプションB」の導入部を更新。
+Update 2019-11-15: 「オプションB」の導入部を更新。  

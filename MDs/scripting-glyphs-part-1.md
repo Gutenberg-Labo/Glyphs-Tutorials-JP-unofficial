@@ -1,4 +1,4 @@
-# Glyphsでスクリプト パート1
+# Glyphsでスクリプト・1
 
 [(Original page)](https://glyphsapp.com/learn/scripting-glyphs-part-1)  
 
@@ -9,15 +9,15 @@ by Rafał Buchner & Rainer Scheichelbauer
 <br />
 
 1 December 2020  
-Published on 22 June 2012
+Published on 22 June 2012  
 
 ********
 
-Pythonのチュートリアル・第1回です。予備知識は必要ありません。この第1回目は、「マクロパネル」ウィンドウでの最初のステップです。
+Pythonのチュートリアル・第1回です。予備知識は必要ありません。この第1回目は、「マクロパネル」ウィンドウでの最初のステップです。  
 
 ********
 
-この複数回のチュートリアルで、Pythonを使い始めましょう。午前中に全部に目を通し、お昼を食べたら、その日の午後には初めてのスクリプトが書けます。楽しんでください！
+この複数回のチュートリアルで、Pythonを使い始めましょう。午前中に全部に目を通し、お昼を食べたら、その日の午後には初めてのスクリプトが書けます。楽しんでください！  
 
 ### マクロパネル
 
@@ -46,7 +46,7 @@ print( "Hello World!" )
 
 <img alt="" src="https://glyphsapp.com/media/pages/learn/scripting-glyphs-part-1/c18e7c01e3-1607121762/macrowindow-2.png">
 
-「実行」（Cmd-Return）を何度か押下していると、実行結果の領域はすぐに溢れかえってしまうでしょう。「消去」（Cmd-K）を押下して一掃してください。
+「実行」（Cmd-Return）を何度か押下していると、実行結果の領域はすぐに溢れかえってしまうでしょう。「消去」（Cmd-K）を押下して一掃してください。  
 
 ### オブジェクト
 
@@ -104,7 +104,7 @@ print( Glyphs.font.glyphs["a"].subCategory )
 print( Glyphs.font.glyphs["a"].unicode )
 ```
 
-コピー＆ペーストが使えることは、覚えておいてください。行を毎回入力しなおす必要はありません。
+コピー＆ペーストが使えることは、覚えておいてください。行を毎回入力しなおす必要はありません。  
 
 ### 変数
 
@@ -140,7 +140,7 @@ print( myGlyph.subCategory, end=" " )
 print( myGlyph.unicode )
 ```
 
-これで私たちが変更するのは1行目のグリフ名だけにできました。
+これで私たちが変更するのは1行目のグリフ名だけにできました。  
 
 ### ループ処理
 
@@ -175,12 +175,12 @@ for myFont in Glyphs.fonts:
 
 レポートに別の情報を含めたいですか？ [Glyphs Python Documentation](http://docu.glyphsapp.com/#gsglyph "Glyphs.app Python Scripting API Documentation — Glyphs.app Python Scripting API 0.3 documentation")にアクセスし、他にどんなGlyphのオブジェクト（「GSGlyph」）やFontのオブジェクト（「GSFont」）があって何ができるか見てください。  
 
-[パート2](https://glyphsapp.com/learn/scripting-glyphs-part-2)では、GSGlyphをもう少し深く、ノードの扱いまで掘り下げます。
+[第2回](/scripting-glyphs-part-2.md)では、GSGlyphをもう少し深く、ノードの扱いまで掘り下げます。  
 
 ********
 
-Update 2014-10-04: Glyphs.fontのショートカットと、パート2へのリンクを追加。  
+Update 2014-10-04: Glyphs.fontのショートカットと、第2回へのリンクを追加。  
 Update 2015-07-30: スクリーンショットをGlyphs 2に更新。  
 Update 2016-12-08: スクリーンショットを更新、書式を修正、Glyphs.currentDocumentをGlyphs.fontに差し替え。  
 Update 2016-12-09: 最初の段落を追加。  
-Update 2020-12-02: Python3に更新。
+Update 2020-12-02: Python3に更新。  
