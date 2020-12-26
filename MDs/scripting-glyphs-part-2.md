@@ -17,7 +17,7 @@ Published on 28 June 2012
 
 ********
 
-このチュートリアルは、最初に[Glyphsでスクリプト・1](./scripting-glyphs-part-1.html)を読み終わっていることが前提です。  
+このチュートリアルは、最初に[Glyphsでスクリプト・1](/scripting-glyphs-part-1.md)を読み終わっていることが前提です。  
 
 ### グリフとレイヤー
 
