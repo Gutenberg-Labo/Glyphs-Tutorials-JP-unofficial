@@ -31,4 +31,5 @@ Updates are very infrequent or extremely fickle, but content would be added acco
 |             Older Versions of Glyphs | [Glyphsの過去バージョン](/MDs/older-versions-of-glyphs.md)                         | 2020-Dec-22 |
 |             Scripting Glyphs, Part 1 | [Glyphsでスクリプト・1](/MDs/scripting-glyphs-part-1.md)                           | 2020-Dec-24 |
 |             Scripting Glyphs, Part 2 | [Glyphsでスクリプト・2](/MDs/scripting-glyphs-part-2.md)                           | 2020-Dec-26 |
+|             Scripting Glyphs, Part 3 | [Glyphsでスクリプト・3](/MDs/scripting-glyphs-part-3.md)                           | 2020-Dec-26 |
 |     Reusing Shapes: Smart Components | [図形の再利用：スマートコンポーネント](/MDs/smart-components.md)                   | 2020-Dec-16 |
