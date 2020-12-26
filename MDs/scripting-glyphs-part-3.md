@@ -17,7 +17,7 @@ Published on 17 July 2012
 
 ********
 
-このチュートリアルは、最初に[Glyphsでスクリプト・1](./scripting-glyphs-part-1.md")と[Glyphsでスクリプト・2](./scripting-glyphs-part-2.md)を読み終わっていることが前提です。  
+このチュートリアルは、最初に[Glyphsでスクリプト・1](./scripting-glyphs-part-1.md)と[Glyphsでスクリプト・2](./scripting-glyphs-part-2.md)を読み終わっていることが前提です。  
 
 Glyphsのメニューバーに「スクリプト」というメニューがあることに気がついているかもしれません。書いたスクリプトをこのメニュー内に配置しましょう。まずは、良いテキストエディタが必要です。個人的には、コーディングをとても楽しく簡単にする特別な機能を持った、[TextMate](http://macromates.com/)（60ドル）と[SublimeText](https://www.sublimetext.com)（80ドル）の2つが好きです。ベテランのMacユーザなら[BBEdit](https://www.barebones.com/products/bbedit/index.html)（50ドル）、[Smultron](https://www.peterborgapps.com/smultron/)（15ドル）、[Coda](https://www.panic.com/coda/buy.html)（100ドル）も好きでしょう。このうちのどれかにライセンス料をお支払い済みかもしれませんが、もしそうなら、Pythonのコーディングでもそのエディタをあっさり続けて使えます。でも予算が限られているとか、今はコーディングをいくつか試すだけで買うかどうかは後から決めたいのであれば、無料の[TextWrangler](http://www.barebones.com/products/TextWrangler/)、[SubEthaEdit](https://subethaedit.net)、[Atom](https://atom.io)、または最近非常に人気のある[Visual Studio Code](https://code.visualstudio.com/)を使ってもよいでしょう。  
 
