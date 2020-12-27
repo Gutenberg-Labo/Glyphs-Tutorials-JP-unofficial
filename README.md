@@ -20,16 +20,17 @@ Updates are very infrequent or extremely fickle, but content would be added acco
 
 ## Index
 
-|                           原タイトル | 日本語訳                                                                           | 更新日      |
-|-------------------------------------:|:-----------------------------------------------------------------------------------|:------------|
-|    Cannot download or update Glyphs? | [Glyphsをダウンロード／更新できない時](/MDs/cannot-download-or-update-glyphs.md)   | 2020-Dec-24 |
-|        Creating a Layered Color Font | [複数レイヤーのカラーフォントの作成](/MDs/creating-a-layered-color-font.md)        | 2020-Dec-22 |
-|           Creating an SVG Color Font | [SVGカラーフォントの作成](/MDs/creating-an-svg-color-font.md)                      | 2020-Dec-26 |
-| Creating Fonts with Complex Outlines | [複雑なアウトラインのフォントの作成](/MDs/creating-fonts-with-complex-outlines.md) | 2020-Dec-22 |
-|   How to Install Your Glyphs License | [ライセンスのインストール方法](/MDs/how-to-install-your-glyphs-license.md)         | 2020-Dec-23 |
-|                            Ligatures | [リガチャー（合字）](/MDs/ligatures.md)                                            | 2020-Dec-24 |
-|             Older Versions of Glyphs | [Glyphsの過去バージョン](/MDs/older-versions-of-glyphs.md)                         | 2020-Dec-22 |
-|             Scripting Glyphs, Part 1 | [Glyphsでスクリプト・1](/MDs/scripting-glyphs-part-1.md)                           | 2020-Dec-24 |
-|             Scripting Glyphs, Part 2 | [Glyphsでスクリプト・2](/MDs/scripting-glyphs-part-2.md)                           | 2020-Dec-26 |
-|             Scripting Glyphs, Part 3 | [Glyphsでスクリプト・3](/MDs/scripting-glyphs-part-3.md)                           | 2020-Dec-26 |
-|     Reusing Shapes: Smart Components | [図形の再利用：スマートコンポーネント](/MDs/smart-components.md)                   | 2020-Dec-16 |
+|                                   原タイトル | 日本語訳                                                                                    | 更新日      |
+|---------------------------------------------:|:--------------------------------------------------------------------------------------------|:------------|
+|            Cannot download or update Glyphs? | [Glyphsをダウンロード／更新できない時](/MDs/cannot-download-or-update-glyphs.md)            | 2020-Dec-24 |
+|           How to Install Your Glyphs License | [ライセンスのインストール方法](/MDs/how-to-install-your-glyphs-license.md)                  | 2020-Dec-23 |
+|                     Older Versions of Glyphs | [Glyphsの過去バージョン](/MDs/older-versions-of-glyphs.md)                                  | 2020-Dec-22 |
+|                Creating a Layered Color Font | [複数レイヤーのカラーフォントの作成](/MDs/creating-a-layered-color-font.md)                 | 2020-Dec-22 |
+|                   Creating an SVG Color Font | [SVGカラーフォントの作成](/MDs/creating-an-svg-color-font.md)                               | 2020-Dec-26 |
+|         Creating Fonts with Complex Outlines | [複雑なアウトラインのフォントの作成](/MDs/creating-fonts-with-complex-outlines.md)          | 2020-Dec-22 |
+|                                    Ligatures | [リガチャー（合字）](/MDs/ligatures.md)                                                     | 2020-Dec-24 |
+| Multiple Masters, Part 1: Setting up Masters | [マルチプルマスター・1：マスターの設定](/MDs/multiple-masters-part-1-setting-up-masters.md) | 2020-Dec-27 |
+|             Reusing Shapes: Smart Components | [図形の再利用：スマートコンポーネント](/MDs/smart-components.md)                            | 2020-Dec-16 |
+|                     Scripting Glyphs, Part 1 | [Glyphsでスクリプト・1](/MDs/scripting-glyphs-part-1.md)                                    | 2020-Dec-24 |
+|                     Scripting Glyphs, Part 2 | [Glyphsでスクリプト・2](/MDs/scripting-glyphs-part-2.md)                                    | 2020-Dec-26 |
+|                     Scripting Glyphs, Part 3 | [Glyphsでスクリプト・3](/MDs/scripting-glyphs-part-3.md)                                    | 2020-Dec-26 |
