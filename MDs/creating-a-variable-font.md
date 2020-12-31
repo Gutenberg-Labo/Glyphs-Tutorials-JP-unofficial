@@ -61,12 +61,12 @@ OK、マスターが設定できたので、それぞれのマスターに図形
 
 ## Step 3 互換性のあるグリフの作図
 
-手短かつ簡潔に説明するために、このチュートリアルでは大文字のAにこだわることにします。ステム幅が約50ユニットであるライト体（Cmd-1）のAを作図します。  
+手短かつ簡潔に説明するために、このチュートリアルでは大文字の A にこだわることにします。ステム幅が約50ユニットであるライト体（Cmd-1）の A を作図します。  
 
 <img alt="" height="300px" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/66d04fb9c0-1605628247/a_lightmaster.png">
 
 <!-- reordered this sentence between the pictures -->
-……そして幅が200ユニットのボールド体（Cmd-2）のAを作図します。  
+……そして幅が200ユニットのボールド体（Cmd-2）の A を作図します。  
 
 <img alt="" height="300px" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/37ab8a82ae-1605628247/a_boldmaster.png">
 
@@ -92,7 +92,7 @@ OK、マスターが設定できたので、それぞれのマスターに図形
 2. オプションで、「名前」の直下にあるポップアップメニューから**ウェイトと幅のクラス**を選択できます。欠点として、これは関係する「静的な」フォントの出力のみに適用され、バリアブルフォントには書き込まれません。これについては[フォントの命名](https://glyphsapp.com/learn/naming)のチュートリアルをご参照ください。
 3. それぞれの補間軸に適した**デザインスペースの座標**を選びます。ウェイトの分布については[マルチプルマスター・3](https://glyphsapp.com/learn/multiple-masters-part-3-setting-up-instances)のチュートリアルを参照してください。
 4. **スタイルリンク**を選択します。正体では、通常はここは空白のままにしておき、太字の時だけ「Regular」の「ボールド」にします。そしてそれぞれの斜体ではその正体に対応した「イタリック」、例えば、セミボールドのイタリックなら「Semibold」の「イタリック」にします。斜体だけのインスタンスは「Regular」の「イタリック」で、太字の斜体は「ボールド」の「イタリック」です。これについては[フォントの命名](https://glyphsapp.com/learn/naming)のチュートリアルをご参照ください。
-5. そしてこれはとても言いにくいことなのですが、OTVarインスタンスでは**カスタムパラメータはほとんど動作しません**。大半のフィルタなど、図形のポストプロセスが行われる場合は特にそうです。カスタムパラメータをインスタンスで設定しても、アプリケーションはこれらをぬけぬけと無視します。なぜかって？ アウトラインの互換性が脅かされるからです。
+5. そしてこれはとても言いにくいことなのですが、OTVarのインスタンスでは**カスタムパラメータはほとんど動作しません**。大半のフィルタなど、図形のポストプロセスが行われる場合は特にそうです。カスタムパラメータをインスタンスで設定しても、アプリケーションはこれらをぬけぬけと無視します。なぜかって？ アウトラインの互換性が脅かされるからです。
 <!-- ignore this for now please
 5. オプション： **Variable SubfamilyName** を選択してインスタンスの（スタイルの）名前を上書きします。静的なフォントとバリアブルフォントの「両方の」出力に同じインスタンスを使用していて、何らかの理由で、「静的なスタイルとバリアブルのスタイルで異なるスタイル名」を使いたい場合、このパラメータでバリアブルのスタイル名を特定して設定できます。
 -->
@@ -248,7 +248,7 @@ AdobeのOTVarの実装にはバグがあります。そのため、Illustrator�
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/3d0993da87-1608028536/axislocation.png">
 
 <!-- paragraph replaced: -->
-この例では、ウェイトは `usWeightClass` の1から1000の値に関連するのでWeightスライダーの範囲が50から200というのは仕様から外れていると議論できます。さら言えば、100（ヘアライン体）から、400（レギュラー体）、700（ボールド体）、900（ヘビー体）という範囲で、100刻みの値には意味があります。するとこの例では、Lightマスターは300（ライト体）のウェイトに、Boldマスターは800（エクストラボールド）以上のウェイトに相当します。  
+この例では、ウェイトは `usWeightClass` の1から1000の値に関連するのでWeightスライダーの範囲が50から200というのは仕様から外れていると議論できます。さら言えば、100（Hairline）から、400（Regular）、700（Bold）、900（Heavy）という範囲で、100刻みの値には意味があります。するとこの例では、Lightマスターは300（Light）のウェイトに、Boldマスターは800（Extrabold）以上のウェイトに相当します。  
 
 <!-- paragraph commented out, not sure if it still works that way, currently a bug in Glyphs 3: -->
 <!--
@@ -360,7 +360,7 @@ AdobeのOTVarの実装にはバグがあります。そのため、Illustrator�
 [mekkablueのスクリプト集](https://github.com/mekkablue/Glyphs-Scripts/)（リンク先readmeにインストール手順あり）には、バリアブルフォントを動作させるのに便利なスクリプトがいくつかあります。  
 <ol>
 <li>
-<p><strong>「Interpolation」＞「Composite Variabler」：</strong> コンポーネントグリフ内で使われているコンポーネントの[オルタネートレイヤー](https://glyphsapp.com/learn/alternating-glyph-shapes)を再複製します。またブレースレイヤーをコンポーネントグリフ内でも動作させます。例えば、ウェイトが太くなるにつれ二階建てから一階建てに切り替わるというブレースレイヤーを持つ小文字の <code>g</code> の場合、<code>gcircumflex</code> 、<code>gcommaaccent</code> 、<code>gbreve</code> といったコンポーネントグリフ中でブラケットレイヤーを再複製する必要があります。なおスクリプトの実行後にブラケットレイヤーを分解する必要があります。</p>
+<p><strong>「Interpolation」＞「Composite Variabler」：</strong> コンポーネントグリフ内で使われているコンポーネントの<a href="https://glyphsapp.com/learn/alternating-glyph-shapes">オルタネートレイヤー</a>を再複製します。またブレースレイヤーをコンポーネントグリフ内でも動作させます。例えば、ウェイトが太くなるにつれ二階建てから一階建てに切り替わるというブレースレイヤーを持つ小文字の <code>g</code> の場合、<code>gcircumflex</code> 、<code>gcommaaccent</code> 、<code>gbreve</code> といったコンポーネントグリフ中でブラケットレイヤーを再複製する必要があります。なおスクリプトの実行後にブラケットレイヤーを分解する必要があります。</p>
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/b83a70f895-1605628248/mekkablue-compound-variabler.png">
 </li>
 <li>
@@ -383,7 +383,7 @@ AdobeのOTVarの実装にはバグがあります。そのため、Illustrator�
 * Laurence Penney氏による [Axis Praxis](https://www.axis-praxis.org)
 * Laurence Penney氏による [Samsa](https://www.axis-praxis.org/samsa/) バリアブルフォント解析ツール（[GitHub上のソースコード](https://github.com/Lorp/samsa)）
 * Nübel兄弟による [Font Drop](https://fontdrop.info)
-* Travis Kochel氏による [I Can Variable Font「Notes on generating variable fonts」](https://github.com/scribbletone/i-can-variable-font)<
+* Travis Kochel氏による [I Can Variable Font「Notes on generating variable fonts」](https://github.com/scribbletone/i-can-variable-font)
 * Andrey Kuzmin氏による [Font Dimensions](https://github.com/w0rm/elm-font-dimensions) バリアブルフォント次元可視化ツール
 * Underware氏による楽しいショーケースとコンセプトページ： [Very Able Fonts](http://very-able-fonts.com)
 * Nick Sherman氏による [V-Fonts](https://v-fonts.com/)「a simple resource for finding and trying variable fonts」

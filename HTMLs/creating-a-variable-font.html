@@ -66,10 +66,10 @@
 <p>OK、マスターが設定できたので、それぞれのマスターに図形を追加します。さあ行きましょう。</p>
 
 <h2 id="g-step-3-draw-compatible-glyphs"><span class="Small">Step 3</span> 互換性のあるグリフの作図</h2>
-<p>手短かつ簡潔に説明するために、このチュートリアルでは大文字のAにこだわることにします。ステム幅が約50ユニットであるライト体（Cmd-1）のAを作図します。</p>
+<p>手短かつ簡潔に説明するために、このチュートリアルでは大文字の A にこだわることにします。ステム幅が約50ユニットであるライト体（Cmd-1）の A を作図します。</p>
 <figure><img alt="" height="300px" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/66d04fb9c0-1605628247/a_lightmaster.png"></figure>
 <!-- reordered this sentence between the pictures -->
-<p>……そして幅が200ユニットのボールド体（Cmd-2）のAを作図します。</p>
+<p>……そして幅が200ユニットのボールド体（Cmd-2）の A を作図します。</p>
 <figure><img alt="" height="300px" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/37ab8a82ae-1605628247/a_boldmaster.png"></figure>
 <!--added the first sentence: -->
 <p>「グリフ」＞「アンカーを自動設置」（Cmd-U）か、あるいはもっと良いのはOptionキーを押しながら「グリフ」＞「全てのマスターでアンカーを自動設置」（Cmd-Opt-U）を選択してアンカーを追加します。最も重要なことは、<a href="https://glyphsapp.com/learn/multiple-masters-part-2-keeping-your-outlines-compatible">マルチプルマスターでの設定と同じように</a>、2つのマスター間で全てのアウトラインとアンカーの互換性を保つことです。</p>
@@ -91,7 +91,7 @@
 <li>オプションで、「名前」の直下にあるポップアップメニューから<strong>ウェイトと幅のクラス</strong>を選択できます。欠点として、これは関係する「静的な」フォントの出力のみに適用され、バリアブルフォントには書き込まれません。これについては<a href="https://glyphsapp.com/learn/naming">フォントの命名</a>のチュートリアルをご参照ください。</li>
 <li>それぞれの補間軸に適した<strong>デザインスペースの座標</strong>を選びます。ウェイトの分布については<a href="https://glyphsapp.com/learn/multiple-masters-part-3-setting-up-instances">マルチプルマスター・3</a>のチュートリアルを参照してください。</li>
 <li><strong>スタイルリンク</strong>を選択します。正体では、通常はここは空白のままにしておき、太字の時だけ「Regular」の「ボールド」にします。そしてそれぞれの斜体ではその正体に対応した「イタリック」、例えば、セミボールドのイタリックなら「Semibold」の「イタリック」にします。斜体だけのインスタンスは「Regular」の「イタリック」で、太字の斜体は「ボールド」の「イタリック」です。これについては<a href="https://glyphsapp.com/learn/naming">フォントの命名</a>のチュートリアルをご参照ください。</li>
-<li>そしてこれはとても言いにくいことなのですが、OTVarインスタンスでは<strong>カスタムパラメータはほとんど動作しません</strong>。大半のフィルタなど、図形のポストプロセスが行われる場合は特にそうです。カスタムパラメータをインスタンスで設定しても、アプリケーションはこれらをぬけぬけと無視します。なぜかって？ アウトラインの互換性が脅かされるからです。</li>
+<li>そしてこれはとても言いにくいことなのですが、OTVarのインスタンスでは<strong>カスタムパラメータはほとんど動作しません</strong>。大半のフィルタなど、図形のポストプロセスが行われる場合は特にそうです。カスタムパラメータをインスタンスで設定しても、アプリケーションはこれらをぬけぬけと無視します。なぜかって？ アウトラインの互換性が脅かされるからです。</li>
 </ol>
 <!-- ignore this for now please
 5. オプション： **Variable SubfamilyName** を選択してインスタンスの（スタイルの）名前を上書きします。静的なフォントとバリアブルフォントの「両方の」出力に同じインスタンスを使用していて、何らかの理由で、「静的なスタイルとバリアブルのスタイルで異なるスタイル名」を使いたい場合、このパラメータでバリアブルのスタイル名を特定して設定できます。
@@ -221,7 +221,7 @@
 <p>「ファイル」＞「フォント情報」＞「マスター」で、「Axis Location」というパラメータを追加できます。これでマスターの補間軸上の座標を変更できます。ユーザに見せる値をマスターやインスタンスで設定した補間値とは違うものにしなくてはならない場合に意味があります。</p>
 <figure><img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/3d0993da87-1608028536/axislocation.png"></figure>
 <!-- paragraph replaced: -->
-<p>この例では、ウェイトは <code>usWeightClass</code> の1から1000の値に関連するのでWeightスライダーの範囲が50から200というのは仕様から外れていると議論できます。さら言えば、100（ヘアライン体）から、400（レギュラー体）、700（ボールド体）、900（ヘビー体）という範囲で、100刻みの値には意味があります。するとこの例では、Lightマスターは300（ライト体）のウェイトに、Boldマスターは800（エクストラボールド）以上のウェイトに相当します。</p>
+<p>この例では、ウェイトは <code>usWeightClass</code> の1から1000の値に関連するのでWeightスライダーの範囲が50から200というのは仕様から外れていると議論できます。さら言えば、100（Hairline）から、400（Regular）、700（Bold）、900（Heavy）という範囲で、100刻みの値には意味があります。するとこの例では、Lightマスターは300（Light）のウェイトに、Boldマスターは800（Extrabold）以上のウェイトに相当します。</p>
 
 <!-- paragraph commented out, not sure if it still works that way, currently a bug in Glyphs 3: -->
 <!--
