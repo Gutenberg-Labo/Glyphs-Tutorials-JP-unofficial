@@ -364,7 +364,7 @@ AdobeのOTVarの実装にはバグがあります。そのため、Illustrator�
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/b83a70f895-1605628248/mekkablue-compound-variabler.png">
 </li>
 <li>
-<p><strong>「Kerning」＞「Zero Kerner」：</strong>あるマスターにはが存在するが別のマスターでは欠落しているカーニングペアに値が0のグループカーニングを追加します。OTVar出力でカーニングの補間生成を可能にするのに役立ちます。カーニングの欠落、特に一部のマスターにだけカーニングペアが設定されている場合に使います。</p>
+<p><strong>「Kerning」＞「Zero Kerner」：</strong> あるマスターにはが存在するが別のマスターでは欠落しているカーニングペアに値が 0 のグループカーニングを追加します。OTVar出力でカーニングの補間生成を可能にするのに役立ちます。カーニングの欠落、特に一部のマスターにだけカーニングペアが設定されている場合に使います。</p>
 <img alt="" src="https://glyphsapp.com/media/pages/learn/creating-a-variable-font/a733c89468-1605628248/mekkablue-zero-kerner.png">
 <p><strong>更新情報：</strong> Glyphs 2.6.5、ビルド1300以上では、Zero Kernerはもう必要ありません。</p>
 </li>
