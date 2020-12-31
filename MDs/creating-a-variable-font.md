@@ -45,7 +45,7 @@ Published on 8 March 2018
 ## Step 2 マスターの設定
 
 <!-- new: -->
-同じ「ファイル」＞「フォント情報」ウィンドウで、「マスター」タブに切り替えて、[マルチプルマスターのプロジェクトと同じよう](./multiple-masters-part-1-setting-up-masters.html)に、ウィンドウの左下の隅にある＋アイコンを押下してマスターを追加します。今の例では、「Light」と「Bold」の、2つのマスターを追加します。  
+同じ「ファイル」＞「フォント情報」ウィンドウで、「マスター」タブに切り替えて、[マルチプルマスターのプロジェクトと同じよう](./multiple-masters-part-1-setting-up-masters.md)に、ウィンドウの左下の隅にある＋アイコンを押下してマスターを追加します。今の例では、「Light」と「Bold」の、2つのマスターを追加します。  
 
 <!-- unchanged, except I REORDERED point 1 and 2, and the FIRST SENTENCE of point 3: -->
 それぞれのマスターで、次の設定を選択してください。  
