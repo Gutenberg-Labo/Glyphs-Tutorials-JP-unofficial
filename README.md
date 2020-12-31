@@ -1,6 +1,6 @@
 # Glyphs.app チュートリアル日本語訳・非公式
 
-[Glyphs.app チュートリアル](https://glyphsapp.com/learn)の、非公式な日本語訳です。  
+[Glyphs.app チュートリアル](https://glyphsapp.com/learn)を、非公式に和訳しています。  
 更新頻度は非常に低い、もしくは極めて気まぐれですが、主に訳者自身の需要からコンテンツが増える予定はあります。
 
 * ベストエフォートで運用しており、公式サイトの最新版とは内容が異なる場合があります。
@@ -9,7 +9,7 @@
 
 <br />
 
-This is an unofficial Japanese translation of the [Glyphs.app tutorial.](https://glyphsapp.com/learn)  
+Unofficial Japanese translation of the [Glyphs.app tutorial.](https://glyphsapp.com/learn)  
 Updates are very infrequent or extremely fickle, but content would be added according to the translator's own needs.
 
 * The contents may differ from the latest version on the official site because this is operated on a best-effort basis.
@@ -20,17 +20,18 @@ Updates are very infrequent or extremely fickle, but content would be added acco
 
 ## Index
 
-|                                   原タイトル | 日本語訳                                                                                    | 更新日      |
+|                               Original Title | 日本語訳                                                                                    | Modified on |
 |---------------------------------------------:|:--------------------------------------------------------------------------------------------|:------------|
 |            Cannot download or update Glyphs? | [Glyphsをダウンロード／更新できない時](/MDs/cannot-download-or-update-glyphs.md)            | 2020-Dec-24 |
 |           How to Install Your Glyphs License | [ライセンスのインストール方法](/MDs/how-to-install-your-glyphs-license.md)                  | 2020-Dec-23 |
 |                     Older Versions of Glyphs | [Glyphsの過去バージョン](/MDs/older-versions-of-glyphs.md)                                  | 2020-Dec-22 |
-|                Creating a Layered Color Font | [複数レイヤーのカラーフォントの作成](/MDs/creating-a-layered-color-font.md)                 | 2020-Dec-22 |
-|                   Creating an SVG Color Font | [SVGカラーフォントの作成](/MDs/creating-an-svg-color-font.md)                               | 2020-Dec-26 |
 |         Creating Fonts with Complex Outlines | [複雑なアウトラインのフォントの作成](/MDs/creating-fonts-with-complex-outlines.md)          | 2020-Dec-22 |
 |                                    Ligatures | [リガチャー（合字）](/MDs/ligatures.md)                                                     | 2020-Dec-24 |
-| Multiple Masters, Part 1: Setting up Masters | [マルチプルマスター・1：マスターの設定](/MDs/multiple-masters-part-1-setting-up-masters.md) | 2020-Dec-27 |
 |             Reusing Shapes: Smart Components | [図形の再利用：スマートコンポーネント](/MDs/smart-components.md)                            | 2020-Dec-16 |
+| Multiple Masters, Part 1: Setting up Masters | [マルチプルマスター・1：マスターの設定](/MDs/multiple-masters-part-1-setting-up-masters.md) | 2020-Dec-27 |
+|                Creating a Layered Color Font | [複数レイヤーのカラーフォントの作成](/MDs/creating-a-layered-color-font.md)                 | 2020-Dec-22 |
+|                   Creating an SVG Color Font | [SVGカラーフォントの作成](/MDs/creating-an-svg-color-font.md)                               | 2020-Dec-26 |
+|                     Creating a Variable Font | [バリアブルフォントの作成](/MDs/creating-a-variable-font.md)                                | 2020-Dec-31 |
 |                     Scripting Glyphs, Part 1 | [Glyphsでスクリプト・1](/MDs/scripting-glyphs-part-1.md)                                    | 2020-Dec-24 |
 |                     Scripting Glyphs, Part 2 | [Glyphsでスクリプト・2](/MDs/scripting-glyphs-part-2.md)                                    | 2020-Dec-26 |
 |                     Scripting Glyphs, Part 3 | [Glyphsでスクリプト・3](/MDs/scripting-glyphs-part-3.md)                                    | 2020-Dec-26 |
