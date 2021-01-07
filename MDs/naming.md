@@ -353,7 +353,7 @@ PostScript名はPostScript Type 1時代の遺産です。いくつかのアプ�
 | [ID 21](https://www.microsoft.com/typography/otspec/name.htm#nid21) | WWSファミリー名。ID 16 および ID 17 のエントリがWWS形式に沿っていない場合（つまり、ID 17 のエントリにウェイト、字幅、傾斜以外の属性の修飾子が含まれる場合）に、WWSに準拠したファミリー名を設定するために使用します。 |
 | [ID 22](https://www.microsoft.com/typography/otspec/name.htm#nid22) | WWSサブファミリー名。ID 21と併用され、ID 16 と ID 17 のエントリーがWWS形式に沿っていない場合にこのIDはWWSに沿った（ウェイト、字幅、傾斜の属性のみが記述される）サブファミリー名を提供します。 |
 | [ID 23](https://www.microsoft.com/typography/otspec/name.htm#nid23) | 明るい背景パレット名。COLR/CMAPカラーフォント用に予約されています。 |
-| [ID 24](https://www.microsoft.com/typography/otspec/name.htm#nid24) | 暗い背景パレット名。COLR/CMAPカラーフォント用に予約されています。< |
+| [ID 24](https://www.microsoft.com/typography/otspec/name.htm#nid24) | 暗い背景パレット名。COLR/CMAPカラーフォント用に予約されています。 |
 | [ID 25](https://www.microsoft.com/typography/otspec/name.htm#nid25) | PostScript名プレフィックスのバリエーション。バリアブルフォントにこれが存在すると、PostScript Name Generation for Variation Fontsアルゴリズムでファミリー名のプレフィックスとして使用されます。 |
 
 これらのエントリのほとんどには、通常はUIのテキスト入力フィールドか、または専用のカスタムパラメータといったよりよい設定手段があります。もしこれをやる場合は、通常ではWindows用の名前のみを設定すれば回避できます。言い換えれば、パラメータ `<nameID>; <nameString>` の短縮形を使えば終わりです。  
