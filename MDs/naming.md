@@ -322,7 +322,7 @@ PostScript名はPostScript Type 1時代の遺産です。いくつかのアプ�
 >   
 > `platformID` に 3（Windows）を指定した場合、`encID` は 0 から 10 までの数値に、`langID` は 0x8000 以下の16進数にしなければなりません （[Windowsのプラットフォーム固有のエンコーディングIDと言語ID](https://www.microsoft.com/typography/otspec/name.htm#encLangIDs_platID3)を参照）。  
 
-`platformID` には、Macintoshの場合の 1、Windowsの場合の 3 のいづれかを指定できます。オプションである `encID` と `langID` は、`platformID` に応じた、WindowsまたはMacintoshのいづれかのエンコーディングIDと言語IDを表します。これらは0から65536までの数値でなければならず、10進数、8進数、または16進数で入力できます。AFDKO構文の仕様では「10進数は 0 以外の数字から始まり、8進数は数字の 0 から始まり、16進数は数字および16進文字の a〜f または A〜F に 0x の接頭辞がつかなければならない」と規定されています。  
+`platformID` には、Macintoshの場合の 1、Windowsの場合の 3 のいずれかを指定できます。オプションである `encID` と `langID` は、`platformID` に応じた、WindowsまたはMacintoshのいずれかのエンコーディングIDと言語IDを表します。これらは0から65536までの数値でなければならず、10進数、8進数、または16進数で入力できます。AFDKO構文の仕様では「10進数は 0 以外の数字から始まり、8進数は数字の 0 から始まり、16進数は数字および16進文字の a〜f または A〜F に 0x の接頭辞がつかなければならない」と規定されています。  
 
 ここだけの話、本当に重要なのはプラットフォームID 1 の「Macintosh」とプラットフォームID 3 の「Windows」の2つだけ、いや実際は、本当は、ID 3 の「Windows」だけです。他のプラットフォームID 0 の「Unicode」、ID 2 の「ISO」、ID 4 の「カスタム」は、全くではないにしろ、ほとんど使われません。そのうちの1つ、ID 2 の「ISO」は、公式に非推奨とすらなっています。それにしても、nameテーブルのエントリを自分自身で設定する場合、特に入力値が長くなるパラメータを選択する場合は用心してください。プラットフォーム別にエンコーディングIDと言語IDの途方もないリストがあります。もう、どこかへ召されそうになれますよ。あはは。ということで、これを本当に自身でやることになったなら、[Microsoft OT Spec: The Naming Table](https://www.microsoft.com/typography/otspec/name.htm)のウェブページを何度も見に行くことになるでしょう。ここにはあなたのフォントオタク心が求めてやまない全てのエンコーディングIDと言語IDがリストアップされています。  
 

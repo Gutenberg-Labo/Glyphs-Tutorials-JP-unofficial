@@ -621,7 +621,7 @@
 <p><code>platformID</code> に 3（Windows）を指定した場合、<code>encID</code> は 0 から 10 までの数値に、<code>langID</code> は 0x8000 以下の16進数にしなければなりません （<a href="https://www.microsoft.com/typography/otspec/name.htm#encLangIDs_platID3">Windowsのプラットフォーム固有のエンコーディングIDと言語ID</a>を参照）。</p>
 </blockquote>
 
-<p><code>platformID</code> には、Macintoshの場合の 1、Windowsの場合の 3 のいづれかを指定できます。オプションである <code>encID</code> と <code>langID</code> は、<code>platformID</code> に応じた、WindowsまたはMacintoshのいづれかのエンコーディングIDと言語IDを表します。これらは0から65536までの数値でなければならず、10進数、8進数、または16進数で入力できます。AFDKO構文の仕様では「10進数は 0 以外の数字から始まり、8進数は数字の 0 から始まり、16進数は数字および16進文字の a〜f または A〜F に 0x の接頭辞がつかなければならない」と規定されています。</p>
+<p><code>platformID</code> には、Macintoshの場合の 1、Windowsの場合の 3 のいずれかを指定できます。オプションである <code>encID</code> と <code>langID</code> は、<code>platformID</code> に応じた、WindowsまたはMacintoshのいずれかのエンコーディングIDと言語IDを表します。これらは0から65536までの数値でなければならず、10進数、8進数、または16進数で入力できます。AFDKO構文の仕様では「10進数は 0 以外の数字から始まり、8進数は数字の 0 から始まり、16進数は数字および16進文字の a〜f または A〜F に 0x の接頭辞がつかなければならない」と規定されています。</p>
 <p>ここだけの話、本当に重要なのはプラットフォームID 1 の「Macintosh」とプラットフォームID 3 の「Windows」の2つだけ、いや実際は、本当は、ID 3 の「Windows」だけです。他のプラットフォームID 0 の「Unicode」、ID 2 の「ISO」、ID 4 の「カスタム」は、全くではないにしろ、ほとんど使われません。そのうちの1つ、ID 2 の「ISO」は、公式に非推奨とすらなっています。それにしても、nameテーブルのエントリを自分自身で設定する場合、特に入力値が長くなるパラメータを選択する場合は用心してください。プラットフォーム別にエンコーディングIDと言語IDの途方もないリストがあります。もう、どこかへ召されそうになれますよ。あはは。ということで、これを本当に自身でやることになったなら、<a href="https://www.microsoft.com/typography/otspec/name.htm">Microsoft OT Spec: The Naming Table</a>のウェブページを何度も見に行くことになるでしょう。ここにはあなたのフォントオタク心が求めてやまない全てのエンコーディングIDと言語IDがリストアップされています。</p>
 <p>以下はアスタリスク付きを除いて、<code>&lt;nameID&gt;</code> で設定できるnameテーブルのエントリの簡単な表です。リンク先はMicrosoft社の仕様ページです。</p>
 <div class="Table"><table>
