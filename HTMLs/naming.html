@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/naming" />
+  <title>フォントの命名 | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">フォントの命名</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rainer Erich Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/naming" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/fr/learn/naming" aria-label="Français"><span class="Button-text">fr</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/naming" aria-label="中文"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content"><p><span>12 November 2020&nbsp;</span><span>Published on 31 August 2017</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>フォント名は重要ですが、それはフォントのユーザへの表示方法で不可欠なフォントメニューのグループ化と表示順を決めるからです。フォントファミリーの命名は少し厄介ですが、以下のチュートリアルで紹介する最高のヒントはあなたは幸せにするでしょう。</p>
+</div>
+
+<div class="Article-contentInner">
+<p>フォントの命名には良い慣例を取り入れることが大切です。フォント名がフォント内の6つの異なる場所に格納されていることがそれを難しくしています。または実際には、さらにもういくつかの場所に格納されます。そうなるとさらに複雑です。ご存知だとは思いますが、歴史的経緯です。</p>
+<p>うおお、そしてフォントの名前情報はアプリごとに違う方法で読み取られることになります。私たちは以下をベストプラクティスとして提案します。</p>
+
+<h3 id="g-__family-name-and-subfamily-style-name">ファミリー名とサブファミリー（スタイル）名</h3>
+<p>基本的に、同じ「ファミリー名」のフォントは、ユーザインターフェース内で何らかの形でグループ化されます。これをどう正確に行うかは、もちろん、フォントを扱うソフトウェアに依存します。「ファミリー名」は「ファイル」＞「フォント情報」＞「フォント」＞「名前」で設定できます。</p>
+<figure class="shadow"><img alt="" height="75%" src="https://glyphsapp.com/media/pages/learn/naming/ddd0cce358-1605628246/familyname.png" width="75%"></figure>
+<p>ファミリー内の個別のフォントは、サブファミリー名（別名：スタイル名）で区別する必要がありますが、これは「ファイル」＞「フォント情報」＞「出力スタイル」の「名前」フィールドで設定します。典型的なスタイル名は、「Regular」、「Italic」、「Bold」、「Medium」、「Light Italic」、「Display Bold」、「Caption Italic」などです。つまり、いくつかのキーワードの組み合わせです。</p>
+<ul>
+<li>ウェイト： 「Thin」、「Light」、「Extralight」、「Regular」、「Medium」、「Semibold」、「Bold」、「Extrabold」、「Heavy」、「Black」、…</li>
+<li>字幅： 「Compressed」、「Condensed」、「Extended」、「Expanded」、…</li>
+<li>傾斜： 「Italic」、「Oblique」、「Upright Italic」、「Backslant」、…</li>
+<li>オプティカルサイズ： 「Display」、「Text」、「Caption」、「Small」、…</li>
+</ul>
+<p>もちろん、どんなスタイル名でもOKです。自分のデザインに合っていれば「Felt Tip」や「Hatched」、「Outline」などお好きな名前をつけて構いません。名前にアクセント付きラテン文字が入っていても現在のソフトウェアならさほど問題はないはずです。</p>
+<p>デフォルトのファミリー名（「ファイル」＞「フォント情報」＞「フォント」＞「名前」で設定したもの）とは異なるファミリー名にしたいインスタンスがある場合は、インスタンスごとに「ファイル」＞「フォント情報」＞「出力スタイル」で一般のプロパティに「Family Names（ファミリー名）」を追加できます。</p>
+<p>そうすると、最終的には以下のようなネーミングとなるでしょう。</p>
+<div class="Table"><table>
+<thead>
+<tr>
+<th>ファミリー名</th>
+<th>サブファミリー（スタイル）名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyFontFamily</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Bold Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Semibold</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Semibold Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Black</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Black Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Bold</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Bold Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Semibold Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Black</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Black Italic</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="g-__localized-names">ローカル名</h3>
+<p>しかしながら、互換性を最大限確保するために、ファミリー名とスタイル名は素のASCII文字列の、短い、英単語にしておく方が良いです。これを飛び超えて、非ASCII文字列（例えば、日本語やアルメニア語、チェコ語など）を使いたい場合は、「ローカライズされた」名前を追加すると良いでしょう。</p>
+<p>ファミリー名をローカライズするには、「ファイル」＞「フォント情報」＞「フォント」に進み、「一般」セクションの＋アイコンを押下して一般のプロパティを追加し、ポップアップから「Family Names（ファミリー名）」を選択し、それから言語を選択して名前を設定します。</p>
+<figure class="shadow"><img alt="" height="75%" src="https://glyphsapp.com/media/pages/learn/naming/3cf25fefde-1605628246/localizedfamilyname.png" width="75%"><figcaption>「一般」の横にある＋アイコンを押下して「Family Names（ファミリー名）」を追加します。削除するにはOptキーを長押しして項目の横に現れる−アイコンを押下します。</figcaption></figure>
+<p>デフォルトのファミリー名ではない名前で表示させたい言語ごとにエントリを追加します。選択できる言語が限られていますが、この仕様は遠い遠い昔に遥か彼方の銀河で書かれたものだからです。アイスランド語、アフリカーンス語、モンゴル語、マレー語、マケドニア語をサポートしていて、フラマン語とオランダ語の区別すらしているというのに、全ての言語のカバーはしていません。あなたに必要な言語がメニューにない場合は申し訳ありませんが、この件で私たちにできることはあまりありません。</p>
+<p>スタイル名をローカライズするには、「ファイル」＞「フォント情報」＞「出力スタイル」でそれぞれのインスタンスに一般プロパティ「Style Names（スタイル名）」を追加します。言語の追加は、「ファミリー名」の場合と全く同じです。そういえば、「出力インスタンス」の「ファミリー」名もローカライズ可能で、つまり、「ファイル」＞「フォント情報」＞「出力スタイル」＞「一般」から一般の設定の「Family Names（ファミリー名）」で行えます。これはいくつかのインスタンスでファミリー名をカスタムしており、それらもローカライズする必要がある場合に便利です。</p>
+<p>同時に、例えばデザイナー名や製造者名といった、その他多くのエントリもローカライズ可能です。どうやって？ もちろん、それぞれの一般プロパティからです。この例では「Designers（デザイナー）」と「Manufacturers（製造者）」です。追加した項目がローカライズ可能なものであれば、言語メニューが表示されフォントに必要な他言語のバリエーションをいつでも追加できます。</p>
+
+<h3 id="g-__style-linking">スタイルリンク</h3>
+<p>「スタイルリンク」という機能でそれぞれのフォントの間にファミリーの関係を設定できます。あるインスタンスを別のインスタンスの太字、イタリック、または太字イタリックなどとして定義できます。これは「ファイル」＞「フォント情報」＞「出力スタイル」の「スタイルリンク」セクションでとても簡単に行えます。やるべきことは、太字もしくはイタリックのチェックボックスをオンにして、関連するインスタンス名を入力するだけです。このように。</p>
+<figure><img alt="" height="75%" src="https://glyphsapp.com/media/pages/learn/naming/2d793bd018-1605628246/stylelinking.png" width="75%"></figure>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Pro Tip</h3>
+<div class="ProTip-content"><p>スタイルリンクの入力欄には「Regular」は入力せずに単に空白のままにしておいて構いません。その場合にはGlyphsは「Regular」を想定します。エラーの原因が1つ減ります。</p></div>
+</div></aside>
+
+<p>スタイルリンクの設定で、いわゆる「RIBBIファミリー」を作成できます。RIBBIとは、<strong>R</strong>egular、<strong>I</strong>talic、<strong>B</strong>old、<strong>B</strong>old <strong>I</strong>talicの略です。ちょっと限定的ですが、その用途はOfficeソフトで太字やイタリックのボタンやキーボードショートカットを有効にすることです。これがうまくいけば、TextEditではCmd-Bでレギュラーとボールドの切り替えができますし、WindowsのWordではCtrl-Iで正体とイタリックの切り替えができます。ちなみに、Adobe InDesignでも同じ用途でCmd-Shift-BとCmd-Shift-Iが使えます。</p>
+<p>言い換えると、スタイルリンクの目的は4つのスタイル間を関係づけることだけで、それ以上ではありません。もう一つ考慮すべきことは、リンクされたスタイルはMicrosoft Officeのフォントメニューには表示されないということです。表示されるのはレギュラーのみで、リンクされたボールド、イタリック、ボールドイタリックのスタイルには、BボタンとIボタン（またはそれぞれのキーボードショートカット）のみからアクセスできます。そこでスタイルリンクには次のような戦略をお勧めします。</p>
+<ul>
+<li>「Bold」インスタンスに「『Regular』のボールド」を設定。</li>
+<li>「Italic」インスタンスに「『Regular』のイタリック」を設定。</li>
+<li>「Bold Italic」インスタンスに「Regular のボールド イタリック」を設定（注意：「『Bold』のイタリック」や「『Italic』のボールド」にはしない）。</li>
+<li>他の全てのイタリック体には、それぞれの正体の「イタリック」を設定。例えば、「Semibold Italic」には「『Semibold』のイタリック」を設定。</li>
+<li>残りの全ての正体では、設定は空白のままとする。</li>
+</ul>
+<p>それで、全てがうまくいくと、フォントファミリーの設定は次のようになります。</p>
+<div class="Table"><table>
+<thead>
+<tr>
+<th>ファミリー名</th>
+<th>サブファミリー（スタイル）名</th>
+<th>スタイルリンク</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyFontFamily</td>
+<td>Regular</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Italic</td>
+<td>Regular の「イタリック」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Bold</td>
+<td>Regular「のボールド」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Bold Italic</td>
+<td>Regular「のボールド」「イタリック」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Semibold</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Semibold Italic</td>
+<td>Semibold の「イタリック」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Black</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Black Italic</td>
+<td>Black の「イタリック」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Italic</td>
+<td>Condensed の「イタリック」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Bold</td>
+<td>Condensed「のボールド」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Bold Italic</td>
+<td>Condensed「のボールド」「イタリック」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Semibold</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Semibold Italic</td>
+<td>Condensed Semibold の「イタリック」</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Black</td>
+<td>-</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Condensed Black Italic</td>
+<td>Condensed Black の「イタリック」</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="g-__naming-for-windows-and-office-software">WindowsおよびOffice向けのフォント命名</h3>
+<p>現在のMicrosoft Wordは「ファミリー名」と「サブファミリー（スタイル）名」、あるいは、存在するならば、「WWSファミリー名」と「WWSサブファミリー名」に注目しています。WWSとは<strong>W</strong>eight、<strong>W</strong>idth、<strong>S</strong>lopeの略です。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Good to know</h3>
+<div class="ProTip-content">
+<p>技術文書では、「ファミリー名」と「サブファミリー（スタイル）名」は通常は name ID 1 および name ID 2 となっています。そしてWWS名は Name ID 21（WWSFamilyName）および Name ID 22（WWSSubfamilyName）として知られます。</p>
+<p>「Name ID」という用語は、コンパイルされたフォントファイルに名前情報を格納する方法である、OpenType Namingテーブルのエントリのことを指します。詳細は<a href="https://www.microsoft.com/typography/otspec/name.htm">Namingテーブルの仕様</a>を参照してください。</p>
+</div>
+</div></aside>
+
+<p>Microsoft社のフォントメニューは、ファミリーに存在するのがRegular、Bold、Italic、および Bold Italicのみ、つまり、上記のようにフォント間にRIBBIスタイルのスタイルリンクが設定されたモデルのフォントファミリーを想定しています。この4つから外れたスタイルはとにかく別のフォントファミリと考えなければなりません。そういうことで、マイクロソフト社は公式にこの命名法を推奨しています。</p>
+<div class="Table"><table>
+<thead>
+<tr>
+<th>ファミリー名（ID 1）</th>
+<th>サブファミリー（スタイル）名（ID 2）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyFontFamily</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Bold Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily Semibold</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>MyFontFamily Semibold</td>
+<td>Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily Black</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>MyFontFamily Black</td>
+<td>Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily Condensed</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>MyFontFamily Condensed</td>
+<td>Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily Condensed</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>MyFontFamily Condensed</td>
+<td>Bold Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily Condensed Semibold</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>MyFontFamily Condensed Semibold</td>
+<td>Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily Condensed Black</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>MyFontFamily Condensed Black</td>
+<td>Italic</td>
+</tr>
+</tbody>
+</table></div>
+<p>といった感じです。言い換えれば、「サブファミリー（スタイル）名」（ID 2）はRIBBIスタイルの内の1つにしかなれません。その他のウェイト、字幅、傾斜に関する情報は全て「ファミリー名」（ID 1）に入ります。これはもちろん、前のセクションの表から大きく異なることがわかります。この命名にはいくつか問題があります。扱いが難しいことです。「ファミリー名」パラメータをいくつもいくつも追加しなければならず、さらに悪いことには、スタイル名がほとんどが同じなので、「ファイル」＞「フォント情報」＞「出力スタイル」で見落としてしまうでしょう。また、Wordでは正しいかもしれませんが、DTPプログラムのような他のアプリにとっては理想的ではないかもしれません。</p>
+<p>でもちょっと待ってください……</p>
+<p>良いニュースがあります。<strong>その必要はありません</strong>。Glyphsがその処理を出力時に自動で行います。スタイルリンク情報に基づき、Name ID 1とName ID 2はNamingテーブルの「Windows」の名前に沿って設定されます（そうです、Namingテーブルの情報は、Mac用と、Windows用に、2回保存されます。理由は聞かないでください）。
+というわけで、複雑過ぎて理解できなくなるので、ここからは、デフォルトのファミリー名やスタイル名（フォント情報で入力したもの）をName IDで参照することはしません。</p>
+<p>何らかの理由で、この自動化がうまくいかなかった場合、つまり、WordのBボタンとIボタンで期待するスタイルになっていない場合は、「Style Map Family Names」という一般プロパティからスタイルのマッピングを制御できます。プロパティのポップアップに説明があるので引用します。</p>
+
+<blockquote>
+<p><strong>Style Map Family Names：</strong> 太字、イタリック、ボールドイタリックのスタイルマッピングで使うファミリー名。これにより大きなフォントファミリーの中にサブファミリーを作成できます。フォントファミリー名を共有して、フォントのスタイルリンクのグループを形成できます（レギュラー、イタリック、太字、ボールドイタリック：OS/2テーブル内のfsSelectionのビットの設定で定義される）。Glyphsは4つの個別のウェイトのリンクに、インスタンスの「Style Name（スタイル名）」フィールドと「スタイルリンク」セクションのエントリを使用します。</p>
+</blockquote>
+
+<p>繰り返しますが、この設定は必要ない可能性が高いし、名前をローカライズするならなお必要ないでしょう。しかし念のため。</p>
+
+<h3 id="g-__wws-names-name-ids-21-and-22">WWS名：Name ID 21 と Name ID 22</h3>
+<p>次の場合は、Name ID 21 と Name ID 22 とも呼ばれる、WWS名「だけ」が必要です。</p>
+<ul>
+<li>ファミリーに、ウェイト、字幅、傾斜「以外の」スタイルのバリエーションがある、つまり、そのフォントが非WWS補間軸を持つ場合。</li>
+<li>そして「その非WWS補間軸が非正規な値」を持つ、つまり、純粋にウェイト、字幅、傾斜だけでは表現できないスタイルのフォントである場合のみ。</li>
+</ul>
+<p>ここでフォントファミリーに、「Subhead」や「Display」、「Caption」といったオプティカルサイズのバリエーションを追加するとします。上の表にあるフォントであれば新しい「オプティカルサイズ」補間軸は非正規な値ではないのでWWS名は必要ありません。しかし今追加する新しいフォントは、「オプティカルサイズ」補間軸で特殊な、非正規の位置にあるため、WWS名が必要となります。</p>
+<p>そしてこれを動作させるには「通常ではない名前の別のファミリー」を作成して、そのファミリー名を ID 21 に入れ、しかし「全ての太さ、字幅、傾斜の情報」は ID 22 に留めます。つまり、Name ID 22 はRIBBI名のみならず、「Medium Extended Italic」や「Bold Condensed Oblique」のように太さ、字幅、傾斜のカテゴリに該当する名前を「なんでも」扱います。</p>
+<div class="Table"><table>
+<thead>
+<tr>
+<th>ファミリー名</th>
+<th>サブファミリー（スタイル）名</th>
+<th>WWSファミリー名（Name ID 21）</th>
+<th>WWSサブファミリー名（Name ID 22）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Light</td>
+<td>MyFontFamily Display</td>
+<td>Light</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Light Italic</td>
+<td>MyFontFamily Display</td>
+<td>Light Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Medium Extended</td>
+<td>MyFontFamily Display</td>
+<td>Medium Extended</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Medium Extended Italic</td>
+<td>MyFontFamily Display</td>
+<td>Medium Extended Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display</td>
+<td>MyFontFamily Display</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Italic</td>
+<td>MyFontFamily Display</td>
+<td>Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Bold</td>
+<td>MyFontFamily Display</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Bold Italic</td>
+<td>MyFontFamily Display</td>
+<td>Bold Italic</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Semibold</td>
+<td>MyFontFamily Display</td>
+<td>Semibold</td>
+</tr>
+<tr>
+<td>MyFontFamily</td>
+<td>Display Semibold Italic</td>
+<td>MyFontFamily Display</td>
+<td>Semibold Italic</td>
+</tr>
+</tbody>
+</table></div>
+<p>これをGlyphsでどうやるかって？ 簡単です。「ファイル」＞「フォント情報」＞「出力スタイル」で、それぞれのフォントに適切なカスタムパラメータを追加します。WWSファミリー名には一般プロパティの「WWS Family Name（WWSファミリー名）」を使用し、WWSサブファミリー名には「WWS Subfamily Name（WWSサブファミリー名）」を追加します。ってこんなの誰が知るもんですか。</p>
+<p><strong>Note 1：</strong> Name ID 21 および 22 に設定があるか否かと、OS/2テーブルのfsSelectionの8ビット目の状態は正確に対応していなくてはなりません。この意味がわからなくても、Glyphsはこれを自動で処理しますので、ご心配なく。</p>
+<p><strong>Note 2：</strong> 「MyFontFamily Compressed」のように、スタイル名を純粋にWWSで表現できる場合、Name ID 21 と 22 は不要です。覚えてますよね？ しかし実際は、このfsSelectionのbit 8が設定されていれば、Name ID 21 と 22 の設定の有無は排除しない仕様になっています。なので暇があってその気になれば、これをどのフォントにも追加できます。しかし全く、こんな話はとっとと終わらせて、代わりにアイスを食べましょう。自分でfsSelectionの8ビット目を制御したい場合は、カスタムパラメータ「Has WWS Names」をインスタンスに追加してください。OpenType仕様によれば、このビットは「フォントが『name』ID 21 と 22 の使用を必要とすることなく、ウェイト／字幅／傾斜のファミリーに一致する『name』テーブルの文字列を持つ」ことを示しています。これはフォントの命名が「既にWWSスキームに沿っている」場合に「のみ」意味があることに留意してください。</p>
+
+<h3 id="g-__naming-for-adobe-menus">Adobeメニュー向けのフォント命名</h3>
+<p>Adobeメニューではフォントはファミリー名に基づいてサブメニューに並べ替えられます。これは、非推奨の名前である「優先名」（Name ID 16 と 17）としても知られる「Typographic名」で上書きできます。そこでサブメニューの配置が気に入らない場合は、「Typographic Family Names」を使って独自のサブメニューを作り、残りの個別のフォント名を「Typographic Subfamily Names」に入れられます。どちらも一般プロパティから、「ファイル」＞「フォント情報」＞「出力スタイル」のウィンドウ右上の隅にある＋アイコンの押下によって追加できます。</p>
+<p>サブメニューの中では、フォントは次の順番で、並べ替えられます。</p>
+<ol>
+<li>字幅クラス順</li>
+<li>ウエイトクラス順</li>
+<li>傾斜（正体かイタリックか）</li>
+<li>最後に、スタイル名のアルファベット順</li>
+</ol>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/naming/2b2bc97ab6-1605628246/adobemenuorder.png" width="80%"></figure>
+<p>「字幅」メニュー（1）で字幅クラスを、「ウェイト」メニュー（2）でウエイトクラスを、「イタリック」ボタン（3）で傾斜を、そしてもちろん、「スタイル名」（4）でアルファベット順を設定できます。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Hint</h3>
+<div class="ProTip-content"><p>（VistaまでのバージョンのWindows上の）古いバージョンのMS Officeは250未満のウェイトクラスのフォントを自動的に太らせていました。そのためウェイトクラス200のExtralightがウェイトクラス300のLightよりも太く見えるという奇妙な現象が起きることがあります。これを避けるには、最低のウェイトクラスを250以上にしてください。もちろん、Windows Vista以降の新しいバージョンのMS Officeを使うユーザだけを対象にする場合や、MS Officeを全く使わない場合は、これを無視して100から始めても構いません。しかし、TrueTypeフォントが「埋め込まれた」Wordファイルではまだ影響があるという報告を受けています。</p></div>
+</div></aside>
+
+<p>字幅とウェイトのクラスでさらに区別が必要な場合は（いくつかのオプションではメニューの右側に同じ値が表示されるため）、一般プロパティの「字幅クラス」と「ウエイトクラス」で順序の値を直接設定できます。例えば、レギュラー（400）とミディアム（500）の間に追加のウェイトが必要なら、「ウェイトクラス」に <code>450</code> と入力します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/naming/f47d3e30a9-1605628246/custom-weightclass.png"></figure>
+<figure><img alt="" src="https://glyphsapp.com/custom-weightclass"></figure>
+<p>これはつまり何でも好きなようにできるということです！ 全てのフォントを同じサブメニューに入れたければ、全てのフォントで「Typographic Subfamily Names」を同じにすればよいのです。しかし、フォントを異なるサブメニューに配置したければ、同じくこのパラメータを異なるものにします。</p>
+<p>ただしこれらのパラメータを設定しなくてはならいのは「ファミリー名およびスタイル名のエントリと異なる場合」だけであることを忘れないでください。それ以外の場合は必要ありません。言い換えれば、優先名を使うのはファミリー名とスタイル名で設定したデフォルトを「上書き」するときだけです。そして言うまでもありませんが、同じ値で上書きしても意味はありません。</p>
+
+<blockquote>
+<p><strong>例：</strong> ウェイトと字幅の軸があるフォントファミリーを考えます。これには5つの字幅と9つの太さ、つまり計45個のフォントがあるとします。このときのサブメニューを想像してみてください……うへぇ。このとき2つの選択肢があります。</p>
+<p>（A）45個のフォントを全て1つのメニューに入れておく場合。この場合は上記の設定から何も変更する必要はありません。おめでとう、これから飲みに行けます。</p>
+<p>（B）フォントを字幅別の5つのサブメニューに入れる場合。そうすると、フォントメニューの項目は1つでは済まず5つに増えて乱雑になりますが、少なくともサブメニューの項目はそれぞれ9つずつで済みます。この場合は、「通常ではない」字幅の全てに「Typographic Subfamily Names」、例えば、「MyFont Compressed」、「MyFont Condensed」、「MyFont Semiextended」、「MyFont Extended」などを使うことになります。「通常の」字幅は、「通常の」ファミリー名「MyFont」で十分です。したがって、Typographic Subfamily Name（別名：優先名）は必要ありません。</p>
+</blockquote>
+
+<h3 id="g-__windows-vs-mac-full-name-vs-compatible-full-name">Windows対Mac：フルネーム対Mac互換フルネーム</h3>
+<p>Windowsでは、例えばメニューなどで、フォントのフルネームの表示に Name ID 4（「Full Font Name」または「Full Name」）を使用します。通常のフルネームはファミリー名と、続けてスペース、さらに続けてサブファミリー（スタイル）名で構成されます。Glyphsもこの方法でID 4 のエントリを自動生成しています。これを上書きするには「Name Table Entry」カスタムパラメータを使用します（後述）。ここまでは、順調です。</p>
+<p>Macも同じ目的で Name ID 4を使用します。それは、フォントに Name ID 18（「Compatible Full Name」）が存在しない限りです。言い換えれば、何らかの理由から、Macのメニューに ID 4 での名前が表示されるのが耐えられない場合、「ファイル」＞「フォント情報」＞「出力スタイル」でインスタンスに「Compatible Full Names（Mac互換フルネーム）」という一般プロパティを追加すれば表示名を変えられます。</p>
+<p>言うまでもなく、これは本当に正当な理由がある場合にのみ行ってください。「Compatible Full Names（Mac互換フルネーム）」を使用すると、クロスプラットフォームでドキュメントの相互運用性が損なわれる可能性があります。警告しましたよ。</p>
+
+<h3 id="g-__compatible-name-table">Compatible Name Table</h3>
+<p>nameテーブルのエントリが適切になるようにGlyphsは自動でうまくやりくりするので、出力フォントはAdobeアプリケーションや、同様にMac上のMicrosoft OfficeやCoreTextアプリでも最適に機能するということを上で申し上げました。ほとんどのアプリはこのやり方でカバーされます。</p>
+<p>しかしながら、時折、不満を持つカスタマーは現れるものです。特にQuark XPressやレガシーなバージョンのFontExplorerのユーザです。これらのアプリでフォントファミリーが正しくグループ化されないという苦情を受けた場合は、<code>Compatible Name Table</code> というカスタムパラメータを使用します。Glyphsはこれによってレガシースタイルのnameテーブルを出力します。</p>
+<p>このパラメータはQuark XPressとFontExplorerでフォントファミリーを適切にグループ化します。しかし、Microsoft Officeを含む他のアプリでは、ファミリーのグループ化を混乱させてしまいます。残念ですが、全部はフォローできません。</p>
+
+<h3 id="g-__the-postscript-names">PostScript名</h3>
+<p>PostScript名はPostScript Type 1時代の遺産です。いくつかのアプリや、（特にPostScriptベースの）ファイルフォーマットの中には文書内に格納するフォント情報としてPostScript「フォント」名（nameテーブル ID 6 、最新バージョンの仕様では単に「PostScript Name」）を使用するものがあります。PostScript「Full」Name（nameテーブル ID 4 、現在の仕様では単に「Full Font Name」）は、人間の読者のみが対象です。繰り返しますが、両方ともGlyphsが自動的に設定しますので、単にアプリをいじくりまわすだけという理由ならほとんどの場合は何もしなくても問題ありません。自分で設定しなければならないよほどの理由がない限り、このチュートリアルの次の見出しまで読み飛ばして構いません。</p>
+<p><strong>PostScript「フォント」名</strong>（「PostScript Name」、ID 6）は「ファイル」＞「フォント情報」＞「出力スタイル」の「Font Name（フォント名）」という一般プロパティで設定できます。これは2つの理由から厄介です。名前の長さと、文字種の制限です。技術的には、最大長は127文字で、これはほぼ全てのフォントで大丈夫なはずです。しかし、<a href="http://www.adobe.com/products/atmlight.html">Adobe Type Manager</a>（ATM）のようなレガシーなソフトウェアの中には前半部分、つまり63文字までしか区別できないものがあります。つまり、2つのフォントでPostScriptフォント名の最初の63文字が同じだと、古いアプリでは区別されなかったり、誤動作が起きるかもしれません。良いニュースとしては、レガシーなソフトウェアを気にしないのであれば、この制限は無視して構いません。しかしレガシーなソフトウェアとの互換性を気にする場合、この制限はさらに過酷になる可能性があります。初期のPostScriptインタプリタは29文字まで（そう、29なんです）しか文字を保持できません。うげぇ。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Pro Tip</h3>
+<div class="ProTip-content"><p>29文字の制限はEOTウェブフォントにも適用されます。EOTはとっくの昔に時代遅れのフォーマットとなっていますが、クライアントはInternet Explorer 6との互換性を主張するかもしれません。そのため、EOTを書き出していた場合は、PostScriptフォント名も設定し、それが29文字以内に収まるようにしておくと良いでしょう。</p></div>
+</div></aside>
+
+<p>文字種の制限ですが、PostScriptフォント名には、制御文字、スペース、PostScript言語で予約された <code>[](){}&lt;&gt;/%</code> の10文字を除いた、7ビットのASCIIコード「だけ」しか使うことができません。ハイフン <code>-</code> は、ファミリー名とサブファミリー（スタイル）名を繋ぐために予約されています。つまり、使えるのは以下の文字だけです。</p>
+<pre><code class="language-plaintext">!&quot;#$&amp;'*+,-.0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ\^_@abcdefghijklmnopqrstuvwxyz|~</code></pre>
+<p>どういうことかというと「MyFont Condensed Extrabold Italic」を「MyFont-CondensedExtraboldItalic」とすれば、文字長は31文字となります。ここであなたのクライアントから、文字数を29文字しか扱えない1988年のイメージセッターをサポートしなければならないという要求があったとしましょう。この長さ制限をクリアするには、スタイル名にあたる部分を「CdXBdIt」に省略します。完全なフォント名は、こうして、「MyFont-CdXBdIt」となって、14文字に収まりました。これで博物館に収蔵された機械の埃を払えるでしょう。</p>
+<p>アドビは<a href="http://wwwimages.adobe.com/content/dam/acom/en/devnet/font/pdfs/5088.FontNames.pdf">Tech Note #5088</a>で、スタイル名の略語として以下を推奨しています。</p>
+<div class="Table"><table>
+<thead>
+<tr>
+<th>略語</th>
+<th>スタイル名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bd</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>Bk</td>
+<td>Book</td>
+</tr>
+<tr>
+<td>Blk</td>
+<td>Black</td>
+</tr>
+<tr>
+<td>Cm</td>
+<td>Compressed</td>
+</tr>
+<tr>
+<td>Cn</td>
+<td>Condensed</td>
+</tr>
+<tr>
+<td>Ct</td>
+<td>Compact</td>
+</tr>
+<tr>
+<td>Dm</td>
+<td>Demi（接頭辞）</td>
+</tr>
+<tr>
+<td>Ds</td>
+<td>Display</td>
+</tr>
+<tr>
+<td>Ex</td>
+<td>Extended</td>
+</tr>
+<tr>
+<td>Hv</td>
+<td>Heavy</td>
+</tr>
+<tr>
+<td>Ic</td>
+<td>Inclined</td>
+</tr>
+<tr>
+<td>It</td>
+<td>Italic</td>
+</tr>
+<tr>
+<td>Ks</td>
+<td>Kursiv（独語：イタリック）</td>
+</tr>
+<tr>
+<td>Lt</td>
+<td>Light</td>
+</tr>
+<tr>
+<td>Md</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Nd</td>
+<td>Nord</td>
+</tr>
+<tr>
+<td>Nr</td>
+<td>Narrow</td>
+</tr>
+<tr>
+<td>Obl</td>
+<td>Oblique</td>
+</tr>
+<tr>
+<td>Po</td>
+<td>Poster</td>
+</tr>
+<tr>
+<td>Rg</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>Sl</td>
+<td>Slanted</td>
+</tr>
+<tr>
+<td>Sm</td>
+<td>Semi（接頭辞）</td>
+</tr>
+<tr>
+<td>Su</td>
+<td>Super</td>
+</tr>
+<tr>
+<td>Th</td>
+<td>Thin</td>
+</tr>
+<tr>
+<td>Ult</td>
+<td>Ultra（接頭辞）</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>Upright</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Extra（接頭辞）</td>
+</tr>
+</tbody>
+</table></div>
+<!--
+「Nord」がどういう意味かなんて聞かないでください。私だって今まで見たことがありません。本当ですって。読む奴なんか居るかと思ってAdobe Tech Noteのライターが冗談で混入したのでしょう、多分。古き良き時代の窓のない後ろの部屋で、彼らはそういうことを面白がっていたに違いありません。
+-->
+<p>疑問に思われた方のために、「Nord」と「Nord Italic」とは<a href="http://www.signes.org/set.php?id=551">Roger Excoffon氏による有名な書体、Antique Olive</a>ファミリーのウェイトとして1960年に最初に公開されました。幅広でとても太い断面です。これのデジタル版がAdobe Libraryにあったことから、Adobe社がまとめた際にリストに追加されました。私の知る限り、これが唯一の使用例です。</p>
+<p>そして<strong>PostScript「フル」ネーム</strong>（「Full Font Name」、ID 4）というのがありますが、これも「ファイル」＞「フォント情報」＞「出力スタイル」＞「一般」から一般プロパティ「Full Name（フルネーム）」で設定できます。これは、「ユーザ向け表示」を想定したフォントの「完全な名前」なので、人間にとっての読みやすさが鍵であり、スペースを含むことが許されます。Adobe社によれば、「フォントメニューでの表示に適した」名前でなくてはなりません。</p>
+<p>ということは書きたいように書いても完全に自由なんですね？ ……ええと、そうでもありません。Adobe Tech Note #5088によれば、一部のシステムは「ファミリーのグループに分類するため」にフォントのファミリー名とPostScriptフルネームを一致させるそうです。したがって、PostScriptフルネームはファミリー名から始まらなければなりません。PostScriptフルネームは「スタイル属性の追加によって完成します——一般的にはウェイト、字幅、傾斜、オプティカルサイズの順序で設定します」（Adobe Technote #5088）。例えば、「Bold Extended Italic Display」、「Medium Condensed Oblique Caption」、「Semibold Oblique」、「Compressed Poster」、「Light」などです。</p>
+<p>繰り返しますが、（PostScript）「Font Name（フォント名）」と「Full Name（フルネーム）」の設定は、本当にそうしたいという抑えきれない衝動に駆られ、設定できなければ暴走してしまう場合だけにしてください。そうでなければ、このことは忘れて、2つのPostScript名の設定はGlyphsに任せてください。いずれにせよこれらは簡単に生成できますので。</p>
+
+<h3 id="g-__name-table-entries">Nameテーブルのエントリ</h3>
+<p>もし自分のしていることが何か分かっていて、何も恐れるものがないのなら、nameテーブル全体を自分でも構築できます。ありとあらゆるプラットフォーム上で、ありとあらゆるエンコーディングをされた、ありとあらゆる言語用に、nameテーブルの各エントリを設定できます。やるべきことは、「ファイル」＞「フォント情報」＞「出力スタイル」でインスタンスを選択し、カスタムパラメータに「Name Table Entry」を追加して、その値に以下の構造体を1つ入力するだけです。</p>
+<p><code>nameID; nameString</code><br />
+<strong>例：</strong> <code>4; MyFont Bold Italic</code> （Windows用の英語フルネーム）</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Note</h3>
+<div class="ProTip-content"><p>バージョン2.5以前のGlyphsではnameテーブルのエントリでセミコロンの後にスペースが追加されてしまいます。このバグは修正されました。アプリの古いバージョンとの互換性を維持する必要がある場合は、スペースを除去してセミコロンの直後から名前を開始することをお勧めします。</p></div>
+</div></aside>
+
+<blockquote>
+<p>この場合、<code>platformID</code> は 3（Windows）、続いて <code>encID</code> は 1（Unicode）、そして <code>langID</code> は 0x0049 （Windowsで英語）と想定されます。</p>
+</blockquote>
+
+<p><code>nameID platformID; nameString</code><br />
+<strong>例：</strong> <code>4 1; MyFont Bold Italic</code> （Mac用の英語フルネーム）</p>
+
+<blockquote>
+<p><code>platformID</code> が 1（Mac）に指定された場合、<code>encID</code> と <code>langID</code> の両方は 0（MacRomanおよびMacで英語）と想定されます。</p>
+</blockquote>
+
+<p><code>nameID platformID encID langID; nameString</code><br />
+<strong>例：</strong> <code>4 3 1 0x040C; MaPolice Gras Oblique</code> （Windows用のフランス語フルネーム）</p>
+
+<blockquote>
+<p><code>platformID</code> が 1（Mac）の場合、<code>encID</code> には 0 から 32 までの数値を、<code>langID</code> には 0 から 150 までの数値を指定できます（<a href="https://www.microsoft.com/typography/otspec/name.htm#encLangIDs_platID1">Macintoshのプラットフォーム固有のエンコーディングIDと言語ID</a>を参照）。</p>
+<p><code>platformID</code> に 3（Windows）を指定した場合、<code>encID</code> は 0 から 10 までの数値に、<code>langID</code> は 0x8000 以下の16進数にしなければなりません （<a href="https://www.microsoft.com/typography/otspec/name.htm#encLangIDs_platID3">Windowsのプラットフォーム固有のエンコーディングIDと言語ID</a>を参照）。</p>
+</blockquote>
+
+<p><code>platformID</code> には、Macintoshの場合の 1、Windowsの場合の 3 のいづれかを指定できます。オプションである <code>encID</code> と <code>langID</code> は、<code>platformID</code> に応じた、WindowsまたはMacintoshのいづれかのエンコーディングIDと言語IDを表します。これらは0から65536までの数値でなければならず、10進数、8進数、または16進数で入力できます。AFDKO構文の仕様では「10進数は 0 以外の数字から始まり、8進数は数字の 0 から始まり、16進数は数字および16進文字の a〜f または A〜F に 0x の接頭辞がつかなければならない」と規定されています。</p>
+<p>ここだけの話、本当に重要なのはプラットフォームID 1の「Macintosh」とプラットフォームID 3の「Windows」の2つだけ、いや実際は、本当は、ID 3の「Windows」だけです。他のプラットフォームID 0の「Unicode」、ID 2の「ISO」、ID 4の「カスタム」は、全くではないにしろ、ほとんど使われません。そのうちの1つ、ID 2の「ISO」は、公式に非推奨とすらなっています。それにしても、nameテーブルのエントリを自分自身で設定する場合、特に入力値が長くなるパラメータを選択する場合は用心してください。プラットフォーム別にエンコーディングIDと言語IDの途方もないリストがあります。もう、どこかへ召されそうになれますよ。あはは。ということで、これを本当に自身でやることになったなら、<a href="https://www.microsoft.com/typography/otspec/name.htm">Microsoft OT Spec. Microsoft OT Spec: The Naming Table</a>のウェブページを何度も見に行くことになるでしょう。ここにはあなたのフォントオタク心が求めてやまない全てのエンコーディングIDと言語IDがリストアップされています。</p>
+<p>以下はアスタリスク付きを除いて、<code>&lt;nameID&gt;</code> で設定できるnameテーブルのエントリの簡単な表です。リンク先はMicrosoft社の仕様ページです。</p>
+<div class="Table"><table>
+<thead>
+<tr>
+<th style="text-align: right;">nameID</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid0">ID 0</a></td>
+<td>著作権表示。</td>
+</tr>
+<tr>
+<td style="text-align: right;">* <a href="https://www.microsoft.com/typography/otspec/name.htm#nid1">ID 1</a></td>
+<td>フォントのファミリー名。</td>
+</tr>
+<tr>
+<td style="text-align: right;">* <a href="https://www.microsoft.com/typography/otspec/name.htm#nid2">ID 2</a></td>
+<td>フォントのサブファミリー名（別名：「スタイル名」）。</td>
+</tr>
+<tr>
+<td style="text-align: right;">* <a href="https://www.microsoft.com/typography/otspec/name.htm#nid3">ID 3</a></td>
+<td>一意のフォント識別子（別名：「Unique identifier string」）。アプリケーションはこれによってフォントを識別できます。ファミリ名とスタイル名、バージョン番号と作成年の組合せであることが多いです。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid4">ID 4</a></td>
+<td>完全なフォント名（別名：「PostScript Full Name」）。完全で固有な、人間が読めるフォント名。Windowsで使用されます。ファミリー名（ID 1）とスタイル名（ID 2）の間にワードスペースを挟んで組み合わせたものであることが多いです。</td>
+</tr>
+<tr>
+<td style="text-align: right;">* <a href="https://www.microsoft.com/typography/otspec/name.htm#nid5">ID 5</a></td>
+<td>バージョン文字列。フォントベンダからのリリース情報とバージョン情報。通常は「Version」という単語の後にバージョン番号 x.xxx が続きます。「versionStringパラメーターでも設定可能です。」</td>
+</tr>
+<tr>
+<td style="text-align: right;">* <a href="https://www.microsoft.com/typography/otspec/name.htm#nid6">ID 6</a></td>
+<td>フォントのPostScript名（別名：「PostScript Font Name」）。「postscriptFontNameパラメータでも設定可能です。」</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid7">ID 7</a></td>
+<td>商標文字列。オプションですが、フォントを商標として登録した場合だけは必須です。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid8">ID 8</a></td>
+<td>製造者名。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid9">ID 9</a></td>
+<td>デザイナー名。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid10">ID 10</a></td>
+<td>説明。任意のテキスト。「改訂情報、推奨する使用法、履歴、フィーチャーなどを含めることができます。」</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid11">ID 11</a></td>
+<td>ベンダのURL。URLプロトコル、つまり <code>http://</code> とかから始めるのを忘れずに。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid12">ID 12</a></td>
+<td>デザイナーのURL。URLプロトコル、つまり <code>http://</code> とかから始めるのを忘れずに。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid13">ID 13</a></td>
+<td>ライセンス説明。ユーザがフォントについて可能なこと不可能なことを1〜2文で要約したもの。例えば、インストール可能なデバイス数や再販不可など。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid14">ID 14</a></td>
+<td>ライセンス情報のURL。使用許諾契約書の全文を含むウェブページへのリンク。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid16">ID 16</a></td>
+<td>Typographicファミリー名（別名：「Preferred family name」）。ID 1 と異なる場合にのみ設定します。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid17">ID 17</a></td>
+<td>Typographicサブファミリー名（別名：「Preferred subfamily name」）。ID 2 と異なる場合にのみ設定します。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid18">ID 18</a></td>
+<td>Mac互換フルネーム。マッキントッシュのみ。ID 4 と異なる場合にのみ設定します。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid19">ID 19</a></td>
+<td>サンプルテキスト。一部のアプリでフォントのプレビューした時に表示されます。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid20">ID 20</a></td>
+<td>PostScript CID findfont名。公式には非推奨ですが、CJKフォントではまだ使用されています。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid21">ID 21</a></td>
+<td>WWSファミリー名。ID 16 および ID 17 のエントリがWWS形式に沿っていない場合（つまり、ID 17 のエントリにウェイト、字幅、傾斜以外の属性の修飾子が含まれる場合）に、WWSに準拠したファミリー名を設定するために使用します。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid22">ID 22</a></td>
+<td>WWSサブファミリー名。ID 21と併用され、ID 16 と ID 17 のエントリーがWWS形式に沿っていない場合にこのIDはWWSに沿った（ウェイト、字幅、傾斜の属性のみが記述される）サブファミリー名を提供します。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid23">ID 23</a></td>
+<td>明るい背景パレット名。COLR/CMAPカラーフォント用に予約されています。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid24">ID 24</a></td>
+<td>暗い背景パレット名。COLR/CMAPカラーフォント用に予約されています。</td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="https://www.microsoft.com/typography/otspec/name.htm#nid25">ID 25</a></td>
+<td>PostScript名プレフィックスのバリエーション。バリアブルフォントにこれが存在すると、PostScript Name Generation for Variation Fontsアルゴリズムでファミリー名のプレフィックスとして使用されます。</td>
+</tr>
+</tbody>
+</table></div>
+<p>これらのエントリのほとんどには、通常はUIのテキスト入力フィールドか、または専用のカスタムパラメータといったよりよい設定手段があります。もしこれをやる場合は、通常ではWindows用の名前のみを設定すれば回避できます。言い換えれば、パラメータ <code>&lt;nameID&gt;; &lt;nameString&gt;</code> の短縮形を使えば終わりです。</p>
+<p>繰り返しますが、これはGlyphsの生成するnameテーブルが何らかの理由でうまく機能しない場合と、自分が何をしているのか分かっている場合にのみ行ってください。やってみたいからというだけのために自分で設定すると、何かが壊れる可能性があります。</p>
+
+<!---
+### STATテーブル
+フォント内のデータは全てフォントファイル内のテーブルに格納されますが、そのうちの1つにSTATと呼ばれるものがあります。STATとは「Style Attributes」の略で、バリアブルフォントには必須で、バリアブルではないフォントではオプションなOpenTypeテーブルの名前です。なので、フォントの将来性を考えるなら、STATテーブル（も）追加しておくのは良い考えです。Glyphsは、「ファイル」＞「フォント情報」＞「出力スタイル」の「Export STAT Table」カスタムパラメータでSTATテーブルをサポートしています。
+<figure><img alt="" height="75%" src="https://glyphsapp.com/media/pages/learn/naming/eb8159fdb8-1605628246/exportstattable.png" width="75%"></figure>
+--->
+
+<p><small><br />
+このチュートリアルの説明に多くの情報を提供してくれたMicrosoft社のRob McKaughan氏に感謝します。いくつかの文章はRobのものを直接引用しました。<br />
+<br />
+Update 2017-12-17: 誤記を訂正し、「preferredFamilyName」（Typographic Family Names）パラメータについての説明を追加。<br />
+Update 2017-12-17: Antique Olive Nordについての段落を追加（Jean François Porchezさんありがとう！）。nameテーブルのエントリとEOTのPostScript名についていくつかの情報を追加（Phil Garnhamさんありがとう！）。<br />
+Update 2018-07-05: 全てのName IDをパラメータで設定できるようになったため、「Name Table Entry」パラメータについての古い制限を削除。<br />
+Update 2019-03-19: 誤記を訂正し、MaFonteをMaPoliceに、Mac RomanをMacRomanに置換（Nathalieさんありがとう）。<br />
+Update 2019-11-14: 表現を最新の仕様に更新（Joachimさんありがとう）。<br />
+Update 2020-11-13: Glyphs 3用に更新。<br />
+</small></p>          </div>
+
+</body>
+</html>

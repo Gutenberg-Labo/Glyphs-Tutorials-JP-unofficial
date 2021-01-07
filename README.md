@@ -27,6 +27,7 @@ Updates are very infrequent or extremely fickle, but content would be added acco
 |                     Older Versions of Glyphs | [Glyphsの過去バージョン](/MDs/older-versions-of-glyphs.md)                                  | 2020-Dec-22 |
 |         Creating Fonts with Complex Outlines | [複雑なアウトラインのフォントの作成](/MDs/creating-fonts-with-complex-outlines.md)          | 2020-Dec-22 |
 |                                    Ligatures | [リガチャー（合字）](/MDs/ligatures.md)                                                     | 2020-Dec-24 |
+|                                       Naming | [フォントの命名](/MDs/naming.md)                                                            | 2021-Jan-07 |
 |             Reusing Shapes: Smart Components | [図形の再利用：スマートコンポーネント](/MDs/smart-components.md)                            | 2020-Dec-16 |
 | Multiple Masters, Part 1: Setting up Masters | [マルチプルマスター・1：マスターの設定](/MDs/multiple-masters-part-1-setting-up-masters.md) | 2020-Dec-27 |
 |                Creating a Layered Color Font | [複数レイヤーのカラーフォントの作成](/MDs/creating-a-layered-color-font.md)                 | 2020-Dec-22 |
