@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="author" href="https://glyphsapp.com/learn/extending-glyphs" />
+  <title>Glyphsの機能拡張 | Glyphs</title>
+</head>
+<body>
+
+<h1 class="TitleBoard-heading">Glyphsの機能拡張</h1>
+
+<div class="AuthorBoard AuthorBoard--article">
+  <div class="AuthorBoard-inner">
+    <div class="AuthorBoard-heading">by Rainer Erich Scheichelbauer</div>
+    <div class="AuthorBoard-languages">
+      <a  class="Button Button--language Button--tiny is-active" data-button href="https://glyphsapp.com/learn/extending-glyphs" aria-label="English"><span class="Button-text">en</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/fr/learn/extending-glyphs" aria-label="Français"><span class="Button-text">fr</span></a>
+      <a  class="Button Button--language Button--tiny" data-button href="https://glyphsapp.com/zh/learn/extending-glyphs" aria-label="中文"><span class="Button-text">zh</span></a>
+    </div>
+    <div class="AuthorBoard-content" ><p>29 September 2020</p></div>
+  </div>
+</div>
+
+<div class="Article-introductionInner">
+  <p>Glyphsの機能拡張は簡単です。ワンクリックで既存のスクリプトやプラグインの世界に行けますし、独自の拡張機能も作れます。思っているよりも簡単です。</p>
+</div>
+
+<div class="Article-contentInner">
+<p>Glyphsの機能拡張には基本的に、スクリプトとプラグインの2つの方法があります。どちらの方法も「Python モジュール」と呼ばれる追加インストールが必要な場合があります。それではお好きな機能を追加するべく、まずはGlyphsの準備をしましょう。この準備は1回きりで終わるので、ご安心ください。</p>
+
+<h2 id="g-modules">Python モジュール</h2>
+<p>「ウィンドウ」＞「プラグインマネージャー」に移動し、プラグインマネージャーを開きます。全ての拡張機能のインストールやアンインストールはここで行います。多くのスクリプトでは「Vanilla」が必要ですし、ほとんどの拡張機能では「Python 3」が必要なので、これらのインストールを絶対にお勧めします。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Attention</h3>
+<div class="ProTip-content"><p>あなたが「Apple silicon」M1チップを搭載した新しいMacの誇り高きオーナーである場合、現在のところプラグインマネージャー内で提供されるPythonモジュールは使用できません。目下対処中ですが、回避策ができるまでは、ご自身でPythonとPyObjCをインストールしてください。どうやって？ このチュートリアルの下部にある「Python 3の独自インストール」を参照してください。</p></div>
+</div></aside>
+
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/extending-glyphs/e449ecdd90-1605628216/pluginmanager-modules.png"></figure>
+<p>またリストにある他のモジュールもインストールして構いません。本当は、FontToolsとRoboFabを必要とする拡張機能は比較的少ないのですが、入れたところで損はありませんし、やってしまったなら仕方ありません。</p>
+
+<h3 id="g-modules__preferences">環境設定</h3>
+<p>「Glyphs」＞「環境設定」＞「アドオン」で、「Pythonバージョン」のポップアップメニューから、「(Glyphs)」と書かれたバージョンのPythonが選択されていることを確認します。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/extending-glyphs/64270ffb35-1605628217/preferences-python3.png"></figure>
+<p>いずれにしろ、これらのモジュールのどれかをインストールして環境設定を行った後は、<strong>アプリを再起動</strong>し、全ての変更を有効にすることをお勧めします。</p>
+
+<h2 id="g-scripts">スクリプト</h2>
+<p>一般的に、スクリプトとは決まった1〜2個の動作を行う短い簡単なPythonのコードです。これらのスクリプトはmacOSライブラリの深い階層にあるGlyphsのApplications Supportフォルダの「Scripts」という特定のフォルダ内に、ファイル名の最後が <code>.py</code> のテキストファイルとして保存されます。Glyphsは「スクリプト」メニュー内のスクリプトを全て読み込んで表示します。そのサブメニューには「Scripts」フォルダのサブフォルダ構造が再現されます。</p>
+<p>スクリプトはさくっと簡単に書けます。今までコーディングをしたことがなくても、スクリプトの基本は1日の午後の時間で学べます。またインストールも簡単でアプリを再起動する必要も「ありません」。</p>
+
+<h3 id="g-scripts__installing-scripts-plugin-manager">スクリプトのインストール：プラグインマネージャー</h3>
+<p>スクリプトのインストールには2つの方法があります。1つ目は、「ウィンドウ」＞「プラグインマネージャー」＞「スクリプト」からのワンクリック簡単インストールです。利用可能なスクリプトのコレクションから、お好きなものを選んでください。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/extending-glyphs/5938fab655-1605628216/pluginmanager-scripts.png"></figure>
+<p>その後、Optionキーを押しながら同時に「スクリプト」＞「スクリプトメニューの更新」（Cmd-Opt-Shift-Y）を選択して、スクリプトメニューを再読み込みします。すると、ほらね。次に「スクリプト」メニューを開いたときには、新たにインストールしたスクリプトがもう利用可能です。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Tip</h3>
+<div class="ProTip-content"><p>「スクリプト」メニューの下部に「スクリプトメニューの更新」という項目が見当たらない場合は、Optionキーを長押ししてください。すると「Scripts フォルダを開く」が「スクリプトメニューの更新」に変わります。OptionキーはCtrlキーとCmdキーの間（訳註：USキーボードの場合。JISキーボードではCmdとCapsの間）にあり、Alt や Opt 、または ⌥ などとラベリングされています。</p></div>
+</div></aside>
+
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/extending-glyphs/5006c10327-1605628216/scripts-menu.png"></figure>
+<p>ここからがポイントです。プラグインマネージャーからインストールしたスクリプトは（上で説明したとおり）自動的に最新の状態に保たれます。Macがインターネットに接続されていれば、Glyphsが起動するたびに、インストール済みのものが最新バージョンかどうかチェックされ、最新でなければ更新されます。</p>
+
+<h3 id="g-scripts__manually-installing-scripts">スクリプトの手動インストール</h3>
+<p>スクリプトをインストールする方法の2つ目はスクリプトファイルをScriptsフォルダ内に手動で保存することです。このフォルダに一番手っ取り早くアクセスするには、お気づきでしょうが、「スクリプト」＞「Scripts フォルダを開く」（Cmd-Shift-Y）を実行します。スクリプトファイルをサブフォルダに保存すれば、「スクリプト」メニューのサブメニューに表示されます。保存したら、これまたOptionキーを長押しして「スクリプト」＞「スクリプトメニューの更新」（Cmd-Opt-Shift-Y）を行うのを忘れないでください。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Pro Tip</h3>
+<div class="ProTip-content"><p>実際のところ、Glyphsは常に最新バージョンのgitリポジトリを「Scripts」フォルダの隣の「Repositories」フォルダに取り込んでいます。自分でgitリポジトリを「Repositories」フォルダにクローンし、そしてエイリアス（シンボリックリンク）を「Scripts」フォルダに追加できるのであれば、手動でインストールしたスクリプトでもGlyphsで自動更新できます。</p></div>
+</div></aside>
+
+<p>言うまでもありませんが、手動でインストールしたスクリプトは自動的には更新されません。代わりに、自分自身で管理しなくてはなりません。</p>
+
+<h3 id="g-scripts__running-scripts">スクリプトの実行</h3>
+<p>スクリプトを実行するには「スクリプト」メニューから選択するだけです。スクリプトの機能がよくわからない場合は、メニュー項目にマウスをしばらく置けば、それが何をするスクリプトなのか、解説するツールチップが表示されます。</p>
+
+<aside class="ProTip"><div class="ProTip-inner">
+<h3 class="ProTip-title">Pro Tip</h3>
+<div class="ProTip-content"><p>スクリプトをもっと素早く実行する方法があります。キーボードショートカットで「ヘルプ」メニューを開き（「システム環境設定」＞「キーボード」＞「ショートカット」＞「アプリケーション」＞「Glyphs」で設定しておく）、スクリプト名の各単語の最初の数文字、例えば「Path Problem Finder」なら「pa pro fi」と入力します。各メニュー項目が直接メニュー内に強調表示されるので、あとはReturnキーを押せばスクリプトを実行できます。</p></div>
+</div></aside>
+
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/extending-glyphs/50992fd93b-1605628217/scripts-tooltip.png"></figure>
+<p>スクリプトが何も動かないようなときは、エラーが生じたのかもしれません。その場合は、マクロウィンドウ（「ウィンドウ」＞「マクロパネル」、Cmd-Opt-M）を開いてエラーメッセージを探します。うまくいかなかった手がかりがあるかもしれません。次のようなメッセージが出ていたら……</p>
+<pre><code class="language-python">ModuleNotFoundError: No module named 'vanilla'</code></pre>
+<p>……スクリプトの動作には「モジュール」と呼ばれるものが必要です。上記の「Python モジュール」のセクションを参照してください。</p>
+
+<h2 id="g-plug-ins">プラグイン</h2>
+<p>プラグインによって、コーダーたちはGlyphsの生態系をさらに深く掘り下げ、より高度なことを可能にします。大半のプラグインは「フィルタ」か「表示」に表示されますが、任意のメニューや右サイドバーのパレットに表示されることもあります。プラグインは非常にとは言わないまでも<a href="https://glyphsapp.com/learn/plugins">作成がちょっと難しくて</a>、スクリプトとは異なり、インストールまたはアップデート後に再起動が必要です。</p>
+
+<h3 id="g-plug-ins__installing-plug-ins-through-the-plugin-manager">プラグインマネージャーによるプラグインのインストール</h3>
+<p>スクリプトと同様に、プラグインは「ウィンドウ」＞「プラグインマネージャー」からワンクリックでインストールできます。「プラグイン」セクションを選択してプラグイン一覧を閲覧し、「インストール」ボタンをクリックしてインストールします。あるいは、もしインストール済みなら、ええ、お察しのとおり、「アンインストール」ボタンをクリックして削除します。それだけです。</p>
+
+<h3 id="g-plug-ins__manually-installing-plug-ins">プラグインの手動インストール</h3>
+<p>Tim Ahrens氏によるマストバイな<a href="https://remix-tools.com/">RMX Tools</a>（別名「Font Remix Tools」）や、素晴らしい<a href="https://www.letterinkapp.com/">LetterInk</a>、デザインの過程を録画できるMakkuk氏の<a href="https://makkuk.com/layerwhale/">LayerWhale</a>、あるいは<a href="https://markfromberg.com/projects/#tools">Mark Frömberg氏による数多くのクールなプラグイン</a>といった、有償のサードパーティ製プラグインがあります。これらには独自の説明書が付属します。通常は、プラグインファイルをダブルクリックすれば、Glyphsがインストールするかどうかを尋ねてきます。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/extending-glyphs/3afad40a2b-1605628216/install-plugin.png"></figure>
+<p>「インストール」を押下してダイアログを確定し、アプリを再起動しさえすれば、プラグインが有効化されて使えるようになります。サードパーティ製プラグインは<a href="https://glyphsapp.com/resources">Resources</a>のページから選択できます。</p>
+
+<h2 id="g-show-your-love">開発者たちへ投げ銭</h2>
+<p>スクリプトやプラグインを気に入りました？ 開発者にお茶をご馳走しませんか？</p>
+<p>プラグインマネージャー内のスクリプトやプラグインはほぼ全て無料で利用可能です。しかし、中にはプラグインマネージャーで一番人気のアイテムのURLの横に投げ銭受付のリンクを設置している開発者がいます。アイコンをクリックするとその開発者の少額決済ページに移動します。</p>
+<figure><img alt="" src="https://glyphsapp.com/media/pages/learn/extending-glyphs/1e35af02be-1605628216/micropayment.png"></figure>
+<p>拡張機能で人生がどれだけ良くなれたかを省みて感謝の気持ちを伝えましょう。💝</p>
+
+<h2 id="g-advanced-options">高度なオプション</h2>
+<p>特にファウンドリ固有の機能のインストール管理が必要な場合など、Glyphs機能拡張の周辺をカスタマイズする方法がまだまだあります。それにしても、このセクションで扱うのは特定の環境や高度なターミナル操作のみです。なので以下の内容がさっぱりピンとこなかったとしたら、多分それはあなたには当てはまらない話なので心配はしないでください。</p>
+
+<h3 id="g-advanced-options__your-own-python-3-installation">Python 3の独自インストール</h3>
+<p><a href="https://brew.sh">Homebrew</a>から独自にインストールしたPython 3をGlyphs内で使用できます。「Glyphs」＞「環境設定」＞「アドオン」＞「Python」のポップアップメニューから、独自でインストールしたPythonを選択してください。</p>
+<figure class="shadow"><img alt="" src="https://glyphsapp.com/media/pages/learn/extending-glyphs/cd4523c825-1605628216/python-version-homebrew.png"></figure>
+<p>そしてGlyphsを再起動したら準備完了です。</p>
+<p>待った、まだでした。実はもう1つあります。プラグインマネージャーから提供されたものではないPythonを使う場合、<code>pyobjc</code> というPythonモジュールが追加で必要です。Terminalで次を入力してみてください。</p>
+<pre><code class="language-shell">pip3 install pyobjc</code></pre>
+<p>さあこれで動作するはずです。再度アプリを再起動しなくてはならないかもしれません。</p>
+
+<h3 id="g-advanced-options__your-own-plugin-manager-content">プラグインマネージャーの独自コンテンツ</h3>
+<p>ファウンドリ内で、社内のメンバーが使えるようにしておくべきカスタムのスクリプトやプラグイン、またはモジュールがあるとします。選択肢は2つあります。GitHubからオープンソースライセンスで公開し、それを私たちに知らせてください。これを私たちが<a href="https://github.com/schriftgestalt/glyphs-packages/tree/glyphs3">GitHub上のGlyphs Packagesリポジトリ</a>に追加したら、1分後には、プラグインマネージャーに追加されます。</p>
+<p>または、特に機密だったり極秘だったりするコードなので公開できないという場合は、独自のパッケージリストを設定できます！ やり方は簡単です。これまた「Glyphs」＞「環境設定」＞「アドオン」を開き、「代替のプラグインリポジトリ」フィールドに、同僚たちに配布したいスクリプト、プラグイン、モジュールの情報を含んだ、公開可能な <code>.plist</code> ファイルのURLを追加します。</p>
+<p>あとはその <code>.plist</code> ファイルを設定して管理して、同僚たちにはそのURLを「Glyphs」＞環境設定＞「アドオン」のフィールドに入力してもらうだけです。以上です。次に「ウィンドウ」＞「プラグインマネージャー」を開いたときには、追加された拡張機能に彼らもアクセス可能です。</p>
+
+<h3 id="g-advanced-options__your-own-scripts-and-plug-ins">独自のスクリプトとプラグイン</h3>
+<p>自分のプロジェクトに合ったスクリプトやプラグインが見当たりませんか？ なら自分で書いてみませんか？</p>
+<p>コーディングをしたことがないのなら、Pythonこそ最初に学ぶスクリプト言語には最適だと思っています。午後の数時間で始められますよ。嘘じゃありません。<a href="https://glyphsapp.com/learn/recommendation:learn-python">Glyphsでスクリプトのチュートリアル</a>を読んでみてください。最初の3つは超簡単です。その先は、確かにちょっと難しくなりますが。しかしご存知の通り、他の皆さんもやってきたことですし、一度コツが掴めたら、やめられなくなります。</p>
+<p>そして準備ができたら、<a href="https://glyphsapp.com/learn/recommendation:plugins">プラグインのチュートリアル</a>へと進むでしょう。その一歩をさらに踏み出せば、力が湧いてくるはずです。</p>
+
+<p><small><br />
+Update 2020-10-20: 未完だった文章を完成（Nathalieさんありがとう）。<br />
+Update 2020-12-20: Python M1チップについてのメモを追加。<br />
+</small></p>          </div>
+
+</body>
+</html>

@@ -33,6 +33,7 @@ Updates are very infrequent or extremely fickle, but content would be added acco
 |                Creating a Layered Color Font | [複数レイヤーのカラーフォントの作成](/MDs/creating-a-layered-color-font.md)                 | 2020-Dec-22 |
 |                   Creating an SVG Color Font | [SVGカラーフォントの作成](/MDs/creating-an-svg-color-font.md)                               | 2020-Dec-26 |
 |                     Creating a Variable Font | [バリアブルフォントの作成](/MDs/creating-a-variable-font.md)                                | 2020-Dec-31 |
+|                             Extending Glyphs | [Glyphsの機能拡張](/MDs/extending-glyphs.md)                                                | 2021-Jan-14 |
 |                     Scripting Glyphs, Part 1 | [Glyphsでスクリプト・1](/MDs/scripting-glyphs-part-1.md)                                    | 2020-Dec-24 |
 |                     Scripting Glyphs, Part 2 | [Glyphsでスクリプト・2](/MDs/scripting-glyphs-part-2.md)                                    | 2020-Dec-26 |
 |                     Scripting Glyphs, Part 3 | [Glyphsでスクリプト・3](/MDs/scripting-glyphs-part-3.md)                                    | 2020-Dec-26 |
